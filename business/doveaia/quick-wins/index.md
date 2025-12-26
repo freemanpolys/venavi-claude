@@ -75,43 +75,144 @@
 
 ## 🏗️ Architecture Technique Commune
 
-**Stack Azure AI Foundry (tous les agents)** :
+**Stack Doveaia (tous les agents)** :
 
 ```
 ┌─────────────────────────────────────────────────────────┐
 │                  FRONTEND / INTERFACE                    │
-│  - Site web (Agent FAQ)                                 │
-│  - Notion/Slack (Agents internes)                       │
-│  - API (Intégrations CRM, LinkedIn, etc.)               │
+│  - Widget Web (JavaScript)                              │
+│  - Application Teams (Teams Toolkit)                    │
+│  - Chatwoot (self-hosted, open source)                  │
+│  - Dashboard SaaS (Angular)                             │
+└─────────────────────────────────────────────────────────┘
+                            │ REST API / WebSocket
+                            ▼
+┌─────────────────────────────────────────────────────────┐
+│           BACKEND - Go + Cloudwego Hertz                 │
+│  - Framework : Hertz (high-performance HTTP)            │
+│  - Multi-tenant : Isolation par tenant_id               │
+│  - Auth : JWT + OAuth2 (Azure AD optionnel)             │
+│  - APIs :                                               │
+│    • POST /chat (conversations)                         │
+│    • POST /documents/upload (indexation KB)             │
+│    • GET /analytics (métriques)                         │
 └─────────────────────────────────────────────────────────┘
                             │
                             ▼
 ┌─────────────────────────────────────────────────────────┐
-│              AZURE AI FOUNDRY AGENTS                     │
-│  - GPT-4o (raisonnement)                                │
-│  - Tools : Search, Code Interpreter, Function Calling   │
-│  - Orchestration : Multi-agents si nécessaire           │
+│         CLOUDWEGO EINO - AI Agent Framework              │
+│  - SDK : github.com/cloudwego/eino                      │
+│  - Agent Builder (ADK)                                  │
+│  - Models : Azure OpenAI GPT-4o                         │
+│  - Tools :                                              │
+│    • RAG (Azure AI Search)                              │
+│    • Function Calling (custom tools)                    │
+│  - Memory : Conversation history (PostgreSQL)           │
 └─────────────────────────────────────────────────────────┘
                             │
                             ▼
 ┌─────────────────────────────────────────────────────────┐
-│                  AZURE AI SEARCH (RAG)                   │
-│  - Documents Doveaia (offres, cas d'usage, FAQ)         │
-│  - Profils LinkedIn extraits                            │
-│  - Templates propales                                   │
-│  - Veille techno Azure                                  │
+│            AZURE AI SEARCH (RAG Multi-Tenant)            │
+│  - 1 index par client (isolation données)               │
+│  - Semantic search (vecteurs embeddings)                │
+│  - Indexation automatique documents uploadés            │
+│  - Filtres : tenant_id (sécurité)                       │
+└─────────────────────────────────────────────────────────┘
+                            │
+                            ▼
+┌─────────────────────────────────────────────────────────┐
+│                  DATA LAYER                              │
+│  - PostgreSQL : Users, Tenants, Conversations           │
+│  - Azure Blob Storage : Documents sources               │
+│  - Redis : Cache sessions, rate limiting                │
 └─────────────────────────────────────────────────────────┘
                             │
                             ▼
 ┌─────────────────────────────────────────────────────────┐
 │                  LLMOPS PIPELINE                         │
 │  - GitHub Actions (CI/CD)                               │
+│  - Docker (containerisation)                            │
+│  - Kubernetes / Azure Container Apps (déploiement)      │
 │  - Prompt versioning (Git)                              │
-│  - Evaluations automatiques (tests qualité réponses)    │
-│  - Monitoring (Azure Application Insights)              │
-│  - Alertes (erreurs, dégradation qualité)               │
+│  - Evaluations automatiques (Eino evals)                │
+│  - Monitoring (Prometheus + Grafana)                    │
+│  - Tracing (OpenTelemetry → Azure Monitor)              │
 └─────────────────────────────────────────────────────────┘
 ```
+
+---
+
+## 🔧 Stack Technique Détaillée
+
+### Backend : Go + Cloudwego
+
+**Pourquoi Go + Cloudwego ?**
+- ✅ **Performance** : Hertz = 10x plus rapide que Flask/FastAPI
+- ✅ **Cloudwego Eino** : SDK officiel pour agents IA (compatible Azure OpenAI)
+- ✅ **Production-ready** : Utilisé par ByteDance (TikTok) à massive scale
+- ✅ **Concurrency** : Goroutines pour traiter 1000+ conversations simultanées
+- ✅ **Type-safe** : Go = moins de bugs que Python dynamique
+
+**Frameworks utilisés** :
+- **Hertz** : HTTP server (https://www.cloudwego.io/docs/hertz/)
+- **Kitex** : RPC framework si micro-services (optionnel)
+- **Eino** : AI Agent SDK (https://www.cloudwego.io/docs/eino/)
+- **Gorm** : ORM pour PostgreSQL
+
+---
+
+### AI Framework : Cloudwego Eino
+
+**Eino ADK (Agent Development Kit)** :
+```go
+import (
+    "github.com/cloudwego/eino/components/model"
+    "github.com/cloudwego/eino/components/tool"
+    "github.com/cloudwego/eino/flow/agent"
+)
+
+// Agent avec RAG + Tools
+agent := agent.NewGraphAgent(
+    model.AzureOpenAI("gpt-4o"),
+    tools: []tool.Tool{
+        azureSearchTool,  // RAG
+        webhookTool,      // Calendly booking
+    },
+    memory: conversationMemory,
+)
+```
+
+**Pourquoi Eino ?**
+- ✅ Compatible Azure OpenAI (notre stack)
+- ✅ Built-in RAG, Memory, Tools
+- ✅ Production-ready (ByteDance l'utilise en prod)
+- ✅ Go-native (performance optimale)
+
+---
+
+### Database : PostgreSQL + Redis
+
+**PostgreSQL (données structurées)** :
+- Tables : `users`, `tenants`, `conversations`, `messages`, `documents`
+- Multi-tenant : Toutes les tables ont `tenant_id` (isolation)
+
+**Redis (cache + sessions)** :
+- Sessions utilisateurs (JWT tokens)
+- Rate limiting (10 req/min/IP)
+- Cache réponses fréquentes (optionnel)
+
+---
+
+### Storage : Azure Services
+
+**Azure Blob Storage** :
+- Documents sources uploadés par clients
+- Organisation : `/tenant-{id}/documents/{filename}`
+
+**Azure AI Search** :
+- 1 index par tenant : `faq-tenant-{id}`
+- Sécurité : Filtre automatique par `tenant_id`
+- Indexation : Automatique après upload document
 
 ---
 

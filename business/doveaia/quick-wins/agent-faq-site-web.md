@@ -41,7 +41,7 @@
 
 ## 🏗️ Architecture Technique
 
-### Stack
+### Stack (Go + Cloudwego Eino)
 
 ```
 ┌─────────────────────────────────────────────────┐
@@ -54,28 +54,31 @@
                     │ HTTPS REST API
                     ▼
 ┌─────────────────────────────────────────────────┐
-│      BACKEND - Azure Functions (Python)         │
-│  - Endpoint POST /chat                          │
-│  - Rate limiting (10 req/min/IP)                │
-│  - Validation input (max 500 chars)             │
-│  - Logging (Application Insights)               │
+│        BACKEND - Go + Cloudwego Hertz           │
+│  - Framework : Hertz (high-performance)         │
+│  - Endpoint : POST /api/v1/chat                 │
+│  - Rate limiting : 10 req/min/IP (Redis)        │
+│  - Validation input : max 500 chars             │
+│  - Logging : OpenTelemetry → Azure Monitor      │
 └─────────────────────────────────────────────────┘
                     │
                     ▼
 ┌─────────────────────────────────────────────────┐
-│       AZURE AI FOUNDRY - Agent FAQ              │
-│  - Model : GPT-4o-mini (rapide, économique)    │
-│  - System Prompt : Expert Doveaia               │
+│      CLOUDWEGO EINO - AI Agent Framework        │
+│  - SDK : github.com/cloudwego/eino              │
+│  - Agent Builder (ADK)                          │
+│  - Model : Azure OpenAI GPT-4o-mini             │
 │  - Tools :                                      │
-│    • Search (Azure AI Search / FAQ KB)          │
-│    • get_pricing (function calling)             │
-│    • schedule_audit (webhook Calendly)          │
+│    • RAG Tool (Azure AI Search)                 │
+│    • Pricing Tool (function calling)            │
+│    • Booking Tool (webhook Calendly)            │
+│  - Memory : Conversation history (PostgreSQL)   │
 └─────────────────────────────────────────────────┘
                     │
                     ▼
 ┌─────────────────────────────────────────────────┐
 │     AZURE AI SEARCH - Knowledge Base            │
-│  - Index "doveaia-faq"                          │
+│  - Index : "doveaia-faq"                        │
 │  - 30-50 Q/R pré-écrites                        │
 │  - Documents :                                  │
 │    • Offres (Starter, Scale, Enterprise)        │
@@ -83,7 +86,21 @@
 │    • Blog posts techniques                      │
 │  - Semantic search (vecteurs embeddings)        │
 └─────────────────────────────────────────────────┘
+                    │
+                    ▼
+┌─────────────────────────────────────────────────┐
+│              DATA & CACHE                        │
+│  - PostgreSQL : Conversations history           │
+│  - Redis : Rate limiting, sessions              │
+└─────────────────────────────────────────────────┘
 ```
+
+**Pourquoi Go + Cloudwego Eino ?**
+- ✅ **Performance** : 10x plus rapide que Python/Flask
+- ✅ **Eino SDK** : Built-in pour agents IA (Azure OpenAI compatible)
+- ✅ **Production-ready** : Utilisé par ByteDance (TikTok) à massive scale
+- ✅ **Concurrency** : Goroutines pour 1000+ conversations simultanées
+- ✅ **Type-safe** : Go = moins de bugs runtime
 
 ---
 
@@ -138,7 +155,7 @@
 
 ## 💻 Code Exemple : System Prompt
 
-```python
+```
 # agents/faq-agent/prompts/system.txt
 
 Tu es l'assistant virtuel de Doveaia, spécialiste des agents IA en production sur Azure AI Foundry.
@@ -177,84 +194,135 @@ Utilise la fonction `search_knowledge_base(query)` pour trouver des infos dans n
 
 ---
 
-## 💻 Code Exemple : Backend API
+## 💻 Code Exemple : Backend API (Go + Eino)
 
-```python
-# agents/faq-agent/api/chat.py
+```go
+// internal/handler/chat.go
+package handler
 
-import os
-from azure.functions import HttpRequest, HttpResponse
-from azure.ai.projects import AIProjectClient
-from azure.ai.projects.models import AgentThread, AgentMessage
-import json
-
-# Init Azure AI Foundry client
-project_client = AIProjectClient(
-    endpoint=os.environ["AZURE_AI_FOUNDRY_ENDPOINT"],
-    credential=os.environ["AZURE_AI_FOUNDRY_KEY"]
+import (
+    "context"
+    "fmt"
+    "github.com/cloudwego/hertz/pkg/app"
+    "github.com/cloudwego/eino/flow/agent"
+    "github.com/cloudwego/eino/components/model"
+    "github.com/cloudwego/eino/components/tool"
+    "doveaia/internal/service"
 )
 
-agent_id = os.environ["FAQ_AGENT_ID"]
+type ChatRequest struct {
+    Message  string `json:"message" binding:"required,max=500"`
+    ThreadID string `json:"thread_id,omitempty"`
+}
 
-def main(req: HttpRequest) -> HttpResponse:
-    """
-    Endpoint POST /chat
-    Body: {"message": "C'est quoi LLMOps ?", "thread_id": "optional"}
-    """
-    try:
-        # Parse request
-        data = req.get_json()
-        user_message = data.get("message", "")
-        thread_id = data.get("thread_id")  # Pour conversations multi-tours
+type ChatResponse struct {
+    Reply    string `json:"reply"`
+    ThreadID string `json:"thread_id"`
+    Status   string `json:"status"`
+}
 
-        # Validation
-        if not user_message or len(user_message) > 500:
-            return HttpResponse("Invalid message", status_code=400)
+// ChatHandler gère les conversations avec l'agent FAQ
+func ChatHandler(ctx context.Context, c *app.RequestContext) {
+    var req ChatRequest
+    if err := c.BindAndValidate(&req); err != nil {
+        c.JSON(400, map[string]string{"error": "Invalid request"})
+        return
+    }
 
-        # Créer ou récupérer thread conversation
-        if not thread_id:
-            thread = project_client.agents.create_thread()
-            thread_id = thread.id
+    // Rate limiting check (via Redis)
+    ip := c.ClientIP()
+    if !service.CheckRateLimit(ctx, ip) {
+        c.JSON(429, map[string]string{"error": "Too many requests"})
+        return
+    }
 
-        # Ajouter message utilisateur
-        project_client.agents.create_message(
-            thread_id=thread_id,
-            role="user",
-            content=user_message
-        )
+    // Get or create conversation thread
+    threadID := req.ThreadID
+    if threadID == "" {
+        threadID = service.CreateThread(ctx)
+    }
 
-        # Exécuter agent
-        run = project_client.agents.create_and_process_run(
-            thread_id=thread_id,
-            agent_id=agent_id
-        )
+    // Get FAQ agent instance
+    faqAgent, err := getFAQAgent()
+    if err != nil {
+        c.JSON(500, map[string]string{"error": "Agent unavailable"})
+        return
+    }
 
-        # Récupérer réponse
-        messages = project_client.agents.list_messages(thread_id=thread_id)
-        assistant_message = messages.data[0].content[0].text.value
+    // Run agent with user message
+    response, err := faqAgent.Run(ctx, req.Message, agent.WithThreadID(threadID))
+    if err != nil {
+        c.JSON(500, map[string]string{"error": "Failed to process message"})
+        return
+    }
 
-        # Log analytics (Application Insights)
-        log_chat_event(user_message, assistant_message, thread_id)
+    // Save conversation to DB
+    service.SaveConversation(ctx, threadID, req.Message, response)
 
-        # Response
-        return HttpResponse(
-            json.dumps({
-                "reply": assistant_message,
-                "thread_id": thread_id,
-                "status": "success"
-            }),
-            mimetype="application/json",
-            status_code=200
-        )
+    // Log analytics
+    service.LogChatEvent(ctx, req.Message, response, threadID)
 
-    except Exception as e:
-        log_error(str(e))
-        return HttpResponse("Erreur serveur", status_code=500)
+    // Response
+    c.JSON(200, ChatResponse{
+        Reply:    response,
+        ThreadID: threadID,
+        Status:   "success",
+    })
+}
 
-def log_chat_event(question, answer, thread_id):
-    """Log vers Application Insights pour analytics"""
-    # TODO: Implement logging
-    pass
+// getFAQAgent crée l'agent Eino avec RAG + Tools
+func getFAQAgent() (*agent.GraphAgent, error) {
+    // Load system prompt
+    systemPrompt, _ := os.ReadFile("prompts/system.txt")
+
+    // Azure AI Search tool (RAG)
+    searchTool := &tool.Tool{
+        Name:        "search_knowledge_base",
+        Description: "Search in Doveaia knowledge base",
+        Function: func(ctx context.Context, query string) (string, error) {
+            results, err := service.SearchAzureAI(ctx, "doveaia-faq", query, 3)
+            if err != nil {
+                return "", err
+            }
+            return formatResults(results), nil
+        },
+    }
+
+    // Create Eino agent
+    ag := agent.NewGraphAgent(
+        model: model.NewAzureOpenAI(
+            endpoint: os.Getenv("AZURE_OPENAI_ENDPOINT"),
+            apiKey:   os.Getenv("AZURE_OPENAI_KEY"),
+            deployment: "gpt-4o-mini",
+        ),
+        tools:        []tool.Tool{searchTool},
+        systemPrompt: string(systemPrompt),
+        temperature:  0.3,
+    )
+
+    return ag, nil
+}
+```
+
+**Structure Projet Go** :
+```
+doveaia-faq/
+├── cmd/
+│   └── api/
+│       └── main.go              # Entry point Hertz server
+├── internal/
+│   ├── handler/
+│   │   └── chat.go              # HTTP handlers
+│   ├── service/
+│   │   ├── agent.go             # Eino agent logic
+│   │   ├── search.go            # Azure AI Search
+│   │   └── analytics.go         # Logging
+│   └── config/
+│       └── config.go            # Configuration
+├── prompts/
+│   └── system.txt               # System prompt
+├── go.mod
+└── Dockerfile
 ```
 
 ---
