@@ -22,6 +22,7 @@ This repo is organized around life, business, and content, not around a single a
 ├─ .claude/                  # Optional: settings for Claude Code
 ├─ braindumps/               # Raw ideas, unstructured thoughts, thinking about Go/Angular/Azure
 ├─ business/                 # Business strategy, offers, audience, positioning, pricing
+├─ claude-code-plugins/      # Git submodule containing Claude Code plugins (slash commands, models, subagents, skills)
 ├─ daily-brief/              # Short daily snapshots / dashboards
 ├─ daily-journal/            # Longer daily entries about what you did and learned
 ├─ journal/                  # General journaling if you want it separate from daily-journal
@@ -44,6 +45,7 @@ This repo is organized around life, business, and content, not around a single a
 ### How Claude should use this structure
 
 - Prefer **editing existing files** instead of creating new ones unless you are clearly starting a new idea, day, or project.
+- Use the `claude-code-plugins/` submodule to store Claude Code plugins (slash commands, models, subagents, skills) that support how you work with this knowledge workspace.
 - When in doubt about where something belongs:
   - Use `braindumps/` for rough, early thoughts.
   - Use `daily-journal/` or `daily-brief/` to log what you did today.
