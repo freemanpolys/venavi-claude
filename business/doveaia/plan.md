@@ -2073,6 +2073,180 @@ Le risque aujourd'hui n'est plus technologique, il est concurrentiel."
 - Coûts fixes faibles
 - TJM élevé (800€+)
 
+#### Scénario Missions Freelance (alternative sans investisseur)
+
+**Contexte** : Pas d'investisseur disponible, besoin de trésorerie immédiat (70k€ sur 6 mois ou 135k€ sur 12 mois).
+
+**Principe** : Financer le démarrage via missions freelance en parallèle du développement de Doveaia.
+
+##### Structure Temps
+
+**Répartition hebdomadaire** :
+- **4 jours** : Mission freelance (DevOps/Cloud/Azure)
+- **1 jour** : Développement Doveaia (commercial, livraison, stratégie)
+- **Week-ends** : Flexibilité Doveaia si nécessaire
+
+**TJM Missions** : 500€ (marché Rennes/régions)
+
+##### Projections Financières Missions
+
+**Revenus missions mensuels** :
+- TJM : 500€
+- Jours facturés : 16 jours/mois (4j × 4 semaines)
+- **CA mensuel brut** : 8 000€
+
+**Revenus nets après charges** :
+- Charges sociales + fiscales : ~45-50%
+- **Revenu net mensuel** : 4 000-4 400€
+
+**Sur 6 mois** :
+- CA brut missions : 48 000€
+- Revenu net : 24 000-26 000€
+
+**Sur 12 mois** :
+- CA brut missions : 96 000€
+- Revenu net : 48 000-52 000€
+
+##### Couverture Besoin Trésorerie
+
+**Besoin identifié** :
+- **6 mois** : 70 000€ (rémunération + charges + coûts fixes)
+- **12 mois** : 135 000€
+
+**Couverture missions** :
+- 6 mois : 24-26k€ (couvre ~35% du besoin)
+- 12 mois : 48-52k€ (couvre ~38% du besoin)
+
+**Gap à combler** :
+- **6 mois** : 44-46k€ → via premiers contrats Doveaia (audits, Starter)
+- **12 mois** : 83-87k€ → via montée en charge progressive
+
+##### Stratégie de Transition
+
+**Mois 1-3 : Missions + Amorçage**
+- Focus : Sécuriser mission stable (CDI portage ou freelance long)
+- Doveaia : Setup (statut, site, LinkedIn), prospection passive
+- Objectif CA Doveaia : 5-10k€ (1-2 audits)
+
+**Mois 4-6 : Missions + Premiers Clients**
+- Focus : Maintenir mission (80% temps)
+- Doveaia : 2-3 projets Starter, construction IP
+- Objectif CA Doveaia : 20-30k€
+- **Jalon critique** : Si MRR Doveaia > 3k€ → préparation sortie missions
+
+**Mois 7-9 : Transition Progressive**
+- Réduction missions : 4j → 3j → 2j
+- Doveaia dominant : Projets Scale, infogérance
+- Objectif CA Doveaia : 40-60k€
+- MRR cible : 5-8k€
+
+**Mois 10-12 : Full-Time Doveaia**
+- Arrêt missions (si MRR > 8k€)
+- 100% focus Doveaia
+- Objectif CA Doveaia : 60-80k€/trimestre
+- MRR cible : 10k€+
+
+##### Impact sur Projections Année 1
+
+**CA Total Année 1 (scénario missions)** :
+
+| Source | CA Année 1 |
+|--------|-----------|
+| Missions freelance (9 mois) | 72 000€ |
+| Doveaia (progressif) | 100-120k€ |
+| **TOTAL** | **172-192k€** |
+
+**Répartition mensuelle Doveaia** :
+- T1 (M1-M3) : 10k€
+- T2 (M4-M6) : 25k€
+- T3 (M7-M9) : 35k€
+- T4 (M10-M12) : 50k€
+- **Total Doveaia An 1** : 120k€
+
+**Résultat net estimé** :
+- Revenus totaux : 192k€
+- Charges totales : ~50k€ (coûts fixes + projets)
+- Rémunération couverte par missions (72k€)
+- **Résultat net** : ~70k€ (réinvesti Année 2)
+
+##### Avantages Scénario Missions
+
+✅ **Zéro dépendance investisseur** : Pas de dilution
+✅ **Revenus immédiats** : Missions couvrent charges vitales
+✅ **Validation marché progressive** : Temps de construire offre Doveaia
+✅ **Réseau professionnel** : Missions = contacts potentiels clients
+✅ **Flexibilité** : Possibilité d'ajuster ratio missions/Doveaia
+✅ **Pas de pression court terme** : Pas d'obligations envers investisseurs
+
+##### Inconvénients Scénario Missions
+
+⚠️ **Temps limité Doveaia** : 1 jour/semaine = ralentissement croissance
+⚠️ **Fatigue** : Double activité = charge mentale élevée
+⚠️ **Opportunités manquées** : Pas disponible pour tous clients potentiels
+⚠️ **Cycles de vente allongés** : Moins de temps pour follow-up commercial
+⚠️ **Risque burn-out** : 12 mois en mode hybride = difficile à tenir
+
+##### Critères de Décision : Missions vs Investisseur
+
+**Choisir Missions si** :
+- ✅ Pas d'investisseur disponible rapidement
+- ✅ Forte aversion dilution (garder 100%)
+- ✅ Tolérance fatigue/double activité
+- ✅ Réseau professionnel missions = source leads
+- ✅ Marché missions stable (TJM 500€+ garanti)
+
+**Choisir Investisseur si** :
+- ✅ Investisseur aligné disponible (15-20% équitable)
+- ✅ Besoin focus 100% Doveaia dès J1
+- ✅ Time-to-market critique (concurrence)
+- ✅ Opportunités nécessitant disponibilité immédiate
+- ✅ Réseau investisseur = accélérateur business
+
+##### Recommandation Hybride (Optimal)
+
+**Scénario idéal** : Missions 3 mois + Investisseur
+
+1. **M1-M3** : Missions 4j + Doveaia 1j
+   - Générer 24k€ via missions
+   - Valider offre Doveaia (2-3 audits)
+   - Préparer pitch investisseur avec traction
+
+2. **M4** : Lever 50-60k€ (15-18% actions)
+   - Apport missions prouvé (engagement, traction)
+   - Valorisation meilleure (clients déjà signés)
+   - Dilution minimale
+
+3. **M4-M12** : Full-time Doveaia
+   - 100% focus croissance
+   - Capital investi = accélération
+
+**Avantages combinés** :
+- Moins de dilution (démonstration capacité)
+- Meilleure valorisation (traction prouvée)
+- Sécurité financière (capital + missions initiales)
+
+##### Tableau Comparatif Scénarios Financement
+
+| Critère | Bootstrap | Missions 12m | Investisseur 70k€ | Missions 3m + Invest 60k€ |
+|---------|-----------|--------------|-------------------|---------------------------|
+| **Capital initial requis** | 10-15k€ | 0€ | 0€ | 0€ |
+| **Dilution** | 0% | 0% | 15-20% | 12-15% |
+| **CA An 1 Doveaia** | 222k€ | 120k€ | 222k€ | 200k€ |
+| **Temps disponible Doveaia** | 100% | 20% → 100% | 100% | 20% (3m) → 100% |
+| **Stress financier** | Moyen | Faible | Faible | Faible |
+| **Vitesse croissance** | Rapide | Lente → Rapide | Rapide | Modérée → Rapide |
+| **Flexibilité** | Moyenne | Élevée | Faible | Élevée |
+
+**⭐ Recommandation finale** : **Missions 3 mois + Investisseur 60k€ (15%)**
+
+Équilibre optimal entre :
+- Minimisation dilution
+- Sécurité financière
+- Vitesse d'exécution
+- Validation marché
+
+---
+
 #### Scénario Levée (si accélération)
 
 **Montant** : 150-250k€ (seed)

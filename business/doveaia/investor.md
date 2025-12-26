@@ -43,6 +43,55 @@ Le business model génère du cash dès M2-M3, mais les premiers mois nécessite
 
 ---
 
+## 💡 Principe d'Équité : Pourquoi 15-20% (et pas 30%) ?
+
+### La Règle d'Or : Capital vs Travail
+
+**Si l'investisseur apporte** :
+- ✅ Capital uniquement (60-70k€)
+- ⚠️ Pas de travail opérationnel quotidien
+
+**Et le fondateur fait** :
+- ✅ 100% du commercial (prospection, négociation, closing)
+- ✅ 100% de la livraison technique (architecture, développement, LLMOps)
+- ✅ 100% de la gestion quotidienne (admin, compta, recrutement futur)
+- ✅ Prend 100% du risque opérationnel (réputation, responsabilité, charge mentale)
+
+→ **Équité : 15-20% pour l'investisseur est juste**
+
+### Benchmark Marché Startup Tech
+
+| Type d'Apport | % Actions Typique | Exemple |
+|---------------|-------------------|---------|
+| **Capital seul** | 10-20% | Business angel early-stage |
+| **Capital + Réseau actif** | 20-25% | Investisseur avec apport d'affaires |
+| **Co-fondateur opérationnel** | 30-50% | Travaille dans l'entreprise |
+| **Fondateur principal** | 50-80% | Fait tout le travail |
+
+### Pourquoi 30% Serait Déséquilibré
+
+**Exemple concret** :
+- Investisseur : apporte 70k€ → reçoit 30% → valorise son apport à 233k€
+- Fondateur : apporte expertise + 2000h travail An 1 (à 100€/h = 200k€) + risque → reçoit 70%
+
+→ Investisseur valorisé 233k€ pour 70k€ cash
+→ Fondateur valorisé 533k€ pour 200k€ travail + risque + expertise unique
+
+**Déséquilibre** : Le fondateur crée la valeur mais est sous-valorisé.
+
+### Avec 15-18%, C'est Équilibré
+
+- Investisseur : 70k€ → 18% → valorisation 389k€
+- Fondateur : expertise + travail → 82% → valorisation 1,76M€
+
+**Équilibre** : Le fondateur qui fait tout garde la majorité de la valeur créée.
+
+### Message Clé à l'Investisseur
+
+*"Je ne cherche pas seulement du capital, je cherche un partenaire qui comprend que l'essentiel de la valeur viendra de l'exécution opérationnelle. 15-18% vous donne une exposition significative au succès tout en me gardant ultra-motivé avec 82-85% des parts."*
+
+---
+
 ## Option 1 : Actions Minoritaires (Capital)
 
 ### ⚠️ Principe d'Équité Fondateur
