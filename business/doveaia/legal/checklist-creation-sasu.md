@@ -12,8 +12,8 @@
 
 - [ ] **Dénomination sociale** : Doveaia (vérifier disponibilité INPI)
 - [ ] **Forme juridique** : SASU (évolutive en SAS)
-- [ ] **Capital social** : Variable 1 000€ - 10 000€ (recommandé)
-- [ ] **Siège social** : [Adresse complète à définir]
+- [ ] **Capital social** : Variable 1 000€
+- [ ] **Siège social** : [Adresse complète à définir] => https://www.lapasserelle-coworking.com/
 - [ ] **Objet social** : Conseil et développement agents IA (voir `objet-social.md`)
 - [ ] **Exercice social** : 1er janvier - 31 décembre
 - [ ] **Président** : [Nom, Prénom, Adresse]
@@ -45,26 +45,6 @@
 
 ### Étape 3 : Domiciliation du Siège Social
 
-**3 Options** :
-
-#### Option A : Domiciliation chez le dirigeant (Gratuit)
-
-✅ **Avantages** :
-- Gratuit
-- Rapide
-- Accepté pour démarrage
-
-❌ **Inconvénients** :
-- Adresse personnelle visible publiquement (KBIS, Google)
-- Si location : Autorisation propriétaire/syndic nécessaire
-- Moins pro pour clients B2B
-
-**Documents nécessaires** :
-- [ ] Justificatif domicile < 3 mois (EDF, eau, internet)
-- [ ] Si location : Autorisation propriétaire (courrier signé) OU clause bail autorisant
-- [ ] Si copropriété : Vérifier règlement copropriété n'interdit pas activité commerciale
-
----
 
 #### Option B : Société de domiciliation (20-50€/mois)
 
@@ -208,7 +188,7 @@
 - Durée : 99 ans
 - Président : [Nom Prénom]
 - Immatriculation : RCS [Ville]
-
+===> https://www.annonces-legales.fr/lp/lecoindesentrepreneurs/constitution-societe-commerciale/constitution-sasu 
 **Prestataires en ligne** :
 - https://www.actulegales.fr/ : 100-150€
 - https://www.legalplace.fr/ : 100-150€
@@ -719,7 +699,7 @@
 **Prochaine mise à jour** : Janvier 2026 (changements réglementaires)
 
 ---
-
+FRAIS LEGAUX : https://www.legalplace.fr/guides/frais-creation-entreprise/
 **✅ TOUT EST PRÊT ! Vous pouvez maintenant créer Doveaia SASU.**
 
 **🚀 Par où commencer ?**

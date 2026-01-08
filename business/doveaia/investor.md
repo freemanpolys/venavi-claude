@@ -25,7 +25,7 @@
 | **Rémunération fondateur** | 48k€ (4000€ net/mois × 6) | 96k€ |
 | Outils entreprise (compta, Office, Claude, etc.) | 3k€ | 6k€ |
 | Charges fixes (statut, RC Pro, marketing, déplacements) | 10k€ | 19k€ |
-| Coûts directs projets (Azure, sous-traitance) | 7k€ | 13k€ |
+| Coûts directs projets (Azure) | 7k€ | 13k€ |
 | **TOTAL BESOIN** | **68k€** | **134k€** |
 
 **Arrondis conservateurs** :

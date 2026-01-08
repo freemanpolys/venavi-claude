@@ -517,3 +517,11 @@ Le pack Shine 149€ couvre :
 7. 🎉 Recevoir KBIS + Compte pro actif
 
 **Bonne création ! 🚀**
+
+- Domiciliation : 42 euros TTC
+- Dépôt de capital chez Shine :  82,8 euros TTC
+- Capital de la SASU : 1 000 euros TTC
+- Annonce légale : 147 euros 
+- Dépôt guichet unique (INPI) : 40 euros
+- Déclaration de bénéficiaire effectif : 20,34 euros
+- Assurance Responsabilité Civile Pro : 12,5 euros
