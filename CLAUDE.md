@@ -138,3 +138,7 @@ When starting a new task in this repo:
 4. **Keep it lightweight**
    - Avoid heavy processes, complex templates, or rigid structures unless the user explicitly asks.
    - The goal is to **support thinking and planning**, not to enforce a strict system.
+
+## TRASH files
+I you need to put files in TRASH, the trash folder is at $HOME/TRASH.
+Just keep trash TRASH-FILE.md here to index trashed files 
