@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formations Kubernetes certifiantes CKA et CKAD. Formation Kubernetes Fondamentaux. Préparation aux certifications CNCF avec formateurs certifiés.">
+    <meta name="keywords" content="formation kubernetes, CKA, CKAD, certification kubernetes, CNCF, formation devops, France, cloud native">
+    <meta name="author" content="AKOUENDY - James Kokou GAGLO">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Formations Kubernetes | CKA, CKAD, Fondamentaux | AKOUENDY">
+    <meta property="og:description" content="Formations Kubernetes certifiantes avec formateurs CKA/CKAD. Fondamentaux, préparation CKAD et CKA.">
+    <meta property="og:url" content="https://www.doveaia.com/kubernetes/training">
+
+    <title>Formations Kubernetes France | CKA, CKAD, Fondamentaux | AKOUENDY</title>
+
+    <link rel="canonical" href="https://www.doveaia.com/kubernetes/training">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Training page specific styles */
+        .training-hero {
+            background: linear-gradient(135deg, var(--color-dark) 0%, #2a2a4e 100%);
+            padding: 120px 0 80px;
+            color: white;
+            text-align: center;
+        }
+
+        .training-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .training-hero p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        .training-badges {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .training-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+        }
+
+        .training-badge svg {
+            width: 20px;
+            height: 20px;
+            stroke: var(--color-secondary);
+        }
+
+        .training-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .training-card {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .training-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .training-card-header {
+            padding: 2rem;
+            background: linear-gradient(135deg, var(--color-primary) 0%, #4a8af4 100%);
+            color: white;
+            position: relative;
+        }
+
+        .training-card-header.ckad {
+            background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);
+        }
+
+        .training-card-header.cka {
+            background: linear-gradient(135deg, #059669 0%, #34d399 100%);
+        }
+
+        .training-card-header h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .training-card-header .subtitle {
+            opacity: 0.9;
+            font-size: 1rem;
+        }
+
+        .training-card-header .duration {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .training-card-body {
+            padding: 2rem;
+        }
+
+        .training-card-body h4 {
+            font-size: 1rem;
+            color: var(--color-dark);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .training-card-body h4 svg {
+            width: 18px;
+            height: 18px;
+            stroke: var(--color-primary);
+        }
+
+        .training-card-body ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 1.5rem;
+        }
+
+        .training-card-body li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--color-text);
+            font-size: 0.95rem;
+        }
+
+        .training-card-body li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--color-secondary);
+            font-weight: bold;
+        }
+
+        .training-price {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid #eee;
+            margin-top: 1rem;
+        }
+
+        .training-price .price {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--color-dark);
+        }
+
+        .training-price .price span {
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--color-text);
+        }
+
+        .training-options {
+            margin-top: 1rem;
+            padding: 1rem;
+            background: #f8fafc;
+            border-radius: 8px;
+        }
+
+        .training-options p {
+            font-size: 0.9rem;
+            color: var(--color-text);
+            margin: 0.5rem 0;
+        }
+
+        .training-options strong {
+            color: var(--color-dark);
+        }
+
+        /* Certification info section */
+        .certification-info {
+            background: #f8fafc;
+            padding: 80px 0;
+        }
+
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .cert-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .cert-card .icon {
+            width: 60px;
+            height: 60px;
+            background: var(--color-primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .cert-card h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--color-dark);
+        }
+
+        .cert-card p {
+            color: var(--color-text);
+            font-size: 0.95rem;
+        }
+
+        /* Comparison table */
+        .training-comparison {
+            padding: 80px 0;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 2rem;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1rem 1.5rem;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        .comparison-table th {
+            background: var(--color-dark);
+            color: white;
+            font-weight: 600;
+        }
+
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .comparison-table tr:hover td {
+            background: #f8fafc;
+        }
+
+        /* Why us section */
+        .why-us {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--color-dark) 0%, #2a2a4e 100%);
+            color: white;
+        }
+
+        .why-us .section-title {
+            color: white;
+        }
+
+        .why-us-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .why-us-item {
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .why-us-item .icon {
+            width: 70px;
+            height: 70px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+        }
+
+        .why-us-item .icon svg {
+            width: 32px;
+            height: 32px;
+            stroke: var(--color-secondary);
+        }
+
+        .why-us-item h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .why-us-item p {
+            opacity: 0.8;
+            font-size: 0.95rem;
+        }
+
+        /* CTA Section */
+        .training-cta {
+            padding: 80px 0;
+            text-align: center;
+            background: #f8fafc;
+        }
+
+        .training-cta h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--color-dark);
+        }
+
+        .training-cta p {
+            font-size: 1.1rem;
+            color: var(--color-text);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 768px) {
+            .training-hero h1 {
+                font-size: 2rem;
+            }
+
+            .training-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .comparison-table {
+                font-size: 0.9rem;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 0.75rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">AKOUENDY</span>
+                <span class="logo-subtitle">Kubernetes Expert</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#services" data-i18n="nav.services">Services</a></li>
+                <li><a href="index.html#tarifs" data-i18n="nav.pricing">Tarifs</a></li>
+                <li><a href="training.html" class="active" data-i18n="nav.training">Formations</a></li>
+                <li><a href="index.html#technologies" data-i18n="nav.technologies">Technologies</a></li>
+                <li><a href="index.html#contact" class="btn btn-primary" data-i18n="nav.contact">Contact</a></li>
+                <li>
+                    <button id="lang-switcher" class="lang-switcher" onclick="i18n.toggleLanguage()" title="Switch language">EN</button>
+                </li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="training-hero">
+        <div class="container">
+            <h1 data-i18n="training.hero.title">Formations Kubernetes</h1>
+            <p data-i18n="training.hero.subtitle">Des formations pratiques dispensées par des experts certifiés CKA/CKAD pour maîtriser Kubernetes de A à Z</p>
+
+            <div class="training-badges">
+                <div class="training-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                        <polyline points="22 4 12 14.01 9 11.01"/>
+                    </svg>
+                    <span data-i18n="training.badges.certified">Formateurs certifiés CKA/CKAD</span>
+                </div>
+                <div class="training-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                        <line x1="8" y1="21" x2="16" y2="21"/>
+                        <line x1="12" y1="17" x2="12" y2="21"/>
+                    </svg>
+                    <span data-i18n="training.badges.practice">70% de pratique</span>
+                </div>
+                <div class="training-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                    <span data-i18n="training.badges.small_groups">Petits groupes (4-10)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Training Cards -->
+    <section class="services" id="formations">
+        <div class="container">
+            <h2 class="section-title" data-i18n="training.catalog.title">Notre catalogue de formations</h2>
+            <p class="section-subtitle" data-i18n="training.catalog.subtitle">Des parcours adaptés à tous les niveaux, du débutant à l'expert</p>
+
+            <div class="training-grid">
+                <!-- Kubernetes Fundamentals -->
+                <article class="training-card">
+                    <div class="training-card-header">
+                        <span class="duration" data-i18n="training.courses.fundamentals.duration">3 jours</span>
+                        <h3 data-i18n="training.courses.fundamentals.title">Kubernetes Fondamentaux</h3>
+                        <p class="subtitle" data-i18n="training.courses.fundamentals.subtitle">Maîtrisez les bases de l'orchestration de conteneurs</p>
+                    </div>
+                    <div class="training-card-body">
+                        <h4>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                <polyline points="14 2 14 8 20 8"/>
+                                <line x1="16" y1="13" x2="8" y2="13"/>
+                                <line x1="16" y1="17" x2="8" y2="17"/>
+                            </svg>
+                            <span data-i18n="training.labels.program">Programme</span>
+                        </h4>
+                        <ul>
+                            <li data-i18n="training.courses.fundamentals.topics.1">Architecture Kubernetes et composants</li>
+                            <li data-i18n="training.courses.fundamentals.topics.2">Pods, Deployments, Services</li>
+                            <li data-i18n="training.courses.fundamentals.topics.3">ConfigMaps, Secrets, Volumes</li>
+                            <li data-i18n="training.courses.fundamentals.topics.4">Ingress et réseau</li>
+                            <li data-i18n="training.courses.fundamentals.topics.5">Monitoring avec Prometheus/Grafana</li>
+                        </ul>
+
+                        <h4>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12 6 12 12 16 14"/>
+                            </svg>
+                            <span data-i18n="training.labels.included">Inclus</span>
+                        </h4>
+                        <ul>
+                            <li data-i18n="training.included.materials">Support de cours PDF</li>
+                            <li data-i18n="training.included.lab_30">Accès lab 30 jours</li>
+                            <li data-i18n="training.included.certificate">Attestation de formation</li>
+                            <li data-i18n="training.included.support_2h">2h de support post-formation</li>
+                        </ul>
+
+                        <div class="training-price">
+                            <div class="price">1 800 € <span data-i18n="pricing.excl_vat">HT</span></div>
+                            <a href="index.html#contact" class="btn btn-primary" data-i18n="pricing.request_quote">Demander un devis</a>
+                        </div>
+
+                        <div class="training-options">
+                            <p><strong data-i18n="training.labels.intra">Intra-entreprise</strong> : 7 500 € HT <span data-i18n="training.labels.up_to_8">(jusqu'à 8 pers.)</span></p>
+                            <p><strong data-i18n="training.labels.individual">Individuel</strong> : 2 400 € HT</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- CKAD Preparation -->
+                <article class="training-card">
+                    <div class="training-card-header ckad">
+                        <span class="duration" data-i18n="training.courses.ckad.duration">4 jours</span>
+                        <h3 data-i18n="training.courses.ckad.title">Préparation CKAD</h3>
+                        <p class="subtitle" data-i18n="training.courses.ckad.subtitle">Certified Kubernetes Application Developer</p>
+                    </div>
+                    <div class="training-card-body">
+                        <h4>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                <polyline points="14 2 14 8 20 8"/>
+                                <line x1="16" y1="13" x2="8" y2="13"/>
+                                <line x1="16" y1="17" x2="8" y2="17"/>
+                            </svg>
+                            <span data-i18n="training.labels.program">Programme</span>
+                        </h4>
+                        <ul>
+                            <li data-i18n="training.courses.ckad.topics.1">Application Design and Build (20%)</li>
+                            <li data-i18n="training.courses.ckad.topics.2">Application Deployment (20%)</li>
+                            <li data-i18n="training.courses.ckad.topics.3">Observability and Maintenance (15%)</li>
+                            <li data-i18n="training.courses.ckad.topics.4">Environment and Security (25%)</li>
+                            <li data-i18n="training.courses.ckad.topics.5">Services and Networking (20%)</li>
+                        </ul>
+
+                        <h4>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12 6 12 12 16 14"/>
+                            </svg>
+                            <span data-i18n="training.labels.included">Inclus</span>
+                        </h4>
+                        <ul>
+                            <li data-i18n="training.included.materials_200">Support de cours 200+ pages</li>
+                            <li data-i18n="training.included.lab_60">Accès lab 60 jours</li>
+                            <li data-i18n="training.included.exercises_150">150+ exercices type examen</li>
+                            <li data-i18n="training.included.mock_exams">2 examens blancs</li>
+                        </ul>
+
+                        <div class="training-price">
+                            <div class="price">2 500 € <span data-i18n="pricing.excl_vat">HT</span></div>
+                            <a href="index.html#contact" class="btn btn-primary" data-i18n="pricing.request_quote">Demander un devis</a>
+                        </div>
+
+                        <div class="training-options">
+                            <p><strong data-i18n="training.labels.with_voucher">Avec voucher examen</strong> : 2 900 € HT</p>
+                            <p><strong data-i18n="training.labels.intra">Intra-entreprise</strong> : 12 000 € HT</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- CKA Preparation -->
+                <article class="training-card">
+                    <div class="training-card-header cka">
+                        <span class="duration" data-i18n="training.courses.cka.duration">5 jours</span>
+                        <h3 data-i18n="training.courses.cka.title">Préparation CKA</h3>
+                        <p class="subtitle" data-i18n="training.courses.cka.subtitle">Certified Kubernetes Administrator</p>
+                    </div>
+                    <div class="training-card-body">
+                        <h4>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                <polyline points="14 2 14 8 20 8"/>
+                                <line x1="16" y1="13" x2="8" y2="13"/>
+                                <line x1="16" y1="17" x2="8" y2="17"/>
+                            </svg>
+                            <span data-i18n="training.labels.program">Programme</span>
+                        </h4>
+                        <ul>
+                            <li data-i18n="training.courses.cka.topics.1">Cluster Architecture & Installation (25%)</li>
+                            <li data-i18n="training.courses.cka.topics.2">Workloads and Scheduling (15%)</li>
+                            <li data-i18n="training.courses.cka.topics.3">Services and Networking (20%)</li>
+                            <li data-i18n="training.courses.cka.topics.4">Storage (10%)</li>
+                            <li data-i18n="training.courses.cka.topics.5">Troubleshooting (30%)</li>
+                        </ul>
+
+                        <h4>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12 6 12 12 16 14"/>
+                            </svg>
+                            <span data-i18n="training.labels.included">Inclus</span>
+                        </h4>
+                        <ul>
+                            <li data-i18n="training.included.materials_300">Support de cours 300+ pages</li>
+                            <li data-i18n="training.included.lab_90">Accès lab multi-clusters 90 jours</li>
+                            <li data-i18n="training.included.exercises_200">200+ exercices type examen</li>
+                            <li data-i18n="training.included.mock_exams">2 examens blancs</li>
+                        </ul>
+
+                        <div class="training-price">
+                            <div class="price">3 200 € <span data-i18n="pricing.excl_vat">HT</span></div>
+                            <a href="index.html#contact" class="btn btn-primary" data-i18n="pricing.request_quote">Demander un devis</a>
+                        </div>
+
+                        <div class="training-options">
+                            <p><strong data-i18n="training.labels.with_voucher">Avec voucher examen</strong> : 3 600 € HT</p>
+                            <p><strong data-i18n="training.labels.bundle">Bundle CKA + CKAD</strong> : 5 200 € HT</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certification Info -->
+    <section class="certification-info">
+        <div class="container">
+            <h2 class="section-title" data-i18n="training.certifications.title">Les certifications Kubernetes CNCF</h2>
+            <p class="section-subtitle" data-i18n="training.certifications.subtitle">Des certifications reconnues mondialement par l'industrie</p>
+
+            <div class="cert-grid">
+                <div class="cert-card">
+                    <div class="icon">2h</div>
+                    <h4 data-i18n="training.certifications.duration.title">Durée de l'examen</h4>
+                    <p data-i18n="training.certifications.duration.desc">Examen pratique de 2 heures sur environnement réel</p>
+                </div>
+                <div class="cert-card">
+                    <div class="icon">66%</div>
+                    <h4 data-i18n="training.certifications.score.title">Score de réussite</h4>
+                    <p data-i18n="training.certifications.score.desc">Minimum 66% pour obtenir la certification</p>
+                </div>
+                <div class="cert-card">
+                    <div class="icon">3</div>
+                    <h4 data-i18n="training.certifications.validity.title">Validité (années)</h4>
+                    <p data-i18n="training.certifications.validity.desc">Certification valable 3 ans après obtention</p>
+                </div>
+                <div class="cert-card">
+                    <div class="icon">$445</div>
+                    <h4 data-i18n="training.certifications.cost.title">Coût de l'examen</h4>
+                    <p data-i18n="training.certifications.cost.desc">Inclut 1 passage + 1 repasse gratuite</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="training-comparison">
+        <div class="container">
+            <h2 class="section-title" data-i18n="training.comparison.title">Comparatif des formations</h2>
+
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th data-i18n="training.comparison.headers.criteria">Critère</th>
+                        <th data-i18n="training.courses.fundamentals.title">Fondamentaux</th>
+                        <th>CKAD</th>
+                        <th>CKA</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-i18n="training.comparison.rows.duration">Durée</td>
+                        <td>3 <span data-i18n="pricing.days">jours</span></td>
+                        <td>4 <span data-i18n="pricing.days">jours</span></td>
+                        <td>5 <span data-i18n="pricing.days">jours</span></td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="training.comparison.rows.level">Niveau</td>
+                        <td data-i18n="training.comparison.levels.beginner">Débutant → Intermédiaire</td>
+                        <td data-i18n="training.comparison.levels.intermediate">Intermédiaire</td>
+                        <td data-i18n="training.comparison.levels.advanced">Intermédiaire → Avancé</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="training.comparison.rows.focus">Focus</td>
+                        <td data-i18n="training.comparison.focus.general">Utilisation générale</td>
+                        <td data-i18n="training.comparison.focus.dev">Développement applicatif</td>
+                        <td data-i18n="training.comparison.focus.admin">Administration cluster</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="training.comparison.rows.certification">Certification</td>
+                        <td data-i18n="training.comparison.cert.attestation">Attestation AKOUENDY</td>
+                        <td data-i18n="training.comparison.cert.cncf">Certification CNCF</td>
+                        <td data-i18n="training.comparison.cert.cncf">Certification CNCF</td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="training.comparison.rows.lab">Accès Lab</td>
+                        <td>30 <span data-i18n="pricing.days">jours</span></td>
+                        <td>60 <span data-i18n="pricing.days">jours</span></td>
+                        <td>90 <span data-i18n="pricing.days">jours</span></td>
+                    </tr>
+                    <tr>
+                        <td data-i18n="training.comparison.rows.price">Tarif</td>
+                        <td>1 800 €</td>
+                        <td>2 500 €</td>
+                        <td>3 200 €</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Why Us -->
+    <section class="why-us">
+        <div class="container">
+            <h2 class="section-title" data-i18n="training.why_us.title">Pourquoi choisir nos formations ?</h2>
+
+            <div class="why-us-grid">
+                <div class="why-us-item">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                    </div>
+                    <h4 data-i18n="training.why_us.certified.title">Formateurs certifiés</h4>
+                    <p data-i18n="training.why_us.certified.desc">Tous nos formateurs sont certifiés CKA et CKAD avec une expérience terrain</p>
+                </div>
+                <div class="why-us-item">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                            <line x1="8" y1="21" x2="16" y2="21"/>
+                            <line x1="12" y1="17" x2="12" y2="21"/>
+                        </svg>
+                    </div>
+                    <h4 data-i18n="training.why_us.practice.title">70% de pratique</h4>
+                    <p data-i18n="training.why_us.practice.desc">Exercices sur environnement réel avec la même stack que nos offres d'infogérance</p>
+                </div>
+                <div class="why-us-item">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <h4 data-i18n="training.why_us.guarantee.title">Garantie de réussite</h4>
+                    <p data-i18n="training.why_us.guarantee.desc">Accès gratuit à la prochaine session si vous ne réussissez pas l'examen</p>
+                </div>
+                <div class="why-us-item">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <h4 data-i18n="training.why_us.support.title">Suivi personnalisé</h4>
+                    <p data-i18n="training.why_us.support.desc">Accompagnement post-formation avec heures de support incluses</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="training-cta">
+        <div class="container">
+            <h2 data-i18n="training.cta.title">Prêt à vous former sur Kubernetes ?</h2>
+            <p data-i18n="training.cta.subtitle">Contactez-nous pour discuter de vos besoins et planifier votre formation</p>
+            <div class="cta-buttons">
+                <a href="index.html#contact" class="btn btn-primary btn-lg" data-i18n="training.cta.contact">Demander un devis</a>
+                <a href="index.html#simulateur" class="btn btn-outline btn-lg" data-i18n="training.cta.simulator">Simuler mon projet</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-text">AKOUENDY</span>
+                    <p data-i18n="footer.tagline">Expert Kubernetes & Cloud Native en France</p>
+                    <p class="footer-legal">SIRET : [À compléter]</p>
+                </div>
+                <div class="footer-links">
+                    <h4 data-i18n="footer.services">Services</h4>
+                    <ul>
+                        <li><a href="index.html#services">BUILD</a></li>
+                        <li><a href="index.html#services">RUN</a></li>
+                        <li><a href="index.html#services">DEPLOY</a></li>
+                        <li><a href="training.html" data-i18n="nav.training">Formations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4 data-i18n="footer.resources">Ressources</h4>
+                    <ul>
+                        <li><a href="index.html#tarifs" data-i18n="nav.pricing">Tarifs</a></li>
+                        <li><a href="index.html#technologies" data-i18n="nav.technologies">Technologies</a></li>
+                        <li><a href="index.html#contact" data-i18n="nav.contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4 data-i18n="footer.contact">Contact</h4>
+                    <p>jkgaglo@akouendy.com</p>
+                    <p>+33 7 49 62 49 89</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 AKOUENDY. <span data-i18n="footer.copyright">Tous droits réservés.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-# Dev Team Opus GLM 4.7 - Configuration de ZDI avec Claude Code
+e # Dev Team Opus GLM 4.7 - Configuration de ZDI avec Claude Code
 
 **Source**: Fichier local
 **Chemin du fichier**: `/Users/jgaglo/Documents/screenshots-and-records/dev-team-opus-glm4_7.mov`
