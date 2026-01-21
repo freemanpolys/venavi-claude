@@ -2,14 +2,14 @@
 tags: type/offre-commerciale
 aliases:
 lead: Offre complète d'infogérance Kubernetes - Build, Run & Deploy
-visual: "![[logo-akouendy.png]]"
+visual: "![[logo-DOVEAIA.png]]"
 template-type: Offre Commerciale
 template-version: "1.0"
 created: 2025-01-19
 updated: 2025-01-19
 ---
 
-![[logo-akouendy.png|center|200]]
+![[logo-DOVEAIA.png|center|200]]
 
 ---
 
@@ -31,7 +31,7 @@ updated: 2025-01-19
 
 Kubernetes est devenu le standard de facto pour l'orchestration de conteneurs en production. Sa mise en œuvre et son exploitation requièrent une expertise pointue pour garantir performance, sécurité et haute disponibilité.
 
-**AKOUENDY** vous propose une offre complète d'infogérance Kubernetes couvrant l'ensemble du cycle de vie de votre infrastructure :
+**DOVEAIA** vous propose une offre complète d'infogérance Kubernetes couvrant l'ensemble du cycle de vie de votre infrastructure :
 
 - **BUILD** : Construction et déploiement initial de votre cluster
 - **RUN** : Exploitation, maintenance et évolution continue
@@ -144,7 +144,7 @@ Installation et configuration d'une plateforme CI/CD intégrée au cluster :
 | Besoin d'ajouter un namespace | P4 |
 | Question sur une configuration | P4 |
 
-> **Clause de reclassification** : AKOUENDY se réserve le droit de reclassifier un incident si les critères objectifs ne correspondent pas au niveau déclaré. En cas de reclassification, le client en est informé avec justification.
+> **Clause de reclassification** : DOVEAIA se réserve le droit de reclassifier un incident si les critères objectifs ne correspondent pas au niveau déclaré. En cas de reclassification, le client en est informé avec justification.
 
 #### Évolutions incluses
 
@@ -392,9 +392,9 @@ Solution complète pour les grandes organisations avec toute la stack DevSecOps.
 
 | | |
 |---|---|
-| **Société** | AKOUENDY |
+| **Société** | DOVEAIA |
 | **Responsable** | James Kokou GAGLO |
-| **Email** | jkgaglo@akouendy.com |
+| **Email** | jkgaglo@DOVEAIA.com |
 | **Téléphone** | +33 7 49 62 49 89 |
 | **Site web** | www.doveaia.com |
 | **SIRET** | [À compléter] |
@@ -416,10 +416,10 @@ Solution complète pour les grandes organisations avec toute la stack DevSecOps.
 
 Contactez-nous pour un échange sans engagement.
 
-📧 jkgaglo@akouendy.com | 📞 +33 7 49 62 49 89
+📧 jkgaglo@DOVEAIA.com | 📞 +33 7 49 62 49 89
 
 </center>
 
 ---
 
-*Document généré le 19 janvier 2025 — AKOUENDY © Tous droits réservés*
+*Document généré le 19 janvier 2025 — DOVEAIA © Tous droits réservés*

@@ -5,4 +5,5 @@ Dan Koe: https://thedankoe.com/blog/
 Peter Yang: https://creatoreconomy.so/
 Sahil Bloom: https://www.sahilbloom.com/newsletter
 Pragmatic Engineerhttps://newsletter.pragmaticengineer.com
-https://blog.bytebytego.com
+Bytebytego https://blog.bytebytego.com
+The Neuron: https://www.theneurondaily.com
