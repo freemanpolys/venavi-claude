@@ -1,2 +1,3 @@
-Le POOL : https://lepoool.tech/actualites/
-MAG IT : https://www.lemagit.fr/actualites
+https://lepoool.tech/actualites/
+https://www.lemagit.fr/actualites
+https://www.developpez.com

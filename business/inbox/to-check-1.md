@@ -1,0 +1,1 @@
+https://www.aihero.dev/events/turn-ai-agents-into-autonomous-software-engineers-with-ralph

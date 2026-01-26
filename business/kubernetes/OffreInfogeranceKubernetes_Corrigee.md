@@ -61,20 +61,20 @@ Kubernetes est devenu le standard de facto pour l'orchestration de conteneurs en
 
 | Offre          | Nœuds       | Control-Plane             | Délai    | Tarif HT |
 | -------------- | ----------- | ------------------------- | -------- | -------- |
-| **Starter**    | 3 workers   | 1 master                  | 5 jours  | 4 500 €  |
-| **Standard**   | 5 workers   | 3 masters (HA)            | 8 jours  | 7 500 €  |
-| **Enterprise** | 10+ workers | 3 masters (HA) + multi-AZ | 12 jours | 12 000 € |
+| **Starter**    | 3 workers   | 1 master                  | 5 jours  | 6 000 €  |
+| **Standard**   | 5 workers   | 3 masters (HA)            | 8 jours  | 10 000 € |
+| **Enterprise** | 10+ workers | 3 masters (HA) + multi-AZ | 12 jours | 16 000 € |
 
 **Options supplémentaires :**
 
 | Option                                       | Tarif HT                |
 | -------------------------------------------- | ----------------------- |
-| Cluster multi-cloud / hybride                | +3 000 €                |
-| Intégration GitOps (ArgoCD/FluxCD)           | +1 500 €                |
-| Service Mesh (Istio/Linkerd)                 | +2 000 €                |
-| Toolchain CI/CD complète (GitLab ou Jenkins) | +4 500 €                |
+| Cluster multi-cloud / hybride                | +4 000 €                |
+| Intégration GitOps (ArgoCD/FluxCD)           | +3 000 €                |
+| Service Mesh (Istio/Linkerd)                 | +3 000 €                |
+| Toolchain CI/CD complète (GitLab ou Jenkins) | +6 000 €                |
 | Cluster de staging/développement additionnel | +50% du tarif principal |
-| Formation supplémentaire (par journée)       | 900 €                   |
+| Formation supplémentaire (par journée)       | 1 200 €                   |
 
 **Détail option Toolchain CI/CD complète :**
 
@@ -155,12 +155,12 @@ Installation et configuration d'une plateforme CI/CD intégrée au cluster :
 
 ### 3.2 Tarification RUN (mensuel)
 
-| Offre | Nœuds max | MCO | MCS | Support | Rapport | Tarif HT/mois |
-|-------|-----------|-----|-----|---------|---------|---------------|
-| **Essentiel** | 5 | ✓ | ✓ | H+4 (JO) | Trimestriel | 600 € |
-| **Standard** | 10 | ✓ | ✓ | H+2 (JO) | Mensuel | 900 € |
-| **Premium** | 20 | ✓ | ✓ | 24/7 | Mensuel | 1 800 € |
-| **Enterprise** | Illimité | ✓ | ✓ | 24/7 + dédié | Hebdo | Sur devis |
+| Offre          | Nœuds max | MCO | MCS | Support      | Rapport     | Tarif HT/mois |
+| -------------- | --------- | --- | --- | ------------ | ----------- | ------------- |
+| **Essentiel**  | 5         | ✓   | ✓   | H+4 (JO)     | Trimestriel | 600 €         |
+| **Standard**   | 10        | ✓   | ✓   | H+2 (JO)     | Mensuel     | 1 200 €       |
+| **Premium**    | 20        | ✓   | ✓   | 24/7         | Mensuel     | 1 800 €       |
+| **Enterprise** | Illimité  | ✓   | ✓   | 24/7 + dédié | Hebdo       | Sur devis     |
 
 **Plages horaires de support :**
 
@@ -183,26 +183,26 @@ Installation et configuration d'une plateforme CI/CD intégrée au cluster :
 
 **Options astreinte (pour offres Essentiel et Standard) :**
 
-| Option | Plage couverte | Tarif HT/mois |
-|--------|----------------|---------------|
-| Astreinte soir | Lun-Ven 18h-22h | +200 € |
-| Astreinte week-end | Sam-Dim 9h-18h | +300 € |
-| Astreinte jours fériés | Jours fériés 9h-18h | +150 € |
-| Astreinte 24/7 complète | Tous les jours, toutes heures | +600 € |
+| Option                      | Plage couverte                | Nouveau tarif HT/mois |
+| --------------------------- | ----------------------------- | --------------------- |
+| **Astreinte soir**          | Lun–Ven 18h–22h               | **400 €**             |
+| **Astreinte week-end**      | Sam–Dim 9h–18h                | **600 €**             |
+| **Astreinte jours fériés**  | 9h–18h                        | **300 €**             |
+| **Astreinte 24/7 complète** | Tous les jours, toutes heures | **1 500 €**           |
 
-> **Interventions hors plage contractuelle** : Les interventions demandées en dehors des plages horaires couvertes par le contrat sont facturées au tarif de **150 € HT/heure**, avec un minimum de 2 heures facturées.
+
+> **Interventions hors plage contractuelle** : Les interventions demandées en dehors des plages horaires couvertes par le contrat sont facturées au tarif de **250 € HT/heure**, avec un minimum de **2 heures facturées**.
+   En cas d’incident critique (niveau P1), une **majoration de 50 %** peut être appliquée selon le niveau d’urgence et la plage horaire (soirée, week-end ou jour férié).
 
 ---
-
 ## 4. DEPLOY — Déploiement et Accompagnement Applicatif
 
 ### 4.1 Services proposés
 
 #### Containerisation d'applications
 
-- Analyse de l'application existante
-- Rédaction des Dockerfiles optimisés
-- Configuration multi-stage build
+- Analyse complète de l'application existante
+- Rédaction de Dockerfiles optimisés multi-stage build
 - Scan de sécurité des images
 - Publication sur registry privé
 
@@ -211,7 +211,7 @@ Installation et configuration d'une plateforme CI/CD intégrée au cluster :
 - Rédaction des manifests Kubernetes (Deployment, Service, Ingress, ConfigMap, Secret)
 - Configuration des ressources (requests/limits, HPA, PDB)
 - Mise en place des health checks (liveness, readiness, startup probes)
-- Configuration du networking et de l'exposition
+- Configuration du networking et exposition
 - Intégration avec le stockage persistant
 
 #### CI/CD et GitOps
@@ -226,19 +226,17 @@ Installation et configuration d'une plateforme CI/CD intégrée au cluster :
 - Revue de code et bonnes pratiques
 - Optimisation des performances applicatives
 - Debugging et résolution d'incidents
-- Formation des équipes de développement
+- Formation et montée en compétences des équipes
 
 ### 4.2 Tarification DEPLOY
 
 #### Forfaits déploiement applicatif
 
-Forfaits clé en main pour le déploiement complet d'une application sur le cluster Kubernetes.
-
-| Type d'application | Complexité | Délai | Tarif HT |
-|--------------------|------------|-------|----------|
-| **Application simple** | 1-3 services, sans état | 2-3 jours | 1 800 € |
-| **Application standard** | 4-8 services, avec BDD | 5 jours | 3 500 € |
-| **Application complexe** | 10+ services, microservices | 10 jours | 7 000 € |
+| Type d'application       | Complexité                  | Délai       | Tarif HT |
+| ------------------------ | --------------------------- | ----------- | -------- |
+| **Application simple**   | 1-3 services, sans état     | 2-3 jours   | 2 800 €  |
+| **Application standard** | 4-8 services, avec BDD      | 5-7 jours   | 5 000 €  |
+| **Application complexe** | 10+ services, microservices | 10-14 jours | 10 500 € |
 
 **Inclus dans chaque forfait :**
 - Analyse de l'application et de ses dépendances
@@ -251,21 +249,19 @@ Forfaits clé en main pour le déploiement complet d'une application sur le clus
 
 **Non inclus (options ou régie) :**
 - Modification du code applicatif
-- Configuration CI/CD (voir option Toolchain)
+- Configuration CI/CD complète (voir option Toolchain)
 - Environnements multiples (staging, preprod) — forfait par environnement
-- Formation des équipes
+- Formation avancée des équipes
 
 #### Régie — Accompagnement sur mesure
 
-Mode d'intervention flexible pour les besoins ponctuels ou les missions ne rentrant pas dans un forfait standard.
-
-| Formule | Tarif HT |
-|---------|----------|
-| **Demi-journée** (4h) | 450 € |
-| **Journée** (8h) | 850 € |
-| **Forfait 5 jours** | 4 000 € |
-| **Forfait 10 jours** | 7 500 € |
-| **Forfait mensuel** (20 jours) | 14 000 € |
+| Formule                        | Tarif HT |
+| ------------------------------ | -------- |
+| **Demi-journée** (4h)          | 600 €    |
+| **Journée** (8h)               | 1 100 €  |
+| **Forfait 5 jours**            | 5 500 €  |
+| **Forfait 10 jours**           | 11 000 € |
+| **Forfait mensuel** (20 jours) | 20 000 € |
 
 **Cas d'usage de la régie :**
 - Accompagnement des équipes de développement (pair programming, revue de code)
@@ -283,20 +279,17 @@ Mode d'intervention flexible pour les besoins ponctuels ou les missions ne rentr
 
 #### Forfaits annuels DEPLOY
 
-Pour les clients avec des besoins réguliers de déploiement et d'accompagnement.
-
 | Forfait | Jours inclus | Tarif HT/an | Tarif jour équivalent |
 |---------|--------------|-------------|----------------------|
-| **DEPLOY 10** | 10 jours | 8 000 € | 800 € |
-| **DEPLOY 20** | 20 jours | 15 000 € | 750 € |
-| **DEPLOY 40** | 40 jours | 28 000 € | 700 € |
+| **DEPLOY 10** | 10 jours | 12 000 € | 1 200 € |
+| **DEPLOY 20** | 20 jours | 22 000 € | 1 100 € |
+| **DEPLOY 40** | 40 jours | 40 000 € | 1 000 € |
 
 **Conditions des forfaits annuels :**
-
 - Engagement : 12 mois à compter de la signature
 - Facturation : 50% à la commande, 50% à 6 mois
 - Utilisation : journées planifiées avec un préavis de 5 jours ouvrés
-- **Report des jours non consommés** : les jours non utilisés à la date anniversaire sont reportables à hauteur de **25% du forfait** (soit 2,5 jours pour DEPLOY 10, 5 jours pour DEPLOY 20, 10 jours pour DEPLOY 40), utilisables uniquement sur le **trimestre suivant** la date anniversaire. Au-delà de ce délai, ils expirent définitivement.
+- **Report des jours non consommés** : les jours non utilisés à la date anniversaire sont reportables à hauteur de **25% du forfait**, utilisables uniquement sur le **trimestre suivant** la date anniversaire. Au-delà de ce délai, ils expirent définitivement.
 
 ---
 
@@ -306,29 +299,29 @@ Pour les clients avec des besoins réguliers de déploiement et d'accompagnement
 
 Idéal pour une première mise en production Kubernetes.
 
-| Inclus | Détail |
-|--------|--------|
-| BUILD Starter | Cluster 3 workers, 1 master, Rancher |
-| RUN Essentiel (12 mois) | MCO + MCS + Support H+4 |
-| DEPLOY (1 application) | Containerisation + déploiement |
-| Formation | 1 journée équipe technique |
+| Inclus                  | Détail                               |
+| ----------------------- | ------------------------------------ |
+| BUILD Starter           | Cluster 3 workers, 1 master, Rancher |
+| RUN Essentiel (12 mois) | MCO + MCS + Support H+4              |
+| DEPLOY (1 application)  | Containerisation + déploiement       |
+| Formation               | 1 journée équipe technique           |
 
-**Tarif pack :** 16 500 € HT (au lieu de 18 900 €) — **Économie : 2 400 €**
+**Tarif pack :** 16 500 € HT (au lieu de 18 1 200 €) — **Économie : 2 400 €**
 
-> **Option disponible** : Toolchain CI/CD complète (GitLab/Jenkins, Harbor, Trivy, OWASP ZAP, SonarQube, Vault) — +4 500 € HT
+> **Option disponible** : Toolchain CI/CD complète (GitLab/Jenkins, Harbor, Trivy, OWASP ZAP, SonarQube, Vault) — +6 000 € HT
 
 ### 5.2 Pack Production
 
 Pour les environnements de production critiques avec chaîne CI/CD complète.
 
-| Inclus | Détail |
-|--------|--------|
-| BUILD Standard | Cluster HA 5 workers, 3 masters, Rancher |
-| Toolchain CI/CD | GitLab/Jenkins, Harbor, Trivy, OWASP ZAP, SonarQube, Vault |
-| GitOps | ArgoCD configuré |
-| RUN Standard (12 mois) | MCO + MCS + Support H+2 |
-| DEPLOY (3 applications) | Containerisation + déploiement |
-| Formation | 2 journées |
+| Inclus                  | Détail                                                     |
+| ----------------------- | ---------------------------------------------------------- |
+| BUILD Standard          | Cluster HA 5 workers, 3 masters, Rancher                   |
+| Toolchain CI/CD         | GitLab/Jenkins, Harbor, Trivy, OWASP ZAP, SonarQube, Vault |
+| GitOps                  | ArgoCD configuré                                           |
+| RUN Standard (12 mois)  | MCO + MCS + Support H+2                                    |
+| DEPLOY (3 applications) | Containerisation + déploiement                             |
+| Formation               | 2 journées                                                 |
 
 **Tarif pack :** 32 000 € HT (au lieu de 37 600 €) — **Économie : 5 600 €**
 
