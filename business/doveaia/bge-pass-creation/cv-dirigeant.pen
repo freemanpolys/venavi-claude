@@ -1,0 +1,789 @@
+{
+  "version": "2.8",
+  "children": [
+    {
+      "type": "frame",
+      "id": "I5iqv",
+      "x": 0,
+      "y": 0,
+      "name": "CV Dirigeant A4",
+      "width": 595,
+      "height": 842,
+      "fill": "$white",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "RASfG",
+          "name": "Header",
+          "width": "fill_container",
+          "height": 110,
+          "fill": "$deep-teal",
+          "layout": "none",
+          "children": [
+            {
+              "type": "frame",
+              "id": "2C99J",
+              "x": 36,
+              "y": 18,
+              "name": "Logo Icon",
+              "width": 48,
+              "height": 48,
+              "fill": "#2A6B7E",
+              "cornerRadius": 10,
+              "layout": "none",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "O8aXu",
+                  "x": 8,
+                  "y": 4,
+                  "name": "Logo D",
+                  "fill": "$white",
+                  "content": "D",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "frame",
+                  "id": "DykwF",
+                  "x": 28,
+                  "y": 10,
+                  "name": "Logo Lines",
+                  "layout": "vertical",
+                  "gap": 3,
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": 1,
+                      "id": "gMZ7V",
+                      "name": "l1",
+                      "fill": "$green",
+                      "width": 9,
+                      "height": 2
+                    },
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": 1,
+                      "id": "2Edwb",
+                      "name": "l2",
+                      "fill": "$green",
+                      "width": 7,
+                      "height": 2
+                    },
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": 1,
+                      "id": "DYSQc",
+                      "name": "l3",
+                      "fill": "$green",
+                      "width": 5,
+                      "height": 2
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "7a6Kl",
+              "x": 100,
+              "y": 15,
+              "name": "Name",
+              "fill": "$white",
+              "content": "GAGLO Kokou",
+              "fontFamily": "Inter",
+              "fontSize": 30,
+              "fontWeight": "300",
+              "letterSpacing": 2
+            },
+            {
+              "type": "text",
+              "id": "oJmrV",
+              "x": 100,
+              "y": 45,
+              "name": "Title",
+              "fill": "$white",
+              "content": "Fondateur & Dirigeant — Doveaia",
+              "fontFamily": "Inter",
+              "fontSize": 15,
+              "fontWeight": "500"
+            },
+            {
+              "type": "text",
+              "id": "2CApg",
+              "x": 100,
+              "y": 65,
+              "name": "Subtitle",
+              "fill": "#FFFFFFAA",
+              "content": "Docteur en Télécommunications  |  Expert Cloud & Kubernetes  |  Formateur CNCF",
+              "fontFamily": "Inter",
+              "fontSize": 11,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "id": "sQYtM",
+          "name": "Green Accent",
+          "fill": "$green",
+          "width": "fill_container",
+          "height": 4
+        },
+        {
+          "type": "frame",
+          "id": "ldYif",
+          "name": "Body",
+          "width": "fill_container",
+          "height": "fill_container",
+          "layout": "vertical",
+          "gap": 8,
+          "padding": [
+            14,
+            36,
+            16,
+            36
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "Pv6IG",
+              "name": "Accroche Label",
+              "fill": "$deep-teal",
+              "content": "A PROPOS",
+              "fontFamily": "Inter",
+              "fontSize": 10,
+              "fontWeight": "700",
+              "letterSpacing": 2
+            },
+            {
+              "type": "rectangle",
+              "cornerRadius": 1,
+              "id": "cAq4x",
+              "name": "Accroche Line",
+              "fill": "$green",
+              "width": 50,
+              "height": 2
+            },
+            {
+              "type": "rectangle",
+              "id": "ZgHnV",
+              "name": "Spacer Parcours",
+              "opacity": 0,
+              "width": 1,
+              "height": 10
+            },
+            {
+              "type": "text",
+              "id": "X9HEb",
+              "name": "Accroche Text",
+              "fill": "$gray",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Dirigeant technique avec 14 ans d'expérience en transformation digitale pour des grands comptes (Caisse des Dépôts, BNP Paribas, Orange). Expert Cloud & Kubernetes, formateur certifié CNCF et Docteur en Télécommunications. Je fonde Doveaia pour aider les entreprises à passer de l'expérimentation IA à des systèmes réellement utiles en production — en apportant l'ingénierie Cloud/DevOps qui manque (infrastructure, CI/CD, intégration, monitoring, maîtrise des coûts).",
+              "lineHeight": 1.5,
+              "fontFamily": "Inter",
+              "fontSize": 9,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "gYz3z",
+              "name": "Parcours Label",
+              "fill": "$deep-teal",
+              "content": "PARCOURS PROFESSIONNEL",
+              "fontFamily": "Inter",
+              "fontSize": 10,
+              "fontWeight": "700",
+              "letterSpacing": 2
+            },
+            {
+              "type": "rectangle",
+              "cornerRadius": 1,
+              "id": "TyEle",
+              "name": "Parcours Line",
+              "fill": "$green",
+              "width": 50,
+              "height": 2
+            },
+            {
+              "type": "frame",
+              "id": "hT2yE",
+              "name": "Exp ICDC",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 3,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "25a9a",
+                  "name": "Exp1 Header",
+                  "width": "fill_container",
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "JKnNP",
+                      "name": "exp1title",
+                      "fill": "$deep-teal",
+                      "content": "Expert DevOps & Kubernetes",
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "MT53s",
+                      "name": "exp1date",
+                      "fill": "$gray",
+                      "content": "2023 - 2026",
+                      "fontFamily": "Inter",
+                      "fontSize": 9,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "2uo6J",
+                  "name": "exp1company",
+                  "fill": "$green",
+                  "content": "Informatique Caisse des Dépôts (ICDC)",
+                  "fontFamily": "Inter",
+                  "fontSize": 9,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "uMzvQ",
+                  "name": "exp1desc",
+                  "fill": "$gray",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Référent DevOps, Kubernetes et Rancher. Accompagnement des équipes devs et ops à l'adoption DevOps, IaC avec Terraform (Azure), CI/CD avec Azure DevOps et Gitlab CI. Formation des équipes sur Kubernetes, Rancher et Helm.",
+                  "lineHeight": 1.45,
+                  "fontFamily": "Inter",
+                  "fontSize": 8,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "fZfZP",
+              "name": "Exp BeOpenIT",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 3,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "AofTq",
+                  "name": "Exp2 Header",
+                  "width": "fill_container",
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "RrYPS",
+                      "name": "exp2title",
+                      "fill": "$deep-teal",
+                      "content": "Lead DevOps & Expert Kubernetes",
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "HNoRp",
+                      "name": "exp2date",
+                      "fill": "$gray",
+                      "content": "2021 - 2023",
+                      "fontFamily": "Inter",
+                      "fontSize": 9,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "dIl1R",
+                  "name": "exp2company",
+                  "fill": "$green",
+                  "content": "BeOpenIT",
+                  "fontFamily": "Inter",
+                  "fontSize": 9,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "pp5Nw",
+                  "name": "exp2desc",
+                  "fill": "$gray",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Développement d'API Kubernetes et OpenShift et d'Operators en Golang. Plateforme Multi-Cloud d'onboarding (OpenShift, EKS, GKE, AKS). Déploiement continu GitOps (FluxCD). Code open-source sur GitHub.",
+                  "lineHeight": 1.45,
+                  "fontFamily": "Inter",
+                  "fontSize": 8,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "xNYlr",
+              "name": "Exp BNP",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 3,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "cguxU",
+                  "name": "Exp3 Header",
+                  "width": "fill_container",
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "iiUpZ",
+                      "name": "exp3title",
+                      "fill": "$deep-teal",
+                      "content": "Lead DevOps & Expert Kubernetes",
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "w08Ua",
+                      "name": "exp3date",
+                      "fill": "$gray",
+                      "content": "2021 - 2022",
+                      "fontFamily": "Inter",
+                      "fontSize": 9,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "sR7du",
+                  "name": "exp3company",
+                  "fill": "$green",
+                  "content": "BNP Paribas (via BeOpenIT)",
+                  "fontFamily": "Inter",
+                  "fontSize": 9,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "oUXnj",
+                  "name": "exp3desc",
+                  "fill": "$gray",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Support niveau 3 des équipes de développement sur les pipelines Jenkins. Création et maintien des agents Kubernetes de build sur CloudBees CI. Création de rôles Ansible pour les automatisations.",
+                  "lineHeight": 1.45,
+                  "fontFamily": "Inter",
+                  "fontSize": 8,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "NsW4q",
+              "name": "Exp Orange Sonatel",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 3,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "ftDey",
+                  "name": "Exp4 Header",
+                  "width": "fill_container",
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "V3QtD",
+                      "name": "exp4title",
+                      "fill": "$deep-teal",
+                      "content": "Lead DevOps & Expert Kubernetes/OpenShift",
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "b049R",
+                      "name": "exp4date",
+                      "fill": "$gray",
+                      "content": "2018 - 2021",
+                      "fontFamily": "Inter",
+                      "fontSize": 9,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "wkGfR",
+                  "name": "exp4company",
+                  "fill": "$green",
+                  "content": "Orange Sonatel",
+                  "fontFamily": "Inter",
+                  "fontSize": 9,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "E9Ge4",
+                  "name": "exp4desc",
+                  "fill": "$gray",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Référent DevOps, Kubernetes, Rancher et OpenShift. Lead technique sur l'offre DevOps. Installation et exploitation de plateformes Kubernetes et OpenShift en production. Automatisation de l'offre Cloud IaaS avec VMware vCloud.",
+                  "lineHeight": 1.45,
+                  "fontFamily": "Inter",
+                  "fontSize": 8,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "bi0q1",
+              "name": "Exp Orange Money",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 3,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "2XvqO",
+                  "name": "Exp5 Header",
+                  "width": "fill_container",
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "38UA6",
+                      "name": "exp5title",
+                      "fill": "$deep-teal",
+                      "content": "Consultant Senior DevOps",
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "UfSOh",
+                      "name": "exp5date",
+                      "fill": "$gray",
+                      "content": "2017 - 2018",
+                      "fontFamily": "Inter",
+                      "fontSize": 9,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "UZHTh",
+                  "name": "exp5company",
+                  "fill": "$green",
+                  "content": "Orange Money - Sonatel",
+                  "fontFamily": "Inter",
+                  "fontSize": 9,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "c7ELl",
+                  "name": "exp5desc",
+                  "fill": "$gray",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Mise en place de l'intégration et du déploiement continu DevOps. Lead Dev Spring Cloud et JHipster. Architecte des microservices. Mise en haute disponibilité de la production sur VMware.",
+                  "lineHeight": 1.45,
+                  "fontFamily": "Inter",
+                  "fontSize": 8,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "vQL7c",
+              "name": "Exp People Input",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 3,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "Uqg0B",
+                  "name": "Exp6 Header",
+                  "width": "fill_container",
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "dffAK",
+                      "name": "exp6title",
+                      "fill": "$deep-teal",
+                      "content": "Tech Lead Sysadmin - Ingénieur Cloud & DevOps",
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "fM0Mn",
+                      "name": "exp6date",
+                      "fill": "$gray",
+                      "content": "2011 - 2017",
+                      "fontFamily": "Inter",
+                      "fontSize": 9,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "PLWzb",
+                  "name": "exp6company",
+                  "fill": "$green",
+                  "content": "People Input",
+                  "fontFamily": "Inter",
+                  "fontSize": 9,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "fA2qw",
+                  "name": "exp6desc",
+                  "fill": "$gray",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Mise en place de clusters IaaS (Proxmox) et PaaS (Rancher/ArgoCD). Chaîne CI/CD avec Jenkins et Ansible. Conteneurisation Docker. Administration serveurs et architecture microservices Spring Boot.",
+                  "lineHeight": 1.45,
+                  "fontFamily": "Inter",
+                  "fontSize": 8,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "rectangle",
+              "id": "J4P19",
+              "name": "Spacer Formation",
+              "opacity": 0,
+              "width": 1,
+              "height": 6
+            },
+            {
+              "type": "text",
+              "id": "OcMMk",
+              "name": "Formation Label",
+              "fill": "$deep-teal",
+              "content": "FORMATION",
+              "fontFamily": "Inter",
+              "fontSize": 10,
+              "fontWeight": "700",
+              "letterSpacing": 2
+            },
+            {
+              "type": "rectangle",
+              "cornerRadius": 1,
+              "id": "xYtEI",
+              "name": "Formation Line",
+              "fill": "$green",
+              "width": 50,
+              "height": 2
+            },
+            {
+              "type": "frame",
+              "id": "t65FV",
+              "name": "Formation Rows",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 4,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "zjcta",
+                  "name": "f1",
+                  "width": "fill_container",
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "FrPHl",
+                      "name": "f1title",
+                      "fill": "$deep-teal",
+                      "content": "Doctorat en Télécommunications — Université Cheikh Anta Diop, Dakar",
+                      "fontFamily": "Inter",
+                      "fontSize": 9,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "3CFrr",
+                      "name": "f1date",
+                      "fill": "$gray",
+                      "content": "2022",
+                      "fontFamily": "Inter",
+                      "fontSize": 9,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "ZxV7l",
+                  "name": "f2",
+                  "width": "fill_container",
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "DsYu6",
+                      "name": "f2title",
+                      "fill": "$deep-teal",
+                      "content": "Master 2 Recherche — École Supérieure Polytechnique, Dakar",
+                      "fontFamily": "Inter",
+                      "fontSize": 9,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "uKFLW",
+                      "name": "f2date",
+                      "fill": "$gray",
+                      "content": "2015",
+                      "fontFamily": "Inter",
+                      "fontSize": 9,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "oHrS4",
+                  "name": "f3",
+                  "width": "fill_container",
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "nPrhf",
+                      "name": "f3title",
+                      "fill": "$deep-teal",
+                      "content": "Ingénieur Téléinformatique — ESMT, Dakar",
+                      "fontFamily": "Inter",
+                      "fontSize": 9,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "AM2Z3",
+                      "name": "f3date",
+                      "fill": "$gray",
+                      "content": "2011",
+                      "fontFamily": "Inter",
+                      "fontSize": 9,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "rectangle",
+              "id": "2rS14",
+              "name": "Spacer Certifications",
+              "opacity": 0,
+              "width": 1,
+              "height": 6
+            },
+            {
+              "type": "text",
+              "id": "hOkve",
+              "name": "Certifications Label",
+              "fill": "$deep-teal",
+              "content": "CERTIFICATIONS",
+              "fontFamily": "Inter",
+              "fontSize": 10,
+              "fontWeight": "700",
+              "letterSpacing": 2
+            },
+            {
+              "type": "rectangle",
+              "cornerRadius": 1,
+              "id": "qPNYN",
+              "name": "Cert Line",
+              "fill": "$green",
+              "width": 50,
+              "height": 2
+            },
+            {
+              "type": "text",
+              "id": "anSs4",
+              "name": "Certifications Text",
+              "fill": "$gray",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "CKA & CKAD (Kubernetes)  |  VMware Cloud Native Master  |  Azure Az-900 & Az-104  |  Formateur officiel CNCF  |  Créateur de contenu YouTube (Cloud & DevOps)",
+              "lineHeight": 1.4,
+              "fontFamily": "Inter",
+              "fontSize": 8,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variables": {
+    "bg-page": {
+      "type": "color",
+      "value": "#F8F8F8"
+    },
+    "deep-teal": {
+      "type": "color",
+      "value": "#1B4D5C"
+    },
+    "gray": {
+      "type": "color",
+      "value": "#6B7280"
+    },
+    "green": {
+      "type": "color",
+      "value": "#3CB371"
+    },
+    "light-gray": {
+      "type": "color",
+      "value": "#F5F5F5"
+    },
+    "white": {
+      "type": "color",
+      "value": "#FFFFFF"
+    }
+  }
+}

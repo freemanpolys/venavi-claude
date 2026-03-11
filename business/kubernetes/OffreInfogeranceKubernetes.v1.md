@@ -93,6 +93,30 @@ Installation et configuration d'une plateforme CI/CD intégrée au cluster :
 
 ## 3. RUN — Infogérance et Maintien en Condition Opérationnelle
 
+### 3.0 Prérequis — Audit de Reprise (clusters non construits par AKOUENDY)
+
+Pour tout cluster Kubernetes non construit par AKOUENDY, un **audit de reprise** est obligatoire avant la souscription d'un contrat RUN. Cet audit permet de :
+
+- Documenter l'architecture et l'état actuel du cluster
+- Évaluer la conformité sécurité (CIS Benchmark Kubernetes)
+- Identifier les écarts par rapport aux bonnes pratiques
+- Établir une baseline pour le MCO/MCS
+- Fournir un plan de remédiation chiffré si nécessaire
+
+| Taille cluster | Durée   | Tarif HT |
+| -------------- | ------- | -------- |
+| 1-5 nœuds      | 2 jours | 2 400 €  |
+| 6-15 nœuds     | 3 jours | 3 600 €  |
+| 16+ nœuds      | Sur devis | —      |
+
+**Livrables :**
+- Rapport d'audit complet (architecture, sécurité, performances)
+- Liste des non-conformités et risques identifiés
+- Plan de remédiation priorisé avec estimation
+- Documentation technique de l'existant
+
+> **Note** : Si des remédiations sont nécessaires avant prise en charge RUN, elles sont facturées séparément au tarif régie (1 100 €/jour).
+
 ### 3.1 Services inclus
 
 #### Maintien en Condition Opérationnelle (MCO)

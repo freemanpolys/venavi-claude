@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Infogérance d'applications Angular & Spring Boot sur serveurs Linux. Construction d'environnements, exploitation, maintenance et support. Devis gratuit.">
+    <meta name="keywords" content="infogérance, spring boot, angular, linux, serveurs, maintenance, exploitation, support, déploiement, afrique, france">
+    <meta name="author" content="DOVEAIA">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Infogérance Applications Web | DOVEAIA">
+    <meta property="og:description" content="Construction et exploitation d'environnements serveur pour applications Angular & Spring Boot. Support et maintenance inclus.">
+
+    <title>Infogérance Applications Web | Angular & Spring Boot | DOVEAIA</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">DOVEAIA</span>
+                <span class="logo-subtitle">Infogérance Applicative</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#tarifs">Tarifs</a></li>
+                <li><a href="#simulateur">Simulateur</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact" class="btn btn-primary">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Infogérance Applicative<br><span class="highlight">Angular & Spring Boot</span></h1>
+            <p class="hero-subtitle">Nous construisons, exploitons et maintenons vos environnements serveur Linux pour que vous puissiez vous concentrer sur votre métier. De la mise en place initiale au support 24/7.</p>
+            <div class="hero-cta">
+                <a href="#simulateur" class="btn btn-primary btn-lg">Simuler mon projet</a>
+                <a href="#services" class="btn btn-outline btn-lg">Découvrir nos offres</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">30min</span>
+                    <span class="stat-label">Temps de réponse P1</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">Astreinte Premium</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">-10%</span>
+                    <span class="stat-label">Remise BUILD + RUN</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Nos Offres</h2>
+            <p class="section-subtitle">Deux offres complémentaires pour couvrir la construction et l'exploitation de vos environnements applicatifs</p>
+
+            <div class="services-grid">
+                <!-- BUILD -->
+                <article class="service-card">
+                    <div class="service-icon build-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                        </svg>
+                    </div>
+                    <h3>BUILD</h3>
+                    <p class="service-tagline">Mise en Place d'Environnements</p>
+                    <p class="service-description">Nous construisons et configurons vos environnements serveur de A à Z. À la fin de la prestation, vous disposez d'une infrastructure prête à l'emploi, documentée et sécurisée.</p>
+                    <ul class="service-features">
+                        <li>Provisioning serveurs Linux (Ubuntu, Debian, RHEL)</li>
+                        <li>Hardening sécurité (pare-feu, SSH, fail2ban)</li>
+                        <li>Stack applicative (JVM, Nginx, Spring Boot)</li>
+                        <li>Base de données (PostgreSQL, MySQL, MongoDB)</li>
+                        <li>SSL/HTTPS, DNS, monitoring, sauvegardes</li>
+                        <li>Documentation & runbook opérationnel</li>
+                    </ul>
+                    <div class="service-cta">
+                        <a href="#simulateur" class="btn btn-primary">Simuler mon BUILD</a>
+                        <span class="service-price-range">A partir de 1 600 &euro; HT</span>
+                    </div>
+                </article>
+
+                <!-- RUN -->
+                <article class="service-card featured">
+                    <div class="service-badge">Contrat annuel</div>
+                    <div class="service-icon run-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"/>
+                        </svg>
+                    </div>
+                    <h3>RUN</h3>
+                    <p class="service-tagline">Exploitation, Maintenance & Support</p>
+                    <p class="service-description">Nous prenons en charge l'exploitation de votre infrastructure applicative : déploiements, surveillance, mises à jour, support et intervention en cas d'incident.</p>
+                    <ul class="service-features">
+                        <li>Déploiements avec rollback automatique</li>
+                        <li>Patchs sécurité OS et JVM</li>
+                        <li>Monitoring disponibilité et performance</li>
+                        <li>Support par email, téléphone ou chat</li>
+                        <li>Intervention sur incidents d'infrastructure</li>
+                        <li>Rapports d'activité réguliers</li>
+                    </ul>
+                    <div class="service-cta">
+                        <a href="#simulateur" class="btn btn-secondary">Simuler mon RUN</a>
+                        <span class="service-price-range">A partir de 500 &euro; HT / mois</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Périmètre BUILD -->
+    <section class="scope">
+        <div class="container">
+            <h2 class="section-title">Périmètre BUILD</h2>
+            <p class="section-subtitle">Tout ce qui est inclus dans la mise en place de vos environnements</p>
+
+            <div class="scope-grid">
+                <div class="scope-item">
+                    <div class="scope-icon">OS</div>
+                    <h4>Provisioning</h4>
+                    <p>Installation Linux (Ubuntu, Debian, RHEL)</p>
+                </div>
+                <div class="scope-item">
+                    <div class="scope-icon">SEC</div>
+                    <h4>Hardening</h4>
+                    <p>Pare-feu, SSH, fail2ban, mises à jour</p>
+                </div>
+                <div class="scope-item">
+                    <div class="scope-icon">APP</div>
+                    <h4>Stack Applicative</h4>
+                    <p>JVM, Tomcat, Spring Boot, Nginx</p>
+                </div>
+                <div class="scope-item">
+                    <div class="scope-icon">DB</div>
+                    <h4>Base de données</h4>
+                    <p>PostgreSQL, MySQL ou MongoDB</p>
+                </div>
+                <div class="scope-item">
+                    <div class="scope-icon">SSL</div>
+                    <h4>SSL & DNS</h4>
+                    <p>Let's Encrypt, HTTPS, virtual hosts</p>
+                </div>
+                <div class="scope-item">
+                    <div class="scope-icon">MON</div>
+                    <h4>Monitoring</h4>
+                    <p>Disponibilité et alertes basiques</p>
+                </div>
+                <div class="scope-item">
+                    <div class="scope-icon">BAK</div>
+                    <h4>Sauvegarde</h4>
+                    <p>Backups automatisés BDD + fichiers</p>
+                </div>
+                <div class="scope-item">
+                    <div class="scope-icon">DOC</div>
+                    <h4>Documentation</h4>
+                    <p>Doc technique + runbook opérationnel</p>
+                </div>
+                <div class="scope-item">
+                    <div class="scope-icon">ANA</div>
+                    <h4>Analyse</h4>
+                    <p>Étude architecture et contraintes</p>
+                </div>
+                <div class="scope-item">
+                    <div class="scope-icon">LB</div>
+                    <h4>Load Balancer</h4>
+                    <p>HAProxy/Nginx (Standard+)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tarifs Section -->
+    <section id="tarifs" class="pricing">
+        <div class="container">
+            <h2 class="section-title">Tarifs</h2>
+            <p class="section-subtitle">Des offres transparentes adaptées à la taille de votre infrastructure</p>
+
+            <!-- Tabs -->
+            <div class="pricing-tabs">
+                <button class="tab-btn active" data-tab="tab-build">BUILD</button>
+                <button class="tab-btn" data-tab="tab-run">RUN</button>
+                <button class="tab-btn" data-tab="tab-comparatif">Comparatif</button>
+            </div>
+
+            <!-- TAB BUILD -->
+            <div id="tab-build" class="tab-content active">
+                <div class="pricing-grid">
+                    <!-- Essentiel -->
+                    <div class="pricing-card">
+                        <h3>Essentiel</h3>
+                        <p class="pricing-description">2 serveurs — Architecture minimale pour une application en production</p>
+                        <div class="pricing-price">
+                            <span class="price">1 600 &euro;</span>
+                            <span class="price-period">HT</span>
+                        </div>
+                        <p class="pricing-detail">Délai : 2 jours</p>
+                        <ul class="pricing-features">
+                            <li>1 serveur Application (Angular + Spring Boot + Nginx)</li>
+                            <li>1 serveur Base de données</li>
+                            <li>Hardening sécurité complet</li>
+                            <li>SSL/HTTPS + DNS</li>
+                            <li>Monitoring + Sauvegarde</li>
+                            <li>Documentation & runbook</li>
+                            <li class="not-included">Load balancer HA</li>
+                            <li class="not-included">HA base de données</li>
+                            <li class="not-included">Observabilité dédiée</li>
+                        </ul>
+                        <a href="#simulateur" class="btn btn-outline btn-block">Simuler</a>
+                    </div>
+
+                    <!-- Standard -->
+                    <div class="pricing-card featured">
+                        <div class="pricing-badge">Recommandé</div>
+                        <h3>Standard</h3>
+                        <p class="pricing-description">3 serveurs — Haute disponibilité applicative avec load balancing</p>
+                        <div class="pricing-price">
+                            <span class="price">2 800 &euro;</span>
+                            <span class="price-period">HT</span>
+                        </div>
+                        <p class="pricing-detail">Délai : 4 jours</p>
+                        <ul class="pricing-features">
+                            <li>2 serveurs Application (HA)</li>
+                            <li>1 serveur Base de données</li>
+                            <li>Load balancer (HAProxy/Nginx)</li>
+                            <li>Hardening sécurité complet</li>
+                            <li>SSL/HTTPS + DNS</li>
+                            <li>Monitoring + Sauvegarde</li>
+                            <li>Documentation & runbook</li>
+                            <li class="not-included">HA base de données</li>
+                            <li class="not-included">Observabilité dédiée</li>
+                        </ul>
+                        <a href="#simulateur" class="btn btn-primary btn-block">Simuler</a>
+                    </div>
+
+                    <!-- Premium -->
+                    <div class="pricing-card">
+                        <h3>Premium</h3>
+                        <p class="pricing-description">5 serveurs — HA complète + observabilité dédiée</p>
+                        <div class="pricing-price">
+                            <span class="price">6 000 &euro;</span>
+                            <span class="price-period">HT</span>
+                        </div>
+                        <p class="pricing-detail">Délai : 10 jours</p>
+                        <ul class="pricing-features">
+                            <li>2 serveurs Application (HA)</li>
+                            <li>2 serveurs BDD (actif/passif)</li>
+                            <li>1 serveur Observabilité</li>
+                            <li>Load balancer (HAProxy/Nginx)</li>
+                            <li>Failover BDD automatique</li>
+                            <li>Prometheus + Grafana + Loki</li>
+                            <li>Dashboards + alerting proactif</li>
+                            <li>Hardening sécurité complet</li>
+                            <li>Documentation & runbook</li>
+                        </ul>
+                        <a href="#simulateur" class="btn btn-outline btn-block">Simuler</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB RUN -->
+            <div id="tab-run" class="tab-content">
+                <div class="pricing-grid">
+                    <!-- Basic -->
+                    <div class="pricing-card">
+                        <h3>Basic</h3>
+                        <p class="pricing-description">Applications stables, peu de mises en production</p>
+                        <div class="pricing-price">
+                            <span class="price">500 &euro;</span>
+                            <span class="price-period">HT / mois</span>
+                        </div>
+                        <p class="pricing-detail">6 000 &euro; HT / an &middot; 5 déploiements/an</p>
+                        <ul class="pricing-features">
+                            <li>5 déploiements/an + rollback</li>
+                            <li>Patchs sécurité OS/JVM</li>
+                            <li>Certificats SSL</li>
+                            <li>Redémarrage services</li>
+                            <li>Monitoring disponibilité</li>
+                            <li>Support email, J+1 ouvré</li>
+                            <li>Rapport trimestriel</li>
+                            <li class="not-included">MAJ serveurs Linux</li>
+                            <li class="not-included">Astreinte 24/7</li>
+                            <li class="not-included">Logs centralisés</li>
+                        </ul>
+                        <a href="#simulateur" class="btn btn-outline btn-block">Simuler</a>
+                    </div>
+
+                    <!-- Standard -->
+                    <div class="pricing-card featured">
+                        <div class="pricing-badge">Populaire</div>
+                        <h3>Standard</h3>
+                        <p class="pricing-description">Applications actives, mises à jour régulières</p>
+                        <div class="pricing-price">
+                            <span class="price">1 000 &euro;</span>
+                            <span class="price-period">HT / mois</span>
+                        </div>
+                        <p class="pricing-detail">12 000 &euro; HT / an &middot; 10 déploiements/an</p>
+                        <ul class="pricing-features">
+                            <li>10 déploiements/an + rollback</li>
+                            <li>Tout le Basic inclus</li>
+                            <li>MAJ serveurs Linux + JVM</li>
+                            <li>Vérification sauvegardes</li>
+                            <li>Monitoring CPU/RAM/disque</li>
+                            <li>Support email + tél, &le; 4h</li>
+                            <li>Rapport mensuel</li>
+                            <li class="not-included">Astreinte 24/7</li>
+                            <li class="not-included">Logs centralisés</li>
+                        </ul>
+                        <a href="#simulateur" class="btn btn-primary btn-block">Simuler</a>
+                    </div>
+
+                    <!-- Premium -->
+                    <div class="pricing-card">
+                        <h3>Premium</h3>
+                        <p class="pricing-description">Applications critiques, zéro interruption</p>
+                        <div class="pricing-price">
+                            <span class="price">2 500 &euro;</span>
+                            <span class="price-period">HT / mois</span>
+                        </div>
+                        <p class="pricing-detail">30 000 &euro; HT / an &middot; 20 déploiements/an</p>
+                        <ul class="pricing-features">
+                            <li>20 déploiements/an + rollback</li>
+                            <li>Tout le Standard inclus</li>
+                            <li>MCO complet + tuning infra</li>
+                            <li>Logs centralisés + dashboards</li>
+                            <li>Alerting proactif</li>
+                            <li>Astreinte 24/7 incluse</li>
+                            <li>Support email + tél + chat, &le; 1h</li>
+                            <li>Analyse post-incident</li>
+                            <li>Rapport mensuel détaillé</li>
+                        </ul>
+                        <a href="#simulateur" class="btn btn-outline btn-block">Simuler</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB Comparatif -->
+            <div id="tab-comparatif" class="tab-content">
+                <div class="comparatif-table-wrapper">
+                    <h4>BUILD — Mise en place d'environnements</h4>
+                    <table class="comparatif-table">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Essentiel (2 srv)</th>
+                                <th class="featured-col">Standard (3 srv)</th>
+                                <th>Premium (5 srv)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>Tarif HT</strong></td><td>1 600 &euro;</td><td>2 800 &euro;</td><td>6 000 &euro;</td></tr>
+                            <tr><td><strong>Délai</strong></td><td>2 jours</td><td>4 jours</td><td>10 jours</td></tr>
+                            <tr><td>Hardening sécurité</td><td class="check-yes">oui</td><td class="check-yes">oui</td><td class="check-yes">oui</td></tr>
+                            <tr><td>Stack applicative</td><td class="check-yes">oui</td><td class="check-yes">oui</td><td class="check-yes">oui</td></tr>
+                            <tr><td>Base de données</td><td class="check-yes">oui</td><td class="check-yes">oui</td><td class="check-yes">oui</td></tr>
+                            <tr><td>SSL / HTTPS</td><td class="check-yes">oui</td><td class="check-yes">oui</td><td class="check-yes">oui</td></tr>
+                            <tr><td>Monitoring + Sauvegarde</td><td class="check-yes">oui</td><td class="check-yes">oui</td><td class="check-yes">oui</td></tr>
+                            <tr><td>Documentation & runbook</td><td class="check-yes">oui</td><td class="check-yes">oui</td><td class="check-yes">oui</td></tr>
+                            <tr><td><strong>HA applicative (LB)</strong></td><td class="check-no">&mdash;</td><td class="check-yes">oui</td><td class="check-yes">oui</td></tr>
+                            <tr><td><strong>HA base de données</strong></td><td class="check-no">&mdash;</td><td class="check-no">&mdash;</td><td class="check-yes">oui</td></tr>
+                            <tr><td><strong>Observabilité dédiée</strong></td><td class="check-no">&mdash;</td><td class="check-no">&mdash;</td><td class="check-yes">oui</td></tr>
+                        </tbody>
+                    </table>
+
+                    <h4>RUN — Exploitation, Maintenance & Support</h4>
+                    <table class="comparatif-table">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Basic</th>
+                                <th class="featured-col">Standard</th>
+                                <th>Premium</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>Prix annuel HT</strong></td><td>6 000 &euro;</td><td>12 000 &euro;</td><td>30 000 &euro;</td></tr>
+                            <tr><td><strong>Prix mensuel HT</strong></td><td>500 &euro;</td><td>1 000 &euro;</td><td>2 500 &euro;</td></tr>
+                            <tr><td><strong>Déploiements/an</strong></td><td>5</td><td>10</td><td>20</td></tr>
+                            <tr><td>Patchs sécurité OS/JVM</td><td class="check-yes">oui</td><td class="check-yes">oui</td><td class="check-yes">oui</td></tr>
+                            <tr><td>Certificats SSL</td><td class="check-yes">oui</td><td class="check-yes">oui</td><td class="check-yes">oui</td></tr>
+                            <tr><td>Monitoring disponibilité</td><td class="check-yes">oui</td><td class="check-yes">oui</td><td class="check-yes">oui</td></tr>
+                            <tr><td>MAJ serveurs Linux + JVM</td><td class="check-no">&mdash;</td><td class="check-yes">oui</td><td class="check-yes">oui</td></tr>
+                            <tr><td>Monitoring CPU/RAM/disque</td><td class="check-no">&mdash;</td><td class="check-yes">oui</td><td class="check-yes">oui</td></tr>
+                            <tr><td>Vérification sauvegardes</td><td class="check-no">&mdash;</td><td class="check-yes">oui</td><td class="check-yes">oui</td></tr>
+                            <tr><td><strong>Astreinte 24/7</strong></td><td class="check-no">&mdash;</td><td class="check-no">&mdash;</td><td class="check-yes">oui</td></tr>
+                            <tr><td><strong>Logs centralisés</strong></td><td class="check-no">&mdash;</td><td class="check-no">&mdash;</td><td class="check-yes">oui</td></tr>
+                            <tr><td><strong>MCO complet + tuning</strong></td><td class="check-no">&mdash;</td><td class="check-no">&mdash;</td><td class="check-yes">oui</td></tr>
+                            <tr><td><strong>Temps de réponse</strong></td><td>J+1 ouvré</td><td>&le; 4h ouvrées</td><td>&le; 1h</td></tr>
+                            <tr><td><strong>Canaux support</strong></td><td>Email</td><td>Email, Tél</td><td>Email, Tél, Chat</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Classification Incidents -->
+    <section class="incidents">
+        <div class="container">
+            <h2 class="section-title">Classification des Incidents</h2>
+            <p class="section-subtitle">Des niveaux de criticité clairs pour une gestion efficace des incidents</p>
+
+            <div class="incidents-grid">
+                <div class="incident-card p1">
+                    <span class="incident-level">P1 — CRITIQUE</span>
+                    <h4>30 min</h4>
+                    <p>Application indisponible, perte de données, faille de sécurité active. Résolution en 4h.</p>
+                </div>
+                <div class="incident-card p2">
+                    <span class="incident-level">P2 — MAJEUR</span>
+                    <h4>2h</h4>
+                    <p>Fonctionnalité majeure indisponible, dégradation sévère. Résolution en 8h.</p>
+                </div>
+                <div class="incident-card p3">
+                    <span class="incident-level">P3 — MINEUR</span>
+                    <h4>4h</h4>
+                    <p>Fonctionnalité secondaire impactée, contournement possible. Résolution en 24h.</p>
+                </div>
+                <div class="incident-card p4">
+                    <span class="incident-level">P4 — DEMANDE</span>
+                    <h4>J+1</h4>
+                    <p>Demande d'information, changement non urgent, déploiement planifié. Résolution en 48h.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLA Section -->
+    <section class="sla">
+        <div class="container">
+            <h2 class="section-title">Nos Engagements</h2>
+            <div class="sla-grid">
+                <div class="sla-card">
+                    <div class="sla-icon">30j</div>
+                    <h4>Garantie BUILD</h4>
+                    <p>Intervention corrective gratuite pendant 30 jours après livraison</p>
+                </div>
+                <div class="sla-card">
+                    <div class="sla-icon">SSH</div>
+                    <h4>100% à Distance</h4>
+                    <p>Interventions sécurisées via SSH/VPN. Décalage UTC minimal avec l'Afrique de l'Ouest.</p>
+                </div>
+                <div class="sla-card">
+                    <div class="sla-icon">DOC</div>
+                    <h4>Tout Documenté</h4>
+                    <p>Documentation technique complète et runbook opérationnel livré avec chaque prestation</p>
+                </div>
+                <div class="sla-card">
+                    <div class="sla-icon">50/50</div>
+                    <h4>Facturation Claire</h4>
+                    <p>BUILD : 50% à la commande, 50% à la livraison. RUN : facturation annuelle ou mensuelle.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Simulateur Section -->
+    <section id="simulateur" class="simulator">
+        <div class="container">
+            <h2 class="section-title">Simulateur de Projet</h2>
+            <p class="section-subtitle">Composez votre offre BUILD + RUN et estimez votre budget en temps réel</p>
+
+            <div class="simulator-wrapper" x-data="simulator">
+                <!-- Left: Steps -->
+                <div class="simulator-steps">
+
+                    <!-- Step 1: BUILD -->
+                    <div class="simulator-step">
+                        <h3><span class="step-number">1</span> Offre BUILD — Mise en place</h3>
+                        <div class="form-group">
+                            <label>Architecture serveur</label>
+                            <div class="radio-cards">
+                                <label class="radio-card">
+                                    <input type="radio" name="build" value="none" x-model="build">
+                                    <div class="radio-card-content">
+                                        <strong>Aucun</strong>
+                                        <span>Pas de BUILD</span>
+                                        <span class="radio-price">0 &euro;</span>
+                                    </div>
+                                </label>
+                                <label class="radio-card">
+                                    <input type="radio" name="build" value="essentiel" x-model="build">
+                                    <div class="radio-card-content">
+                                        <strong>Essentiel</strong>
+                                        <span>2 serveurs</span>
+                                        <span class="radio-price">1 600 &euro;</span>
+                                    </div>
+                                </label>
+                                <label class="radio-card">
+                                    <input type="radio" name="build" value="standard" x-model="build">
+                                    <div class="radio-card-content">
+                                        <strong>Standard</strong>
+                                        <span>3 serveurs + LB</span>
+                                        <span class="radio-price">2 800 &euro;</span>
+                                    </div>
+                                </label>
+                                <label class="radio-card">
+                                    <input type="radio" name="build" value="premium" x-model="build">
+                                    <div class="radio-card-content">
+                                        <strong>Premium</strong>
+                                        <span>5 serveurs + HA + Obs</span>
+                                        <span class="radio-price">6 000 &euro;</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Build Options -->
+                        <div class="form-group" x-show="build !== 'none'" x-transition>
+                            <label>Options BUILD</label>
+                            <div class="checkbox-list">
+                                <label class="checkbox-item">
+                                    <input type="checkbox" x-model="buildOptions.cicd">
+                                    <span>CI/CD complète (GitLab CI / GitHub Actions / Jenkins) — <strong>+2 000 &euro;</strong></span>
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" x-model="buildOptions.formation">
+                                    <span>Formation équipe (1 journée transfert de compétences) — <strong>+1 000 &euro;</strong></span>
+                                </label>
+                            </div>
+                            <div style="margin-top: 1rem;">
+                                <label>Serveurs supplémentaires (+650 &euro; / serveur)</label>
+                                <div class="number-input-single">
+                                    <button type="button" class="btn-minus" @click="decrementServers()">&minus;</button>
+                                    <input type="number" x-model.number="buildOptions.extraServers" min="0" max="20" readonly>
+                                    <button type="button" class="btn-plus" @click="incrementServers()">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: RUN -->
+                    <div class="simulator-step">
+                        <h3><span class="step-number">2</span> Offre RUN — Exploitation & Support</h3>
+                        <div class="form-group">
+                            <label>Niveau de service annuel</label>
+                            <div class="radio-cards">
+                                <label class="radio-card">
+                                    <input type="radio" name="run" value="none" x-model="run">
+                                    <div class="radio-card-content">
+                                        <strong>Aucun</strong>
+                                        <span>Pas de RUN</span>
+                                        <span class="radio-price">0 &euro;</span>
+                                    </div>
+                                </label>
+                                <label class="radio-card">
+                                    <input type="radio" name="run" value="basic" x-model="run">
+                                    <div class="radio-card-content">
+                                        <strong>Basic</strong>
+                                        <span>5 deploy/an</span>
+                                        <span class="radio-price">6 000 &euro;/an</span>
+                                    </div>
+                                </label>
+                                <label class="radio-card">
+                                    <input type="radio" name="run" value="standard" x-model="run">
+                                    <div class="radio-card-content">
+                                        <strong>Standard</strong>
+                                        <span>10 deploy/an</span>
+                                        <span class="radio-price">12 000 &euro;/an</span>
+                                    </div>
+                                </label>
+                                <label class="radio-card">
+                                    <input type="radio" name="run" value="premium" x-model="run">
+                                    <div class="radio-card-content">
+                                        <strong>Premium</strong>
+                                        <span>20 deploy/an + 24/7</span>
+                                        <span class="radio-price">30 000 &euro;/an</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Options astreinte (Basic/Standard seulement) -->
+                        <div class="form-group" x-show="showRunOptions" x-transition>
+                            <label>Options astreinte (activables mensuellement)</label>
+                            <div class="checkbox-list">
+                                <label class="checkbox-item">
+                                    <input type="checkbox" x-model="runOptions.soir">
+                                    <span>Astreinte soir (Lun-Ven 18h-22h) — <strong>350 &euro;/mois</strong></span>
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" x-model="runOptions.weekend">
+                                    <span>Astreinte week-end (Sam-Dim 9h-18h) — <strong>500 &euro;/mois</strong></span>
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" x-model="runOptions.feries">
+                                    <span>Astreinte jours fériés (9h-18h) — <strong>250 &euro;/mois</strong></span>
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" x-model="runOptions.full247">
+                                    <span>Astreinte 24/7 complète — <strong>1 200 &euro;/mois</strong></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Déploiements supplémentaires -->
+                        <div class="form-group" x-show="run !== 'none'" x-transition>
+                            <label>Déploiements supplémentaires (<span x-text="run === 'premium' ? '200' : '250'"></span> &euro; / unité)</label>
+                            <div class="number-input-single">
+                                <button type="button" class="btn-minus" @click="decrementDeploys()">&minus;</button>
+                                <input type="number" x-model.number="extraDeploys" min="0" max="50" readonly>
+                                <button type="button" class="btn-plus" @click="incrementDeploys()">+</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Right: Summary -->
+                <div class="simulator-summary">
+                    <div class="summary-sticky">
+                        <h3>Récapitulatif</h3>
+
+                        <!-- BUILD Summary -->
+                        <div class="summary-section" x-show="build !== 'none'">
+                            <h4>BUILD — Mise en place</h4>
+                            <div class="summary-line">
+                                <span x-text="labels.build[build]"></span>
+                                <strong x-text="formatPrice(buildPrice)"></strong>
+                            </div>
+                            <div class="summary-line summary-sub" x-show="buildDelai">
+                                <span>Délai : <span x-text="buildDelai"></span></span>
+                            </div>
+                            <template x-for="opt in buildOptionsDetails" :key="opt.name">
+                                <div class="summary-line summary-sub">
+                                    <span x-text="opt.name"></span>
+                                    <span x-text="'+ ' + formatPrice(opt.price)"></span>
+                                </div>
+                            </template>
+                        </div>
+
+                        <!-- RUN Summary -->
+                        <div class="summary-section" x-show="run !== 'none'">
+                            <h4>RUN — Exploitation annuelle</h4>
+                            <div class="summary-line">
+                                <span x-text="labels.run[run]"></span>
+                                <strong x-text="formatPrice(runPrice)"></strong>
+                            </div>
+                            <div class="summary-line summary-sub">
+                                <span x-text="deploysIncluded + ' déploiements inclus'"></span>
+                            </div>
+                            <template x-for="opt in runOptionsDetails" :key="opt.name">
+                                <div class="summary-line summary-sub">
+                                    <span x-text="opt.name"></span>
+                                    <span x-text="'+ ' + formatPrice(opt.price) + '/an'"></span>
+                                </div>
+                            </template>
+                            <div class="summary-line summary-sub" x-show="extraDeploys > 0">
+                                <span x-text="extraDeploys + ' deploy. supplémentaires'"></span>
+                                <span x-text="'+ ' + formatPrice(extraDeploysPrice)"></span>
+                            </div>
+                        </div>
+
+                        <!-- Remise BUILD+RUN -->
+                        <div class="summary-discount" x-show="hasBuildRunDiscount">
+                            <span>Remise BUILD+RUN (-10%)</span>
+                            <span x-text="'- ' + formatPrice(buildRunDiscount)"></span>
+                        </div>
+
+                        <!-- Total -->
+                        <div class="summary-total">
+                            <span x-text="totalLabel"></span>
+                            <span class="summary-total-price" x-text="formatPrice(total)"></span>
+                            <span class="summary-total-detail" x-show="run !== 'none' && build !== 'none'" x-text="'dont ' + formatPrice(totalBuild) + ' BUILD + ' + formatPrice(totalRunAnnual) + '/an RUN'"></span>
+                            <span class="summary-total-detail" x-show="run !== 'none'" x-text="'soit ' + formatPrice(Math.round(totalRunAnnual / 12)) + '/mois (RUN)'"></span>
+                        </div>
+
+                        <!-- Services inclus -->
+                        <div class="summary-services" x-show="services.length > 0">
+                            <h4>Services inclus</h4>
+                            <ul>
+                                <template x-for="s in services" :key="s">
+                                    <li x-text="s"></li>
+                                </template>
+                            </ul>
+                        </div>
+
+                        <a href="#contact" class="btn btn-primary btn-block btn-lg">Demander un devis</a>
+
+                        <button type="button" class="btn btn-outline btn-block" style="margin-top: 0.5rem;" @click="copyShareableLink()" x-text="copyButtonText"></button>
+
+                        <p class="summary-note">Tous les prix sont exprimés hors taxes (HT). Hébergement serveur non inclus.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section class="technologies">
+        <div class="container">
+            <h2 class="section-title">Technologies Maîtrisées</h2>
+            <p class="section-subtitle">Une expertise reconnue sur l'écosystème applicatif Java / Angular</p>
+
+            <div class="tech-grid">
+                <div class="tech-category">
+                    <h4>Systèmes d'exploitation</h4>
+                    <div class="tech-tags">
+                        <span class="tech-featured">Ubuntu</span>
+                        <span>Debian</span>
+                        <span>RHEL / CentOS</span>
+                        <span>Rocky Linux</span>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h4>Stack Applicative</h4>
+                    <div class="tech-tags">
+                        <span class="tech-featured">Spring Boot</span>
+                        <span class="tech-featured">Angular</span>
+                        <span>JVM (OpenJDK)</span>
+                        <span>Tomcat</span>
+                        <span>Nginx</span>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h4>Bases de données</h4>
+                    <div class="tech-tags">
+                        <span class="tech-featured">PostgreSQL</span>
+                        <span>MySQL / MariaDB</span>
+                        <span>MongoDB</span>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h4>Observabilité</h4>
+                    <div class="tech-tags">
+                        <span>Prometheus</span>
+                        <span>Grafana</span>
+                        <span>Loki</span>
+                        <span>Tempo</span>
+                        <span>AlertManager</span>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h4>Sécurité</h4>
+                    <div class="tech-tags">
+                        <span>iptables / ufw</span>
+                        <span>fail2ban</span>
+                        <span>Let's Encrypt</span>
+                        <span>SSH hardening</span>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h4>CI/CD & Outils</h4>
+                    <div class="tech-tags">
+                        <span>GitLab CI</span>
+                        <span>GitHub Actions</span>
+                        <span>Jenkins</span>
+                        <span>HAProxy</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2 class="section-title">Questions Fréquentes</h2>
+            <p class="section-subtitle">Tout ce que vous devez savoir avant de démarrer</p>
+
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <button class="faq-question">Qui fournit les serveurs ?</button>
+                    <div class="faq-answer">
+                        <p>Vous fournissez les serveurs (cloud ou hébergeur de votre choix). Nous pouvons vous conseiller sur le dimensionnement et le choix du provider si nécessaire.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Puis-je combiner BUILD + RUN ?</button>
+                    <div class="faq-answer">
+                        <p>Oui. Si vous souscrivez un contrat RUN dans la foulée du BUILD, vous bénéficiez d'une remise de 10% sur le forfait BUILD. Le simulateur calcule automatiquement cette remise.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Que se passe-t-il si je dépasse mon quota de déploiements ?</button>
+                    <div class="faq-answer">
+                        <p>Chaque déploiement supplémentaire est facturé unitairement : 250 &euro; HT (Basic et Standard) ou 200 &euro; HT (Premium). Vous pouvez ajouter des déploiements dans le simulateur.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Mes serveurs sont déjà installés mais mal configurés, pouvez-vous intervenir ?</button>
+                    <div class="faq-answer">
+                        <p>Oui. Nous proposons un audit de reprise pour évaluer l'existant et remettre à niveau. Tarif : 1 000 &euro; HT (1 à 5 serveurs) ou sur devis au-delà.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Quelle est la différence entre BUILD et RUN ?</button>
+                    <div class="faq-answer">
+                        <p>Le BUILD est une prestation ponctuelle de construction d'infrastructure. Le RUN est un contrat annuel d'exploitation et de maintenance. Les deux sont complémentaires : le BUILD met en place, le RUN maintient en condition opérationnelle.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Qui corrige les bugs de l'application ?</button>
+                    <div class="faq-answer">
+                        <p>La correction de bugs relève de votre équipe de développement. Nous diagnostiquons l'incident (infra vs applicatif), et si le problème est applicatif, nous vous transmettons le diagnostic pour que votre équipe puisse intervenir.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Comment se déroulent les interventions à distance ?</button>
+                    <div class="faq-answer">
+                        <p>Toutes les interventions sont réalisées à distance via accès sécurisé (SSH/VPN). Le décalage horaire entre la France et l'Afrique de l'Ouest (UTC vs UTC+1) est minimal et n'impacte pas la réactivité du support.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Puis-je changer d'offre RUN en cours d'année ?</button>
+                    <div class="faq-answer">
+                        <p>Oui, vous pouvez passer à une offre supérieure à tout moment. Le complément est calculé au prorata de la période restante.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h2>Prêt à fiabiliser votre infrastructure applicative ?</h2>
+                    <p>Contactez-nous pour un échange sans engagement. Nous analyserons vos besoins et vous proposerons une solution adaptée à votre contexte.</p>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <strong>Email</strong>
+                            <a href="mailto:hello@doveaia.com">hello@doveaia.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <strong>Site web</strong>
+                            <a href="https://www.doveaia.com" target="_blank">www.doveaia.com</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-steps">
+                        <h4>Prochaines étapes</h4>
+                        <ol>
+                            <li><strong>Échange découverte</strong> — Compréhension de vos besoins et contraintes</li>
+                            <li><strong>Proposition personnalisée</strong> — Offre adaptée à votre contexte technique</li>
+                            <li><strong>Validation technique</strong> — Revue d'architecture et planning d'intervention</li>
+                            <li><strong>Démarrage</strong> — Lancement sous 5 jours ouvrés après validation</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <form class="contact-form" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Nom complet *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email professionnel *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="company">Société</label>
+                        <input type="text" id="company" name="company">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Téléphone</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="interest">Intérêt principal</label>
+                        <select id="interest" name="interest">
+                            <option value="">Sélectionnez</option>
+                            <option value="build">BUILD — Mise en place d'environnements</option>
+                            <option value="run">RUN — Exploitation & maintenance</option>
+                            <option value="both">BUILD + RUN</option>
+                            <option value="audit">Audit de reprise</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="project">Décrivez votre projet *</label>
+                        <textarea id="project" name="project" rows="4" required placeholder="Nombre de serveurs, technologies utilisées, besoins spécifiques..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">Envoyer ma demande</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-text">DOVEAIA</span>
+                    <p>Infogérance Applicative — Angular & Spring Boot</p>
+                    <p class="footer-legal">SIRET : 94763010900033</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">BUILD</a></li>
+                        <li><a href="#services">RUN</a></li>
+                        <li><a href="#simulateur">Simulateur</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Ressources</h4>
+                    <ul>
+                        <li><a href="#tarifs">Tarifs</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p>hello@doveaia.com</p>
+                    <p style="margin-top: 0.5rem; font-size: 0.9rem;">
+                        Parc Lorans, Bâtiment 1G<br>
+                        Rue Jean-Marie Huchet<br>
+                        35000 Rennes
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 DOVEAIA. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/simulator.js"></script>
+</body>
+</html>

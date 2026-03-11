@@ -1,0 +1,10 @@
+\usepackage{needspace}
+\usepackage{alltt}
+
+% Garder les sections ensemble
+\let\oldsection\section
+\renewcommand{\section}[1]{\needspace{5\baselineskip}\oldsection{#1}}
+
+\let\oldsubsection\subsection
+\renewcommand{\subsection}[1]{\needspace{3\baselineskip}\oldsubsection{#1}}
+

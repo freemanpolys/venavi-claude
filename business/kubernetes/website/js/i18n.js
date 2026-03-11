@@ -1,5 +1,5 @@
 /**
- * AKOUENDY Kubernetes - Internationalization (i18n)
+ * DOVEAIA Kubernetes - Internationalization (i18n)
  * French / English translations
  */
 
@@ -17,9 +17,9 @@ const translations = {
 
         // Hero
         hero: {
-            title: "Infogérance Kubernetes",
-            subtitle: "Build | Run | Deploy",
-            description: "Experts Kubernetes en France. Nous construisons, exploitons et faisons évoluer vos clusters pour que vous puissiez vous concentrer sur votre métier.",
+            title: "Expert Kubernetes & Azure",
+            subtitle: "Infrastructure Cloud Clé en Main",
+            description: "Spécialistes Kubernetes et Microsoft Azure. Nous construisons, migrons et gérons votre infrastructure cloud pour que vous puissiez vous concentrer sur votre métier.",
             cta_simulator: "Simuler mon projet",
             cta_services: "Découvrir nos services",
             stat_availability: "Disponibilité garantie",
@@ -29,7 +29,7 @@ const translations = {
 
         // Services
         services: {
-            title: "Nos Services",
+            title: "Services Kubernetes",
             subtitle: "Une offre complète couvrant tout le cycle de vie de votre infrastructure Kubernetes",
             popular: "Populaire",
             build: {
@@ -191,12 +191,14 @@ const translations = {
                 build_options: "Options BUILD",
                 support_level: "Niveau de support",
                 on_call_options: "Options Astreinte",
+                audit: "Audit de reprise (cluster externe)",
+                audit_desc: "Requis si le cluster n'est pas construit par DOVEAIA",
                 apps_to_deploy: "Applications à déployer",
                 annual_package: "Forfait annuel DEPLOY (optionnel)",
-                training_days: "Journées de formation (900 €/jour)",
-                simple_apps: "Applications simples (1 800 €)",
-                standard_apps: "Applications standard (3 500 €)",
-                complex_apps: "Applications complexes (7 000 €)",
+                training_days: "Journées de formation (1 200 €/jour)",
+                simple_apps: "Applications simples (2 800 €)",
+                standard_apps: "Applications standard (5 000 €)",
+                complex_apps: "Applications complexes (10 500 €)",
                 none: "Aucun"
             },
             options: {
@@ -273,8 +275,8 @@ const translations = {
 
         // Contact
         contact: {
-            title: "Prêt à industrialiser votre infrastructure Kubernetes ?",
-            subtitle: "Contactez-nous pour un échange sans engagement. Nous analyserons vos besoins et vous proposerons une solution adaptée.",
+            title: "Prêt à moderniser votre infrastructure cloud ?",
+            subtitle: "Contactez-nous pour un échange sans engagement. Nous analyserons vos besoins Kubernetes et Azure et vous proposerons une solution adaptée.",
             labels: {
                 email: "Email",
                 phone: "Téléphone",
@@ -310,7 +312,7 @@ const translations = {
 
         // Footer
         footer: {
-            tagline: "Expert Kubernetes & Cloud Native en France",
+            tagline: "Expert Kubernetes & Azure",
             services: "Services",
             resources: "Ressources",
             contact: "Contact",
@@ -422,7 +424,7 @@ const translations = {
                     admin: "Administration cluster"
                 },
                 cert: {
-                    attestation: "Attestation AKOUENDY",
+                    attestation: "Attestation DOVEAIA",
                     cncf: "Certification CNCF"
                 }
             },
@@ -438,6 +440,70 @@ const translations = {
                 subtitle: "Contactez-nous pour discuter de vos besoins et planifier votre formation",
                 contact: "Demander un devis",
                 simulator: "Simuler mon projet"
+            }
+        },
+
+        // Kubernetes Page
+        k8s: {
+            hero: {
+                title: "Infogérance Kubernetes",
+                subtitle: "Build | Run | Deploy",
+                description: "Experts Kubernetes. Nous construisons, exploitons et faisons évoluer vos clusters pour que vous puissiez vous concentrer sur votre métier."
+            },
+            contact: {
+                title: "Prêt à industrialiser votre infrastructure Kubernetes ?",
+                subtitle: "Contactez-nous pour un échange sans engagement. Nous analyserons vos besoins Kubernetes et vous proposerons une solution adaptée."
+            }
+        },
+
+        // Azure Page
+        azure: {
+            hero: {
+                title: "Expert Microsoft Azure",
+                subtitle: "Infrastructure Cloud Clé en Main",
+                description: "Spécialistes Microsoft Azure. Nous migrons, construisons et gérons votre infrastructure cloud Azure pour que vous puissiez vous concentrer sur votre métier.",
+                cta_contact: "Demander un devis",
+                cta_services: "Découvrir nos services"
+            },
+            services: {
+                title: "Services Azure",
+                subtitle: "Expertise Microsoft Azure pour moderniser votre infrastructure",
+                migration: {
+                    title: "Migration Azure",
+                    tagline: "On-premise vers le cloud"
+                },
+                aks: {
+                    title: "AKS Clé en Main",
+                    tagline: "Kubernetes managé sur Azure"
+                },
+                landingzone: {
+                    title: "Azure Landing Zone",
+                    tagline: "Fondations cloud solides"
+                }
+            },
+            tech: {
+                title: "Services Azure Maîtrisés",
+                subtitle: "Une expertise reconnue sur l'écosystème Microsoft Azure"
+            },
+            pricing: {
+                title: "Tarifs Azure",
+                subtitle: "Des offres transparentes pour vos projets Azure",
+                migration: {
+                    name: "Migration Azure",
+                    description: "Migration de votre infrastructure on-premise vers Azure"
+                },
+                aks: {
+                    name: "AKS Clé en Main",
+                    description: "Cluster Kubernetes managé prêt pour la production"
+                },
+                landingzone: {
+                    name: "Azure Landing Zone",
+                    description: "Fondations cloud pour grandes organisations"
+                }
+            },
+            contact: {
+                title: "Prêt à moderniser votre infrastructure Azure ?",
+                subtitle: "Contactez-nous pour un échange sans engagement. Nous analyserons vos besoins Azure et vous proposerons une solution adaptée."
             }
         },
 
@@ -464,7 +530,7 @@ const translations = {
         hero: {
             title: "Kubernetes Managed Services",
             subtitle: "Build | Run | Deploy",
-            description: "Kubernetes experts in France. We build, operate, and evolve your clusters so you can focus on your business.",
+            description: "Kubernetes experts. We build, operate, and evolve your clusters so you can focus on your business.",
             cta_simulator: "Simulate my project",
             cta_services: "Discover our services",
             stat_availability: "Guaranteed availability",
@@ -636,12 +702,14 @@ const translations = {
                 build_options: "BUILD options",
                 support_level: "Support level",
                 on_call_options: "On-call options",
+                audit: "Takeover audit (external cluster)",
+                audit_desc: "Required if the cluster was not built by DOVEAIA",
                 apps_to_deploy: "Applications to deploy",
                 annual_package: "Annual DEPLOY package (optional)",
-                training_days: "Training days (€900/day)",
-                simple_apps: "Simple applications (€1,800)",
-                standard_apps: "Standard applications (€3,500)",
-                complex_apps: "Complex applications (€7,000)",
+                training_days: "Training days (€1,200/day)",
+                simple_apps: "Simple applications (€2,800)",
+                standard_apps: "Standard applications (€5,000)",
+                complex_apps: "Complex applications (€10,500)",
                 none: "None"
             },
             options: {
@@ -755,7 +823,7 @@ const translations = {
 
         // Footer
         footer: {
-            tagline: "Kubernetes & Cloud Native Expert in France",
+            tagline: "Kubernetes & Azure Expert",
             services: "Services",
             resources: "Resources",
             contact: "Contact",
@@ -867,7 +935,7 @@ const translations = {
                     admin: "Cluster administration"
                 },
                 cert: {
-                    attestation: "AKOUENDY certificate",
+                    attestation: "DOVEAIA certificate",
                     cncf: "CNCF certification"
                 }
             },
@@ -883,6 +951,70 @@ const translations = {
                 subtitle: "Contact us to discuss your needs and plan your training",
                 contact: "Request a quote",
                 simulator: "Simulate my project"
+            }
+        },
+
+        // Kubernetes Page
+        k8s: {
+            hero: {
+                title: "Kubernetes Managed Services",
+                subtitle: "Build | Run | Deploy",
+                description: "Kubernetes experts. We build, operate, and evolve your clusters so you can focus on your business."
+            },
+            contact: {
+                title: "Ready to industrialize your Kubernetes infrastructure?",
+                subtitle: "Contact us for a no-obligation discussion. We'll analyze your Kubernetes needs and propose a tailored solution."
+            }
+        },
+
+        // Azure Page
+        azure: {
+            hero: {
+                title: "Microsoft Azure Expert",
+                subtitle: "Turnkey Cloud Infrastructure",
+                description: "Microsoft Azure specialists. We migrate, build, and manage your Azure cloud infrastructure so you can focus on your business.",
+                cta_contact: "Request a quote",
+                cta_services: "Discover our services"
+            },
+            services: {
+                title: "Azure Services",
+                subtitle: "Microsoft Azure expertise to modernize your infrastructure",
+                migration: {
+                    title: "Azure Migration",
+                    tagline: "On-premise to cloud"
+                },
+                aks: {
+                    title: "Turnkey AKS",
+                    tagline: "Managed Kubernetes on Azure"
+                },
+                landingzone: {
+                    title: "Azure Landing Zone",
+                    tagline: "Solid cloud foundations"
+                }
+            },
+            tech: {
+                title: "Azure Services We Master",
+                subtitle: "Recognized expertise on the Microsoft Azure ecosystem"
+            },
+            pricing: {
+                title: "Azure Pricing",
+                subtitle: "Transparent pricing for your Azure projects",
+                migration: {
+                    name: "Azure Migration",
+                    description: "Migration of your on-premise infrastructure to Azure"
+                },
+                aks: {
+                    name: "Turnkey AKS",
+                    description: "Production-ready managed Kubernetes cluster"
+                },
+                landingzone: {
+                    name: "Azure Landing Zone",
+                    description: "Cloud foundations for large organizations"
+                }
+            },
+            contact: {
+                title: "Ready to modernize your Azure infrastructure?",
+                subtitle: "Contact us for a no-obligation discussion. We'll analyze your Azure needs and propose a tailored solution."
             }
         },
 

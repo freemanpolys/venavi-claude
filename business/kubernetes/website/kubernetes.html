@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Expert Kubernetes. Construction, exploitation et déploiement de clusters Kubernetes. Support 24/7, CI/CD, GitOps. Devis gratuit.">
+    <meta name="keywords" content="kubernetes, infogérance, devops, cluster kubernetes, docker, CI/CD, GitOps, France, cloud native, managed kubernetes">
+    <meta name="author" content="DOVEAIA - James Kokou GAGLO">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Infogérance Kubernetes | DOVEAIA">
+    <meta property="og:description" content="Experts Kubernetes. Construction, exploitation et déploiement de clusters Kubernetes pour votre production.">
+    <meta property="og:url" content="https://cloud.doveaia.com/kubernetes">
+
+    <title>Infogérance Kubernetes France | Build, Run, Deploy | DOVEAIA</title>
+
+    <link rel="canonical" href="https://cloud.doveaia.com/kubernetes">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">DOVEAIA</span>
+                <span class="logo-subtitle">Kubernetes & Azure Expert</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#services" class="active">Kubernetes</a></li>
+                <li><a href="azure.html">Azure</a></li>
+                <li><a href="#tarifs" data-i18n="nav.pricing">Tarifs</a></li>
+                <li><a href="training.html" data-i18n="nav.training">Formations</a></li>
+                <li><a href="#simulateur" data-i18n="nav.simulator">Simulateur</a></li>
+                <li><a href="#contact" class="btn btn-primary" data-i18n="nav.contact">Contact</a></li>
+                <li>
+                    <button id="lang-switcher" class="lang-switcher" onclick="i18n.toggleLanguage()" title="Switch language">EN</button>
+                </li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1><span data-i18n="k8s.hero.title">Infogérance Kubernetes</span><br><span class="highlight" data-i18n="k8s.hero.subtitle">Build | Run | Deploy</span></h1>
+            <p class="hero-subtitle" data-i18n="k8s.hero.description">Experts Kubernetes. Nous construisons, exploitons et faisons évoluer vos clusters pour que vous puissiez vous concentrer sur votre métier.</p>
+            <div class="hero-cta">
+                <a href="#simulateur" class="btn btn-primary btn-lg" data-i18n="hero.cta_simulator">Simuler mon projet</a>
+                <a href="#services" class="btn btn-outline btn-lg" data-i18n="hero.cta_services">Découvrir nos services</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">99.9%</span>
+                    <span class="stat-label" data-i18n="hero.stat_availability">Disponibilité garantie</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">30min</span>
+                    <span class="stat-label" data-i18n="hero.stat_response">Temps de réponse P1</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label" data-i18n="hero.stat_support">Support disponible</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title" data-i18n="services.title">Services Kubernetes</h2>
+            <p class="section-subtitle" data-i18n="services.subtitle">Une offre complète couvrant tout le cycle de vie de votre infrastructure Kubernetes</p>
+
+            <div class="services-grid">
+                <!-- BUILD -->
+                <article class="service-card">
+                    <div class="service-icon build-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="services.build.title">BUILD</h3>
+                    <p class="service-tagline" data-i18n="services.build.tagline">Construction de Cluster</p>
+                    <ul class="service-features" id="build-features">
+                        <li>Architecture haute disponibilité</li>
+                        <li>Installation RKE2 + Rancher</li>
+                        <li>Configuration réseau (Calico, Cilium)</li>
+                        <li>Stack observabilité (Prometheus, Grafana)</li>
+                        <li>Sécurité (RBAC, Network Policies)</li>
+                        <li>Documentation et formation</li>
+                    </ul>
+                    <p class="service-price"><span data-i18n="services.build.price">À partir de</span> <strong>6 000 € HT</strong></p>
+                </article>
+
+                <!-- RUN -->
+                <article class="service-card featured">
+                    <div class="service-badge" data-i18n="services.popular">Populaire</div>
+                    <div class="service-icon run-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="services.run.title">RUN</h3>
+                    <p class="service-tagline" data-i18n="services.run.tagline">Infogérance & MCO</p>
+                    <ul class="service-features" id="run-features">
+                        <li>Surveillance 24/7 et alerting</li>
+                        <li>Gestion des certificats TLS</li>
+                        <li>Mises à jour de sécurité</li>
+                        <li>Support SLA garanti</li>
+                        <li>Audit de sécurité trimestriel</li>
+                        <li>Rapports d'exploitation</li>
+                    </ul>
+                    <p class="service-price"><span data-i18n="services.run.price">À partir de</span> <strong>800 € HT/mois</strong></p>
+                </article>
+
+                <!-- DEPLOY -->
+                <article class="service-card">
+                    <div class="service-icon deploy-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 17l6-6-6-6M12 19h8"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="services.deploy.title">DEPLOY</h3>
+                    <p class="service-tagline" data-i18n="services.deploy.tagline">Déploiement Applicatif</p>
+                    <ul class="service-features" id="deploy-features">
+                        <li>Containerisation d'applications</li>
+                        <li>Manifests Kubernetes optimisés</li>
+                        <li>Configuration CI/CD</li>
+                        <li>Stratégies de déploiement</li>
+                        <li>Accompagnement DevOps</li>
+                        <li>Formation des équipes</li>
+                    </ul>
+                    <p class="service-price"><span data-i18n="services.deploy.price">À partir de</span> <strong>2 800 € HT</strong></p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Toolchain CI/CD Section -->
+    <section class="toolchain">
+        <div class="container">
+            <h2 class="section-title" data-i18n="toolchain.title">Toolchain CI/CD Complète</h2>
+            <p class="section-subtitle" data-i18n="toolchain.subtitle">Une chaîne DevSecOps intégrée pour industrialiser vos déploiements</p>
+
+            <div class="toolchain-grid">
+                <div class="tool-item">
+                    <div class="tool-icon">CI/CD</div>
+                    <h4 data-i18n="toolchain.tools.cicd.title">GitLab / Jenkins</h4>
+                    <p data-i18n="toolchain.tools.cicd.desc">Pipelines automatisés</p>
+                </div>
+                <div class="tool-item">
+                    <div class="tool-icon">Registry</div>
+                    <h4 data-i18n="toolchain.tools.registry.title">Harbor</h4>
+                    <p data-i18n="toolchain.tools.registry.desc">Registry Docker privé</p>
+                </div>
+                <div class="tool-item">
+                    <div class="tool-icon">Scan</div>
+                    <h4 data-i18n="toolchain.tools.scan.title">Trivy</h4>
+                    <p data-i18n="toolchain.tools.scan.desc">Vulnérabilités images</p>
+                </div>
+                <div class="tool-item">
+                    <div class="tool-icon">DAST</div>
+                    <h4 data-i18n="toolchain.tools.dast.title">OWASP ZAP</h4>
+                    <p data-i18n="toolchain.tools.dast.desc">Sécurité applicative</p>
+                </div>
+                <div class="tool-item">
+                    <div class="tool-icon">Quality</div>
+                    <h4 data-i18n="toolchain.tools.quality.title">SonarQube</h4>
+                    <p data-i18n="toolchain.tools.quality.desc">Qualité de code</p>
+                </div>
+                <div class="tool-item">
+                    <div class="tool-icon">Secrets</div>
+                    <h4 data-i18n="toolchain.tools.secrets.title">Vault</h4>
+                    <p data-i18n="toolchain.tools.secrets.desc">Gestion des secrets</p>
+                </div>
+            </div>
+            <p class="toolchain-price"><span data-i18n="toolchain.price">Option Toolchain CI/CD :</span> <strong>6 000 € HT</strong></p>
+        </div>
+    </section>
+
+    <!-- Tarifs Section -->
+    <section id="tarifs" class="pricing">
+        <div class="container">
+            <h2 class="section-title" data-i18n="pricing.title">Tarifs Kubernetes</h2>
+            <p class="section-subtitle" data-i18n="pricing.subtitle">Des offres transparentes adaptées à vos besoins</p>
+
+            <!-- Tabs -->
+            <div class="pricing-tabs">
+                <button class="tab-btn active" data-tab="packs" data-i18n="pricing.tabs.packs">Packs</button>
+                <button class="tab-btn" data-tab="build" data-i18n="pricing.tabs.build">BUILD</button>
+                <button class="tab-btn" data-tab="run" data-i18n="pricing.tabs.run">RUN</button>
+                <button class="tab-btn" data-tab="deploy" data-i18n="pricing.tabs.deploy">DEPLOY</button>
+            </div>
+
+            <!-- Packs Content -->
+            <div class="tab-content active" id="packs">
+                <div class="pricing-grid">
+                    <!-- Pack Démarrage -->
+                    <div class="pricing-card">
+                        <h3 data-i18n="pricing.packs.starter.name">Pack Démarrage</h3>
+                        <p class="pricing-description" data-i18n="pricing.packs.starter.description">Idéal pour une première mise en production</p>
+                        <div class="pricing-price">
+                            <span class="price">17 000 €</span>
+                            <span class="price-period" data-i18n="pricing.excl_vat">HT</span>
+                        </div>
+                        <p class="pricing-savings"><span data-i18n="pricing.instead_of">Au lieu de</span> 19 600 € — <span data-i18n="pricing.savings">Économie</span> : 2 600 €</p>
+                        <ul class="pricing-features" id="pack-starter-features">
+                            <li>Cluster 3 workers, 1 master</li>
+                            <li>Rancher (interface d'administration)</li>
+                            <li>RUN Essentiel 12 mois</li>
+                            <li>Support H+4 jours ouvrés</li>
+                            <li>1 application déployée</li>
+                            <li>1 journée de formation</li>
+                        </ul>
+                        <p class="pricing-option"><span data-i18n="pricing.option_cicd">Option CI/CD</span> : +6 000 € HT</p>
+                        <a href="#contact" class="btn btn-outline btn-block" data-i18n="pricing.request_quote">Demander un devis</a>
+                    </div>
+
+                    <!-- Pack Production -->
+                    <div class="pricing-card featured">
+                        <div class="pricing-badge" data-i18n="pricing.recommended">Recommandé</div>
+                        <h3 data-i18n="pricing.packs.production.name">Pack Production</h3>
+                        <p class="pricing-description" data-i18n="pricing.packs.production.description">Pour les environnements critiques</p>
+                        <div class="pricing-price">
+                            <span class="price">44 000 €</span>
+                            <span class="price-period" data-i18n="pricing.excl_vat">HT</span>
+                        </div>
+                        <p class="pricing-savings"><span data-i18n="pricing.instead_of">Au lieu de</span> 50 800 € — <span data-i18n="pricing.savings">Économie</span> : 6 800 €</p>
+                        <ul class="pricing-features" id="pack-production-features">
+                            <li>Cluster HA 5 workers, 3 masters</li>
+                            <li>Rancher + Toolchain CI/CD complète</li>
+                            <li>GitOps avec ArgoCD</li>
+                            <li>RUN Standard 12 mois</li>
+                            <li>Support H+2 jours ouvrés</li>
+                            <li>3 applications déployées</li>
+                            <li>2 journées de formation</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary btn-block" data-i18n="pricing.request_quote">Demander un devis</a>
+                    </div>
+
+                    <!-- Pack Enterprise -->
+                    <div class="pricing-card">
+                        <h3 data-i18n="pricing.packs.enterprise.name">Pack Enterprise</h3>
+                        <p class="pricing-description" data-i18n="pricing.packs.enterprise.description">Solution complète grandes organisations</p>
+                        <div class="pricing-price">
+                            <span class="price">70 000 €+</span>
+                            <span class="price-period" data-i18n="pricing.excl_vat">HT</span>
+                        </div>
+                        <p class="pricing-savings" data-i18n="pricing.on_quote">Sur devis personnalisé</p>
+                        <ul class="pricing-features" id="pack-enterprise-features">
+                            <li>Cluster HA multi-AZ 10+ workers</li>
+                            <li>Toolchain CI/CD + Service Mesh</li>
+                            <li>GitOps ArgoCD + Istio</li>
+                            <li>RUN Premium 12 mois</li>
+                            <li>Support 24/7 dédié</li>
+                            <li>20 jours de régie annuels</li>
+                            <li>5 journées de formation</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline btn-block" data-i18n="pricing.contact_us">Nous contacter</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BUILD Content -->
+            <div class="tab-content" id="build">
+                <div class="pricing-table-wrapper">
+                    <table class="pricing-table">
+                        <thead>
+                            <tr>
+                                <th data-i18n="pricing.tables.tier">Offre</th>
+                                <th data-i18n="pricing.tables.nodes">Nœuds</th>
+                                <th data-i18n="pricing.tables.control_plane">Control-Plane</th>
+                                <th data-i18n="pricing.tables.timeline">Délai</th>
+                                <th data-i18n="pricing.tables.price">Tarif HT</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Starter</strong></td>
+                                <td>3 workers</td>
+                                <td>1 master</td>
+                                <td>5 <span data-i18n="pricing.days">jours</span></td>
+                                <td><strong>6 000 €</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Standard</strong></td>
+                                <td>5 workers</td>
+                                <td>3 masters (HA)</td>
+                                <td>8 <span data-i18n="pricing.days">jours</span></td>
+                                <td><strong>10 000 €</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Enterprise</strong></td>
+                                <td>10+ workers</td>
+                                <td>3 masters (HA) + multi-AZ</td>
+                                <td>12 <span data-i18n="pricing.days">jours</span></td>
+                                <td><strong>16 000 €</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h4 data-i18n="pricing.tables.options">Options BUILD</h4>
+                    <table class="pricing-table">
+                        <tbody>
+                            <tr>
+                                <td>Cluster multi-cloud / hybride</td>
+                                <td><strong>+4 000 €</strong></td>
+                            </tr>
+                            <tr>
+                                <td>GitOps (ArgoCD/FluxCD)</td>
+                                <td><strong>+3 000 €</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Service Mesh (Istio/Linkerd)</td>
+                                <td><strong>+3 000 €</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Toolchain CI/CD</td>
+                                <td><strong>+6 000 €</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Cluster staging/dev</td>
+                                <td><strong>+50%</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Formation (<span data-i18n="pricing.per_day">/jour</span>)</td>
+                                <td><strong>1 200 €</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- RUN Content -->
+            <div class="tab-content" id="run">
+                <div class="pricing-table-wrapper">
+                    <table class="pricing-table">
+                        <thead>
+                            <tr>
+                                <th data-i18n="pricing.tables.tier">Offre</th>
+                                <th data-i18n="pricing.tables.max_nodes">Nœuds max</th>
+                                <th data-i18n="pricing.tables.hours">Plage horaire</th>
+                                <th data-i18n="pricing.tables.support">Support</th>
+                                <th data-i18n="pricing.tables.price">Tarif HT/mois</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Essentiel</strong></td>
+                                <td>5</td>
+                                <td>Lun-Ven 9h-18h</td>
+                                <td>H+4</td>
+                                <td><strong>800 €</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Standard</strong></td>
+                                <td>10</td>
+                                <td>Lun-Ven 9h-18h</td>
+                                <td>H+2</td>
+                                <td><strong>1 200 €</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Premium</strong></td>
+                                <td>20</td>
+                                <td>24/7</td>
+                                <td>30 min</td>
+                                <td><strong>1 800 €</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Enterprise</strong></td>
+                                <td>Illimité</td>
+                                <td>24/7 + dédié</td>
+                                <td>30 min</td>
+                                <td><strong><span data-i18n="pricing.on_quote">Sur devis</span></strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h4 data-i18n="pricing.tables.on_call">Options Astreinte</h4>
+                    <table class="pricing-table">
+                        <tbody>
+                            <tr>
+                                <td>Astreinte soir (18h-22h)</td>
+                                <td><strong>+400 €/mois</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Astreinte week-end</td>
+                                <td><strong>+600 €/mois</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Astreinte jours fériés</td>
+                                <td><strong>+300 €/mois</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Astreinte 24/7</td>
+                                <td><strong>+1 500 €/mois</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h4 data-i18n="pricing.tables.audit">Audit de Reprise</h4>
+                    <p class="pricing-note" style="margin-bottom: 1rem; font-style: normal;">
+                        <strong data-i18n="pricing.notes.audit_required">Prérequis obligatoire</strong> :
+                        <span data-i18n="pricing.notes.audit_desc">Pour tout cluster non construit par DOVEAIA, un audit de reprise est requis avant la mise en place de l'infogérance.</span>
+                    </p>
+                    <table class="pricing-table">
+                        <thead>
+                            <tr>
+                                <th data-i18n="pricing.tables.cluster_size">Taille du cluster</th>
+                                <th data-i18n="pricing.tables.timeline">Durée</th>
+                                <th data-i18n="pricing.tables.price">Tarif HT</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1-5 <span data-i18n="pricing.nodes">nœuds</span></td>
+                                <td>2 <span data-i18n="pricing.days">jours</span></td>
+                                <td><strong>2 400 €</strong></td>
+                            </tr>
+                            <tr>
+                                <td>6-15 <span data-i18n="pricing.nodes">nœuds</span></td>
+                                <td>3 <span data-i18n="pricing.days">jours</span></td>
+                                <td><strong>3 600 €</strong></td>
+                            </tr>
+                            <tr>
+                                <td>16+ <span data-i18n="pricing.nodes">nœuds</span></td>
+                                <td><span data-i18n="pricing.on_quote">Sur devis</span></td>
+                                <td><strong><span data-i18n="pricing.on_quote">Sur devis</span></strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p class="pricing-note" data-i18n="pricing.notes.commitment">Engagement minimum : 12 mois. Interventions hors contrat : 250 €/h (min. 2h).</p>
+                </div>
+            </div>
+
+            <!-- DEPLOY Content -->
+            <div class="tab-content" id="deploy">
+                <div class="pricing-table-wrapper">
+                    <h4>Forfaits déploiement</h4>
+                    <table class="pricing-table">
+                        <thead>
+                            <tr>
+                                <th>Type</th>
+                                <th data-i18n="pricing.tables.complexity">Complexité</th>
+                                <th data-i18n="pricing.tables.timeline">Délai</th>
+                                <th data-i18n="pricing.tables.price">Tarif HT</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Simple</strong></td>
+                                <td>1-3 services, stateless</td>
+                                <td>2-3 <span data-i18n="pricing.days">jours</span></td>
+                                <td><strong>2 800 €</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Standard</strong></td>
+                                <td>4-8 services, DB</td>
+                                <td>5-7 <span data-i18n="pricing.days">jours</span></td>
+                                <td><strong>5 000 €</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Complexe</strong></td>
+                                <td>10+ services, microservices</td>
+                                <td>10-14 <span data-i18n="pricing.days">jours</span></td>
+                                <td><strong>10 500 €</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h4>Régie</h4>
+                    <table class="pricing-table">
+                        <tbody>
+                            <tr>
+                                <td>Demi-journée (4h)</td>
+                                <td><strong>600 €</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Journée (8h)</td>
+                                <td><strong>1 100 €</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Forfait 5 jours</td>
+                                <td><strong>5 500 €</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Forfait 10 jours</td>
+                                <td><strong>11 000 €</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Forfait mensuel (20 jours)</td>
+                                <td><strong>20 000 €</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h4>Forfaits annuels</h4>
+                    <table class="pricing-table">
+                        <thead>
+                            <tr>
+                                <th>Forfait</th>
+                                <th data-i18n="pricing.tables.days_included">Jours inclus</th>
+                                <th data-i18n="pricing.tables.price">Tarif HT/an</th>
+                                <th data-i18n="pricing.tables.daily_rate">Tarif jour</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>DEPLOY 10</strong></td>
+                                <td>10 <span data-i18n="pricing.days">jours</span></td>
+                                <td><strong>12 000 €</strong></td>
+                                <td>1 200 €</td>
+                            </tr>
+                            <tr>
+                                <td><strong>DEPLOY 20</strong></td>
+                                <td>20 <span data-i18n="pricing.days">jours</span></td>
+                                <td><strong>22 000 €</strong></td>
+                                <td>1 100 €</td>
+                            </tr>
+                            <tr>
+                                <td><strong>DEPLOY 40</strong></td>
+                                <td>40 <span data-i18n="pricing.days">jours</span></td>
+                                <td><strong>40 000 €</strong></td>
+                                <td>1 000 €</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="pricing-note" data-i18n="pricing.notes.rollover">Report des jours non consommés : 25% max, sur le trimestre suivant.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Simulateur Section -->
+    <section id="simulateur" class="simulator">
+        <div class="container">
+            <h2 class="section-title" data-i18n="simulator.title">Simulateur de Projet</h2>
+            <p class="section-subtitle" data-i18n="simulator.subtitle">Composez votre offre et estimez votre budget en quelques clics</p>
+
+            <div class="simulator-wrapper" x-data="simulator">
+                <div class="simulator-form">
+                    <!-- Étape 1: BUILD -->
+                    <div class="simulator-step">
+                        <h3><span class="step-number">1</span> <span data-i18n="simulator.steps.build">Construction du cluster (BUILD)</span></h3>
+                        <div class="form-group">
+                            <label data-i18n="simulator.labels.cluster_size">Taille du cluster</label>
+                            <div class="radio-cards small">
+                                <label class="radio-card">
+                                    <input type="radio" name="build" value="none" x-model="build">
+                                    <span class="radio-card-content">
+                                        <strong data-i18n="simulator.labels.none">Aucun</strong>
+                                        <span>Pas de cluster</span>
+                                        <span class="radio-price">0 €</span>
+                                    </span>
+                                </label>
+                                <label class="radio-card">
+                                    <input type="radio" name="build" value="starter" x-model="build">
+                                    <span class="radio-card-content">
+                                        <strong data-i18n="simulator.tiers.starter.name">Starter</strong>
+                                        <span data-i18n="simulator.tiers.starter.desc">3 workers, 1 master</span>
+                                        <span class="radio-price">6 000 €</span>
+                                    </span>
+                                </label>
+                                <label class="radio-card">
+                                    <input type="radio" name="build" value="standard" x-model="build">
+                                    <span class="radio-card-content">
+                                        <strong data-i18n="simulator.tiers.standard.name">Standard</strong>
+                                        <span data-i18n="simulator.tiers.standard.desc">5 workers, 3 masters HA</span>
+                                        <span class="radio-price">10 000 €</span>
+                                    </span>
+                                </label>
+                                <label class="radio-card">
+                                    <input type="radio" name="build" value="enterprise" x-model="build">
+                                    <span class="radio-card-content">
+                                        <strong data-i18n="simulator.tiers.enterprise.name">Enterprise</strong>
+                                        <span data-i18n="simulator.tiers.enterprise.desc">10+ workers, multi-AZ</span>
+                                        <span class="radio-price">16 000 €</span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label data-i18n="simulator.labels.build_options">Options BUILD</label>
+                            <div class="checkbox-list">
+                                <label class="checkbox-item">
+                                    <input type="checkbox" x-model="buildOptions.multicloud">
+                                    <span data-i18n="simulator.options.multicloud">Cluster multi-cloud / hybride</span> (+4 000 €)
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" x-model="buildOptions.gitops">
+                                    <span data-i18n="simulator.options.gitops">GitOps ArgoCD/FluxCD</span> (+3 000 €)
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" x-model="buildOptions.servicemesh">
+                                    <span data-i18n="simulator.options.servicemesh">Service Mesh Istio/Linkerd</span> (+3 000 €)
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" x-model="buildOptions.cicd">
+                                    <span data-i18n="simulator.options.cicd">Toolchain CI/CD complète</span> (+6 000 €)
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Étape 2: RUN -->
+                    <div class="simulator-step">
+                        <h3><span class="step-number">2</span> <span data-i18n="simulator.steps.run">Infogérance (RUN) — 12 mois</span></h3>
+                        <div class="form-group">
+                            <label data-i18n="simulator.labels.support_level">Niveau de support</label>
+                            <div class="radio-cards small">
+                                <label class="radio-card">
+                                    <input type="radio" name="run" value="none" x-model="run">
+                                    <span class="radio-card-content">
+                                        <strong data-i18n="simulator.labels.none">Aucun</strong>
+                                        <span>Pas d'infogérance</span>
+                                        <span class="radio-price">0 €</span>
+                                    </span>
+                                </label>
+                                <label class="radio-card">
+                                    <input type="radio" name="run" value="essentiel" x-model="run">
+                                    <span class="radio-card-content">
+                                        <strong data-i18n="simulator.tiers.essential.name">Essentiel</strong>
+                                        <span data-i18n="simulator.tiers.essential.desc">H+4, Lun-Ven 9h-18h</span>
+                                        <span class="radio-price">800 €/mois</span>
+                                    </span>
+                                </label>
+                                <label class="radio-card">
+                                    <input type="radio" name="run" value="standard" x-model="run">
+                                    <span class="radio-card-content">
+                                        <strong data-i18n="simulator.tiers.standard_run.name">Standard</strong>
+                                        <span data-i18n="simulator.tiers.standard_run.desc">H+2, Lun-Ven 9h-18h</span>
+                                        <span class="radio-price">1 200 €/mois</span>
+                                    </span>
+                                </label>
+                                <label class="radio-card">
+                                    <input type="radio" name="run" value="premium" x-model="run">
+                                    <span class="radio-card-content">
+                                        <strong data-i18n="simulator.tiers.premium.name">Premium</strong>
+                                        <span data-i18n="simulator.tiers.premium.desc">30min, 24/7</span>
+                                        <span class="radio-price">1 800 €/mois</span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group" x-show="showAudit" x-transition>
+                            <label data-i18n="simulator.labels.audit">Audit de reprise (cluster externe)</label>
+                            <p class="pricing-note" style="margin-bottom: 0.5rem; font-style: normal; font-size: 0.85rem;">
+                                <span data-i18n="simulator.labels.audit_desc">Requis si le cluster n'est pas construit par DOVEAIA</span>
+                            </p>
+                            <div class="radio-cards small">
+                                <label class="radio-card">
+                                    <input type="radio" name="audit" value="none" x-model="audit">
+                                    <span class="radio-card-content">
+                                        <strong data-i18n="simulator.labels.none">Aucun</strong>
+                                        <span>Pas d'audit</span>
+                                        <span class="radio-price">0 €</span>
+                                    </span>
+                                </label>
+                                <label class="radio-card">
+                                    <input type="radio" name="audit" value="small" x-model="audit">
+                                    <span class="radio-card-content">
+                                        <strong>1-5 nœuds</strong>
+                                        <span>2 jours</span>
+                                        <span class="radio-price">2 400 €</span>
+                                    </span>
+                                </label>
+                                <label class="radio-card">
+                                    <input type="radio" name="audit" value="medium" x-model="audit">
+                                    <span class="radio-card-content">
+                                        <strong>6-15 nœuds</strong>
+                                        <span>3 jours</span>
+                                        <span class="radio-price">3 600 €</span>
+                                    </span>
+                                </label>
+                                <label class="radio-card">
+                                    <input type="radio" name="audit" value="large" x-model="audit">
+                                    <span class="radio-card-content">
+                                        <strong>16+ nœuds</strong>
+                                        <span>Sur devis</span>
+                                        <span class="radio-price">Sur devis</span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label data-i18n="simulator.labels.on_call_options">Options Astreinte</label>
+                            <div class="checkbox-list">
+                                <label class="checkbox-item">
+                                    <input type="checkbox" x-model="runOptions.soir">
+                                    <span data-i18n="simulator.options.evening">Astreinte soir 18h-22h</span> (+400 €/mois)
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" x-model="runOptions.weekend">
+                                    <span data-i18n="simulator.options.weekend">Astreinte week-end</span> (+600 €/mois)
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" x-model="runOptions.feries">
+                                    <span data-i18n="simulator.options.holidays">Astreinte jours fériés</span> (+300 €/mois)
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Étape 3: DEPLOY -->
+                    <div class="simulator-step">
+                        <h3><span class="step-number">3</span> <span data-i18n="simulator.steps.deploy">Déploiement applicatif (DEPLOY)</span></h3>
+                        <div class="form-group">
+                            <label data-i18n="simulator.labels.apps_to_deploy">Applications à déployer</label>
+                            <div class="number-inputs">
+                                <div class="number-input-group">
+                                    <label data-i18n="simulator.labels.simple_apps">Applications simples (2 800 €)</label>
+                                    <input type="number" x-model.number="deploySimple" min="0" max="10">
+                                </div>
+                                <div class="number-input-group">
+                                    <label data-i18n="simulator.labels.standard_apps">Applications standard (5 000 €)</label>
+                                    <input type="number" x-model.number="deployStandard" min="0" max="10">
+                                </div>
+                                <div class="number-input-group">
+                                    <label data-i18n="simulator.labels.complex_apps">Applications complexes (10 500 €)</label>
+                                    <input type="number" x-model.number="deployComplex" min="0" max="10">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label data-i18n="simulator.labels.annual_package">Forfait annuel DEPLOY (optionnel)</label>
+                            <div class="radio-cards small">
+                                <label class="radio-card">
+                                    <input type="radio" name="deploy-annual" value="none" x-model="deployAnnual">
+                                    <span class="radio-card-content">
+                                        <strong data-i18n="simulator.labels.none">Aucun</strong>
+                                        <span>Pas de forfait</span>
+                                        <span class="radio-price">0 €</span>
+                                    </span>
+                                </label>
+                                <label class="radio-card">
+                                    <input type="radio" name="deploy-annual" value="deploy10" x-model="deployAnnual">
+                                    <span class="radio-card-content">
+                                        <strong>DEPLOY 10</strong>
+                                        <span>10 jours/an</span>
+                                        <span class="radio-price">12 000 €</span>
+                                    </span>
+                                </label>
+                                <label class="radio-card">
+                                    <input type="radio" name="deploy-annual" value="deploy20" x-model="deployAnnual">
+                                    <span class="radio-card-content">
+                                        <strong>DEPLOY 20</strong>
+                                        <span>20 jours/an</span>
+                                        <span class="radio-price">22 000 €</span>
+                                    </span>
+                                </label>
+                                <label class="radio-card">
+                                    <input type="radio" name="deploy-annual" value="deploy40" x-model="deployAnnual">
+                                    <span class="radio-card-content">
+                                        <strong>DEPLOY 40</strong>
+                                        <span>40 jours/an</span>
+                                        <span class="radio-price">40 000 €</span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Étape 4: Formation -->
+                    <div class="simulator-step">
+                        <h3><span class="step-number">4</span> <span data-i18n="simulator.steps.training">Formation</span></h3>
+                        <div class="form-group">
+                            <label data-i18n="simulator.labels.training_days">Journées de formation (1 200 €/jour)</label>
+                            <div class="number-input-single">
+                                <button type="button" class="btn-minus" @click="decrementFormation()">-</button>
+                                <input type="number" x-model.number="formation" min="0" max="10">
+                                <button type="button" class="btn-plus" @click="incrementFormation()">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Résumé -->
+                <div class="simulator-summary">
+                    <div class="summary-sticky">
+                        <h3 data-i18n="simulator.summary.title">Récapitulatif</h3>
+
+                        <div class="summary-section">
+                            <h4 data-i18n="simulator.summary.build">BUILD</h4>
+                            <div class="summary-line">
+                                <span x-text="labels.build[build]">Standard</span>
+                                <span x-text="formatPrice(buildPrice)">10 000 €</span>
+                            </div>
+                            <template x-for="option in buildOptionsDetails" :key="option.name">
+                                <div class="summary-line summary-sub">
+                                    <span x-text="option.name"></span>
+                                    <span x-text="formatPrice(option.price)"></span>
+                                </div>
+                            </template>
+                        </div>
+
+                        <div class="summary-section">
+                            <h4 data-i18n="simulator.summary.run">RUN (12 mois)</h4>
+                            <div class="summary-line">
+                                <span x-text="labels.run[run]">Standard</span>
+                                <span x-text="formatPrice(runPrice)">14 400 €</span>
+                            </div>
+                            <template x-for="option in runOptionsDetails" :key="option.name">
+                                <div class="summary-line summary-sub">
+                                    <span x-text="option.name"></span>
+                                    <span x-text="formatPrice(option.price)"></span>
+                                </div>
+                            </template>
+                            <div class="summary-line summary-sub" x-show="showAudit && audit !== 'none'">
+                                <span x-text="labels.audit[audit]">Audit</span>
+                                <span x-text="formatPrice(auditPrice)"></span>
+                            </div>
+                        </div>
+
+                        <div class="summary-section">
+                            <h4 data-i18n="simulator.summary.deploy">DEPLOY</h4>
+                            <div class="summary-line">
+                                <span x-text="deployAppsLabel">1x Standard</span>
+                                <span x-text="formatPrice(deployAppsPrice)">5 000 €</span>
+                            </div>
+                            <div class="summary-line summary-sub" x-show="deployAnnual !== 'none'">
+                                <span x-text="labels.deployAnnual[deployAnnual]"></span>
+                                <span x-text="formatPrice(deployAnnualPrice)"></span>
+                            </div>
+                        </div>
+
+                        <div class="summary-section">
+                            <h4 data-i18n="simulator.summary.training">Formation</h4>
+                            <div class="summary-line">
+                                <span x-text="formationLabel">1 journée</span>
+                                <span x-text="formatPrice(formationPrice)">1 200 €</span>
+                            </div>
+                        </div>
+
+                        <div class="summary-total">
+                            <span data-i18n="simulator.summary.total">Total estimé HT</span>
+                            <span class="summary-total-price" x-text="formatPrice(total)">30 600 €</span>
+                        </div>
+
+                        <div class="summary-services">
+                            <h4 data-i18n="simulator.summary.services">Services inclus</h4>
+                            <ul>
+                                <template x-for="service in services" :key="service">
+                                    <li x-text="service"></li>
+                                </template>
+                            </ul>
+                        </div>
+
+                        <a href="#contact" class="btn btn-primary btn-block btn-lg" data-i18n="simulator.summary.cta">Demander un devis détaillé</a>
+                        <button type="button" class="btn btn-outline btn-block" @click="copyShareableLink()" style="margin-top: 0.5rem;">
+                            <span x-text="copyButtonText">Copier le lien de cette simulation</span>
+                        </button>
+                        <p class="summary-note" data-i18n="simulator.summary.note">Estimation non contractuelle. Devis personnalisé sur demande.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h2 data-i18n="k8s.contact.title">Prêt à industrialiser votre infrastructure Kubernetes ?</h2>
+                    <p data-i18n="k8s.contact.subtitle">Contactez-nous pour un échange sans engagement. Nous analyserons vos besoins Kubernetes et vous proposerons une solution adaptée.</p>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <strong data-i18n="contact.labels.email">Email</strong>
+                            <a href="mailto:jkgaglo@akouendy.com">jkgaglo@akouendy.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <strong data-i18n="contact.labels.website">Site web</strong>
+                            <a href="https://www.doveaia.com" target="_blank">www.doveaia.com</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-steps">
+                        <h4 data-i18n="contact.steps.title">Prochaines étapes</h4>
+                        <ol id="contact-steps-list">
+                            <li><strong>Échange découverte</strong> — Compréhension de vos besoins</li>
+                            <li><strong>Proposition personnalisée</strong> — Offre adaptée à votre contexte</li>
+                            <li><strong>Validation technique</strong> — Revue d'architecture et planning</li>
+                            <li><strong>Démarrage</strong> — Lancement sous 2 semaines</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <form class="contact-form" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name" data-i18n="contact.form.name">Nom complet *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" data-i18n="contact.form.email">Email professionnel *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="company" data-i18n="contact.form.company">Société</label>
+                        <input type="text" id="company" name="company">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone" data-i18n="contact.form.phone">Téléphone</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="project" data-i18n="contact.form.project">Décrivez votre projet *</label>
+                        <textarea id="project" name="project" rows="4" required data-i18n-placeholder="contact.form.project_placeholder"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="budget" data-i18n="contact.form.budget">Budget estimé</label>
+                        <select id="budget" name="budget">
+                            <option value="" data-i18n="contact.form.budget_options.select">Sélectionnez</option>
+                            <option value="<20k" data-i18n="contact.form.budget_options.lt20k">Moins de 20 000 €</option>
+                            <option value="20-50k" data-i18n="contact.form.budget_options.20-50k">20 000 € - 50 000 €</option>
+                            <option value="50-100k" data-i18n="contact.form.budget_options.50-100k">50 000 € - 100 000 €</option>
+                            <option value=">100k" data-i18n="contact.form.budget_options.gt100k">Plus de 100 000 €</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg btn-block" data-i18n="contact.form.submit">Envoyer ma demande</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-text">DOVEAIA</span>
+                    <p data-i18n="footer.tagline">Expert Kubernetes & Azure</p>
+                    <p class="footer-legal">SIRET : 94763010900033</p>
+                </div>
+                <div class="footer-links">
+                    <h4 data-i18n="footer.services">Services</h4>
+                    <ul>
+                        <li><a href="kubernetes.html">Kubernetes</a></li>
+                        <li><a href="azure.html">Azure</a></li>
+                        <li><a href="training.html" data-i18n="nav.training">Formations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4 data-i18n="footer.resources">Ressources</h4>
+                    <ul>
+                        <li><a href="#tarifs" data-i18n="nav.pricing">Tarifs</a></li>
+                        <li><a href="#simulateur" data-i18n="nav.simulator">Simulateur</a></li>
+                        <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4 data-i18n="footer.contact">Contact</h4>
+                    <p>jkgaglo@akouendy.com</p>
+                    <p style="margin-top: 0.5rem; font-size: 0.9rem;">
+                        Parc Lorans, Bâtiment 1G<br>
+                        Rue Jean-Marie Huchet<br>
+                        35000 Rennes
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 DOVEAIA. <span data-i18n="footer.copyright">Tous droits réservés.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/simulator.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

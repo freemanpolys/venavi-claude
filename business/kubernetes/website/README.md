@@ -1,7 +1,8 @@
 # Site Web Infogérance Kubernetes - AKOUENDY
 
 Site vitrine bilingue (FR/EN) pour l'offre d'infogérance Kubernetes avec simulateur de projet interactif.
-
+## Cloudflare 
+Url : https://doveaia-kubernetes-services.akouendy.workers.dev
 ## Structure
 
 ```

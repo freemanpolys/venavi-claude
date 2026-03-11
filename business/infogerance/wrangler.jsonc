@@ -1,0 +1,23 @@
+{
+  // Config de base (shared)
+  "name": "doveaia-infogerance-apps",
+  "compatibility_date": "2026-02-18",
+  "assets": {
+    "directory": "website",
+    "not_found_handling": "single-page-application"
+  },
+  "observability": {
+    "enabled": true
+  },
+
+  "env": {
+    // Staging: npx wrangler deploy --env staging
+    "staging": {
+      "name": "doveaia-infogerance-apps-staging"
+    },
+    // Production: npx wrangler deploy --env production
+    "production": {
+      "name": "doveaia-infogerance-apps"
+    }
+  }
+}

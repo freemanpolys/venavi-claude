@@ -1,5 +1,5 @@
 /**
- * AKOUENDY Kubernetes - Main JavaScript
+ * DOVEAIA Kubernetes - Main JavaScript
  * Navigation, Tabs, et interactions générales
  */
 

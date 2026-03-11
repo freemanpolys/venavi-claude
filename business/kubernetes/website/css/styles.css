@@ -743,11 +743,12 @@ ul {
 }
 
 .radio-cards.small {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .radio-card {
     cursor: pointer;
+    display: flex;
 }
 
 .radio-card input {
@@ -757,11 +758,13 @@ ul {
 .radio-card-content {
     display: flex;
     flex-direction: column;
+    flex: 1;
     padding: var(--spacing-md);
     border: 2px solid var(--color-border);
     border-radius: var(--radius-md);
     transition: all var(--transition-fast);
     text-align: center;
+    justify-content: space-between;
 }
 
 .radio-card input:checked + .radio-card-content {
@@ -915,17 +918,24 @@ ul {
     padding: var(--spacing-xs) 0;
 }
 
+.summary-line.summary-sub {
+    padding-left: var(--spacing-md);
+    font-size: var(--font-size-xs);
+    color: var(--color-text-light);
+}
+
 .summary-total {
     display: flex;
-    justify-content: space-between;
-    font-size: var(--font-size-xl);
+    flex-direction: column;
+    font-size: var(--font-size-lg);
     font-weight: 700;
     padding: var(--spacing-lg) 0;
     border-bottom: 2px solid var(--color-primary);
     margin-bottom: var(--spacing-lg);
 }
 
-#total-price {
+.summary-total-price {
+    font-size: var(--font-size-3xl);
     color: var(--color-primary);
 }
 
@@ -1221,6 +1231,35 @@ ul {
 }
 
 /* --------------------------------------------------------------------------
+   Azure Section Styles
+   -------------------------------------------------------------------------- */
+.azure-services {
+    background: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.azure-services .section-title::after {
+    background: linear-gradient(135deg, #0078d4, #00bcf2);
+}
+
+.azure-services .service-card.featured {
+    border-color: #0078d4;
+}
+
+.azure-services .service-card.featured::before {
+    background: linear-gradient(135deg, #0078d4, #00bcf2);
+}
+
+.azure-services .service-badge {
+    background: linear-gradient(135deg, #0078d4, #00bcf2);
+}
+
+.tech-tags .tech-featured {
+    background: linear-gradient(135deg, #0078d4, #00bcf2);
+    color: white;
+    font-weight: 600;
+}
+
+/* --------------------------------------------------------------------------
    Responsive Design
    -------------------------------------------------------------------------- */
 @media (max-width: 1024px) {
@@ -1298,7 +1337,7 @@ ul {
     }
 
     .radio-cards.small {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .tech-grid {
@@ -1325,5 +1364,131 @@ ul {
     .pricing-table th,
     .pricing-table td {
         padding: var(--spacing-sm);
+    }
+}
+
+/* ==========================================================================
+   Landing Page - Services Overview
+   ========================================================================== */
+
+.services-overview {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-2xl);
+}
+
+.service-card-large {
+    padding: var(--spacing-2xl);
+}
+
+.service-card-large h3 {
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--spacing-sm);
+}
+
+.service-card-large .service-tagline {
+    font-size: var(--font-size-lg);
+    color: var(--color-primary);
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+}
+
+.service-card-large .service-description {
+    font-size: var(--font-size-base);
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.7;
+}
+
+.service-card-large .service-features {
+    margin-bottom: var(--spacing-xl);
+}
+
+.service-card-large .service-features li {
+    font-size: var(--font-size-base);
+    padding: var(--spacing-sm) 0;
+}
+
+.service-card-large .service-cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    margin-top: auto;
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid var(--color-border);
+}
+
+.service-card-large .service-price-range {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+}
+
+.service-card-large.azure-card {
+    border-color: #0078d4;
+}
+
+.service-card-large.azure-card .service-tagline {
+    color: #0078d4;
+}
+
+.service-card-large.azure-card .service-icon {
+    background: linear-gradient(135deg, #0078d4, #00bcf2);
+}
+
+/* ==========================================================================
+   Azure Styling
+   ========================================================================== */
+
+.azure-services {
+    background: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.azure-services .service-card.featured {
+    border-color: #0078d4;
+}
+
+.azure-services .service-badge {
+    background: #0078d4;
+}
+
+.azure-pricing .pricing-card.featured {
+    border-color: #0078d4;
+}
+
+.azure-pricing .pricing-card.featured .pricing-badge {
+    background: #0078d4;
+}
+
+.azure-hero {
+    background: linear-gradient(135deg, var(--color-dark) 0%, #1a365d 100%);
+}
+
+.azure-hero .highlight {
+    color: #00bcf2;
+}
+
+.tech-tags .tech-featured {
+    background: linear-gradient(135deg, #0078d4, #00bcf2);
+    color: white;
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   Responsive - Landing Page
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    .services-overview {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card-large .service-cta {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .service-card-large .service-price-range {
+        text-align: center;
     }
 }

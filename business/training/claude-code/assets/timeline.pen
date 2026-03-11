@@ -1,0 +1,569 @@
+{
+  "version": "2.7",
+  "children": [
+    {
+      "type": "frame",
+      "id": "XecRY",
+      "x": 0,
+      "y": 0,
+      "name": "Timeline - Evolution of Code Assistance",
+      "width": 1400,
+      "fill": "#0A0A0A",
+      "layout": "vertical",
+      "gap": 60,
+      "padding": [
+        60,
+        80
+      ],
+      "children": [
+        {
+          "type": "frame",
+          "id": "kVLmK",
+          "name": "titleSection",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 12,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "zVSla",
+              "name": "mainTitle",
+              "fill": "#FFFFFF",
+              "content": "L'évolution de l'assistance au code",
+              "textAlign": "center",
+              "fontFamily": "Cormorant Garamond",
+              "fontSize": 42,
+              "fontWeight": "500"
+            },
+            {
+              "type": "text",
+              "id": "J0qh2",
+              "name": "subtitle",
+              "fill": "#848484",
+              "content": "De l'autocomplétion basique aux agents autonomes",
+              "textAlign": "center",
+              "fontFamily": "Inter",
+              "fontSize": 16,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "mI39e",
+          "name": "timelineContainer",
+          "width": "fill_container",
+          "layout": "vertical",
+          "children": [
+            {
+              "type": "frame",
+              "id": "h7Zkr",
+              "name": "timelineBar",
+              "width": "fill_container",
+              "height": 4,
+              "fill": "#2A2A2A"
+            },
+            {
+              "type": "frame",
+              "id": "opAiC",
+              "name": "phasesContainer",
+              "width": "fill_container",
+              "padding": [
+                40,
+                0,
+                0,
+                0
+              ],
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "yda9H",
+                  "name": "phase1",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 24,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "ENDvW",
+                      "name": "phase1Dot",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "ellipse",
+                          "id": "KJki0",
+                          "name": "phase1Circle",
+                          "fill": "#848484",
+                          "width": 16,
+                          "height": 16,
+                          "stroke": {
+                            "thickness": 3,
+                            "fill": "#2A2A2A"
+                          }
+                        },
+                        {
+                          "type": "rectangle",
+                          "id": "zX1s5",
+                          "name": "phase1DateLine",
+                          "fill": "#2A2A2A",
+                          "width": 1,
+                          "height": 30
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "JG7xD",
+                      "name": "phase1Title",
+                      "fill": "#C9A962",
+                      "content": "Phase 1 : Autocomplétion basique",
+                      "textAlign": "center",
+                      "fontFamily": "Inter",
+                      "fontSize": 18,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "k4JMV",
+                      "name": "phase1Content",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#2A2A2A"
+                      },
+                      "layout": "vertical",
+                      "gap": 8,
+                      "padding": [
+                        16,
+                        20
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "Mgqqf",
+                          "name": "phase1Line1",
+                          "fill": "#FFFFFF",
+                          "content": "• Suggestions basées sur des patterns syntaxiques",
+                          "lineHeight": 1.6,
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "Rdu9D",
+                          "name": "phase1Line2",
+                          "fill": "#FFFFFF",
+                          "content": "• Complétion de noms de variables et fonctions",
+                          "lineHeight": 1.6,
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "T2vmI",
+                          "name": "phase1Line3",
+                          "fill": "#FFFFFF",
+                          "content": "• Aucune compréhension sémantique du code",
+                          "lineHeight": 1.6,
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "WaY16",
+                  "name": "phase2",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 24,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "wFrg8",
+                      "name": "phase2Dot",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "ellipse",
+                          "id": "yATwj",
+                          "name": "phase2Circle",
+                          "fill": "#C9A962",
+                          "width": 16,
+                          "height": 16,
+                          "stroke": {
+                            "thickness": 3,
+                            "fill": "#2A2A2A"
+                          }
+                        },
+                        {
+                          "type": "rectangle",
+                          "id": "d8hs1",
+                          "name": "phase2DateLine",
+                          "fill": "#2A2A2A",
+                          "width": 1,
+                          "height": 30
+                        },
+                        {
+                          "type": "text",
+                          "id": "D0Z2I",
+                          "name": "phase2Date",
+                          "fill": "#848484",
+                          "content": "2021-2023",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "YkNDY",
+                      "name": "phase2Title",
+                      "fill": "#C9A962",
+                      "content": "Phase 2 : Copilots (2021-2023)",
+                      "textAlign": "center",
+                      "fontFamily": "Inter",
+                      "fontSize": 18,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "rkq8M",
+                      "name": "phase2Content",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#2A2A2A"
+                      },
+                      "layout": "vertical",
+                      "gap": 8,
+                      "padding": [
+                        16,
+                        20
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "xnH4n",
+                          "name": "phase2Line1",
+                          "fill": "#FFFFFF",
+                          "content": "• GitHub Copilot, TabNine, Codeium",
+                          "lineHeight": 1.6,
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "A9tbm",
+                          "name": "phase2Line2",
+                          "fill": "#FFFFFF",
+                          "content": "• Suggestions de lignes ou blocs de code",
+                          "lineHeight": 1.6,
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "ahsI9",
+                          "name": "phase2Line3",
+                          "fill": "#FFFFFF",
+                          "content": "• Compréhension limitée du contexte projet",
+                          "lineHeight": 1.6,
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "rbeq9",
+                          "name": "phase2Line4",
+                          "fill": "#FFFFFF",
+                          "content": "• Mode \"passif\" : suggère, l'humain décide et exécute",
+                          "lineHeight": 1.6,
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "dPzOf",
+                  "name": "phase3",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 24,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "Rk8LV",
+                      "name": "phase3Dot",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "ellipse",
+                          "id": "ns9Ua",
+                          "name": "phase3Circle",
+                          "fill": "#C9A962",
+                          "width": 16,
+                          "height": 16,
+                          "stroke": {
+                            "thickness": 3,
+                            "fill": "#2A2A2A"
+                          }
+                        },
+                        {
+                          "type": "rectangle",
+                          "id": "hKVsL",
+                          "name": "phase3DateLine",
+                          "fill": "#2A2A2A",
+                          "width": 1,
+                          "height": 30
+                        },
+                        {
+                          "type": "text",
+                          "id": "e9pBF",
+                          "name": "phase3Date",
+                          "fill": "#848484",
+                          "content": "2023-2024",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "GamLn",
+                      "name": "phase3Title",
+                      "fill": "#C9A962",
+                      "content": "Phase 3 : Assistants conversationnels (2023-2024)",
+                      "textAlign": "center",
+                      "fontFamily": "Inter",
+                      "fontSize": 18,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "YCbDa",
+                      "name": "phase3Content",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#2A2A2A"
+                      },
+                      "layout": "vertical",
+                      "gap": 8,
+                      "padding": [
+                        16,
+                        20
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "SdLL6",
+                          "name": "phase3Line1",
+                          "fill": "#FFFFFF",
+                          "content": "• ChatGPT, Claude.ai, Gemini",
+                          "lineHeight": 1.6,
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "w8AOf",
+                          "name": "phase3Line2",
+                          "fill": "#FFFFFF",
+                          "content": "• Dialogue en langage naturel sur le code",
+                          "lineHeight": 1.6,
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "02sCp",
+                          "name": "phase3Line3",
+                          "fill": "#FFFFFF",
+                          "content": "• Génération de snippets à copier-coller",
+                          "lineHeight": 1.6,
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "Ydvcc",
+                          "name": "phase3Line4",
+                          "fill": "#FFFFFF",
+                          "content": "• Pas d'accès direct au système de fichiers",
+                          "lineHeight": 1.6,
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "iyAH6",
+                  "name": "phase4",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 24,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "SKqHv",
+                      "name": "phase4Dot",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "ellipse",
+                          "id": "4Wczw",
+                          "name": "phase4Circle",
+                          "fill": "#C9A962",
+                          "width": 20,
+                          "height": 20,
+                          "stroke": {
+                            "thickness": 3,
+                            "fill": "#C9A962"
+                          },
+                          "effect": {
+                            "type": "shadow",
+                            "shadowType": "outer",
+                            "color": "#C9A96240",
+                            "blur": 12
+                          }
+                        },
+                        {
+                          "type": "rectangle",
+                          "id": "6hQDl",
+                          "name": "phase4DateLine",
+                          "fill": "#2A2A2A",
+                          "width": 1,
+                          "height": 30
+                        },
+                        {
+                          "type": "text",
+                          "id": "d01sN",
+                          "name": "phase4Date",
+                          "fill": "#C9A962",
+                          "content": "2024+",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "NpyLf",
+                      "name": "phase4Title",
+                      "fill": "#C9A962",
+                      "content": "Phase 4 : Agents autonomes (2024+)",
+                      "textAlign": "center",
+                      "fontFamily": "Inter",
+                      "fontSize": 18,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "GkuBY",
+                      "name": "phase4Content",
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#C9A962"
+                      },
+                      "effect": {
+                        "type": "shadow",
+                        "shadowType": "outer",
+                        "color": "#C9A96220",
+                        "blur": 8
+                      },
+                      "layout": "vertical",
+                      "gap": 8,
+                      "padding": [
+                        16,
+                        20
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "tNpeP",
+                          "name": "phase4Line1",
+                          "fill": "#FFFFFF",
+                          "content": "• Claude Code, Cursor Composer, Aider",
+                          "lineHeight": 1.6,
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "rvNGP",
+                          "name": "phase4Line2",
+                          "fill": "#FFFFFF",
+                          "content": "• Accès complet au projet et au terminal",
+                          "lineHeight": 1.6,
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "ka41i",
+                          "name": "phase4Line3",
+                          "fill": "#FFFFFF",
+                          "content": "• Exécution autonome de tâches complexes",
+                          "lineHeight": 1.6,
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "7PS7D",
+                          "name": "phase4Line4",
+                          "fill": "#FFFFFF",
+                          "content": "• Mode \"actif\" : l'agent explore, modifie, teste",
+                          "lineHeight": 1.6,
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

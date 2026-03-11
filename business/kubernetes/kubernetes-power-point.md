@@ -5,7 +5,6 @@
 - **Durée cible** : 10-15 minutes
 - **Nombre de slides** : 12-15
 - **Ton** : Professionnel, rassurant, orienté valeur client
-- **Palette couleurs suggérée** : Bleu foncé (#1E3A5F), Orange accent (#F57C00), Blanc, Gris clair
 
 ---
 

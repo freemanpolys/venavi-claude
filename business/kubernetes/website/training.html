@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Formations Kubernetes certifiantes CKA et CKAD. Formation Kubernetes Fondamentaux. Préparation aux certifications CNCF avec formateurs certifiés.">
-    <meta name="keywords" content="formation kubernetes, CKA, CKAD, certification kubernetes, CNCF, formation devops, France, cloud native">
-    <meta name="author" content="AKOUENDY - James Kokou GAGLO">
+    <meta name="description" content="Formations Kubernetes et Azure certifiantes. CKA, CKAD, AZ-900, AZ-104, AZ-400. Préparation aux certifications CNCF et Microsoft avec formateurs certifiés.">
+    <meta name="keywords" content="formation kubernetes, formation azure, CKA, CKAD, AZ-900, AZ-104, certification kubernetes, certification azure, CNCF, Microsoft, formation devops, France, cloud native">
+    <meta name="author" content="DOVEAIA - James Kokou GAGLO">
     <meta name="robots" content="index, follow">
 
     <!-- Open Graph / Social Media -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Formations Kubernetes | CKA, CKAD, Fondamentaux | AKOUENDY">
-    <meta property="og:description" content="Formations Kubernetes certifiantes avec formateurs CKA/CKAD. Fondamentaux, préparation CKAD et CKA.">
-    <meta property="og:url" content="https://www.doveaia.com/kubernetes/training">
+    <meta property="og:title" content="Formations Kubernetes & Azure | CKA, CKAD, AZ-104 | DOVEAIA">
+    <meta property="og:description" content="Formations Kubernetes et Azure certifiantes. CKA, CKAD, AZ-900, AZ-104, AZ-400 avec formateurs certifiés.">
+    <meta property="og:url" content="https://cloud.doveaia.com/training">
 
-    <title>Formations Kubernetes France | CKA, CKAD, Fondamentaux | AKOUENDY</title>
+    <title>Formations Kubernetes & Azure | CKA, CKAD, AZ-104 | DOVEAIA</title>
 
     <link rel="canonical" href="https://www.doveaia.com/kubernetes/training">
     <link rel="stylesheet" href="css/styles.css">
@@ -98,6 +98,53 @@
 
         .training-card-header.cka {
             background: linear-gradient(135deg, #059669 0%, #34d399 100%);
+        }
+
+        .training-card-header.az900 {
+            background: linear-gradient(135deg, #0078d4 0%, #00bcf2 100%);
+        }
+
+        .training-card-header.az104 {
+            background: linear-gradient(135deg, #0078d4 0%, #5c2d91 100%);
+        }
+
+        .training-card-header.az400 {
+            background: linear-gradient(135deg, #5c2d91 0%, #8661c5 100%);
+        }
+
+        .training-section-title {
+            margin-top: 4rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #e5e7eb;
+        }
+
+        .training-section-title h3 {
+            font-size: 1.5rem;
+            color: var(--color-dark);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .training-section-title h3 .icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .training-section-title h3 .icon.k8s {
+            background: linear-gradient(135deg, var(--color-primary) 0%, #4a8af4 100%);
+        }
+
+        .training-section-title h3 .icon.azure {
+            background: linear-gradient(135deg, #0078d4 0%, #00bcf2 100%);
         }
 
         .training-card-header h3 {
@@ -386,14 +433,13 @@
     <header class="header">
         <nav class="nav container">
             <a href="index.html" class="logo">
-                <span class="logo-text">AKOUENDY</span>
-                <span class="logo-subtitle">Kubernetes Expert</span>
+                <span class="logo-text">DOVEAIA</span>
+                <span class="logo-subtitle">Kubernetes & Azure Expert</span>
             </a>
             <ul class="nav-links">
-                <li><a href="index.html#services" data-i18n="nav.services">Services</a></li>
-                <li><a href="index.html#tarifs" data-i18n="nav.pricing">Tarifs</a></li>
+                <li><a href="kubernetes.html">Kubernetes</a></li>
+                <li><a href="azure.html">Azure</a></li>
                 <li><a href="training.html" class="active" data-i18n="nav.training">Formations</a></li>
-                <li><a href="index.html#technologies" data-i18n="nav.technologies">Technologies</a></li>
                 <li><a href="index.html#contact" class="btn btn-primary" data-i18n="nav.contact">Contact</a></li>
                 <li>
                     <button id="lang-switcher" class="lang-switcher" onclick="i18n.toggleLanguage()" title="Switch language">EN</button>
@@ -410,8 +456,8 @@
     <!-- Hero Section -->
     <section class="training-hero">
         <div class="container">
-            <h1 data-i18n="training.hero.title">Formations Kubernetes</h1>
-            <p data-i18n="training.hero.subtitle">Des formations pratiques dispensées par des experts certifiés CKA/CKAD pour maîtriser Kubernetes de A à Z</p>
+            <h1>Formations Kubernetes & Azure</h1>
+            <p>Des formations pratiques dispensées par des experts certifiés CKA/CKAD et Microsoft Azure pour maîtriser vos infrastructures cloud</p>
 
             <div class="training-badges">
                 <div class="training-badge">
@@ -419,7 +465,7 @@
                         <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
                         <polyline points="22 4 12 14.01 9 11.01"/>
                     </svg>
-                    <span data-i18n="training.badges.certified">Formateurs certifiés CKA/CKAD</span>
+                    <span>Formateurs certifiés</span>
                 </div>
                 <div class="training-badge">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -445,8 +491,13 @@
     <!-- Training Cards -->
     <section class="services" id="formations">
         <div class="container">
-            <h2 class="section-title" data-i18n="training.catalog.title">Notre catalogue de formations</h2>
-            <p class="section-subtitle" data-i18n="training.catalog.subtitle">Des parcours adaptés à tous les niveaux, du débutant à l'expert</p>
+            <h2 class="section-title">Notre catalogue de formations</h2>
+            <p class="section-subtitle">Des parcours adaptés à tous les niveaux, du débutant à l'expert</p>
+
+            <!-- Kubernetes Section Title -->
+            <div class="training-section-title">
+                <h3><span class="icon k8s">K8s</span> Formations Kubernetes</h3>
+            </div>
 
             <div class="training-grid">
                 <!-- Kubernetes Fundamentals -->
@@ -602,6 +653,166 @@
                     </div>
                 </article>
             </div>
+
+            <!-- Azure Section Title -->
+            <div class="training-section-title">
+                <h3><span class="icon azure">Az</span> Formations Microsoft Azure</h3>
+            </div>
+
+            <div class="training-grid">
+                <!-- AZ-900 Azure Fundamentals -->
+                <article class="training-card">
+                    <div class="training-card-header az900">
+                        <span class="duration">2 jours</span>
+                        <h3>AZ-900 Fundamentals</h3>
+                        <p class="subtitle">Microsoft Azure Fundamentals</p>
+                    </div>
+                    <div class="training-card-body">
+                        <h4>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                <polyline points="14 2 14 8 20 8"/>
+                                <line x1="16" y1="13" x2="8" y2="13"/>
+                                <line x1="16" y1="17" x2="8" y2="17"/>
+                            </svg>
+                            <span>Programme</span>
+                        </h4>
+                        <ul>
+                            <li>Concepts du cloud computing</li>
+                            <li>Services Azure principaux</li>
+                            <li>Solutions et outils de gestion</li>
+                            <li>Sécurité et conformité</li>
+                            <li>Tarification et support Azure</li>
+                        </ul>
+
+                        <h4>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12 6 12 12 16 14"/>
+                            </svg>
+                            <span>Inclus</span>
+                        </h4>
+                        <ul>
+                            <li>Support de cours PDF</li>
+                            <li>Labs Azure gratuits</li>
+                            <li>Attestation de formation</li>
+                            <li>QCM d'entraînement</li>
+                        </ul>
+
+                        <div class="training-price">
+                            <div class="price">1 200 € <span>HT</span></div>
+                            <a href="index.html#contact" class="btn btn-primary">Demander un devis</a>
+                        </div>
+
+                        <div class="training-options">
+                            <p><strong>Intra-entreprise</strong> : 5 000 € HT (jusqu'à 8 pers.)</p>
+                            <p><strong>Avec voucher examen</strong> : 1 350 € HT</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- AZ-104 Azure Administrator -->
+                <article class="training-card">
+                    <div class="training-card-header az104">
+                        <span class="duration">4 jours</span>
+                        <h3>AZ-104 Administrator</h3>
+                        <p class="subtitle">Microsoft Azure Administrator</p>
+                    </div>
+                    <div class="training-card-body">
+                        <h4>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                <polyline points="14 2 14 8 20 8"/>
+                                <line x1="16" y1="13" x2="8" y2="13"/>
+                                <line x1="16" y1="17" x2="8" y2="17"/>
+                            </svg>
+                            <span>Programme</span>
+                        </h4>
+                        <ul>
+                            <li>Gestion des identités (Entra ID)</li>
+                            <li>Stockage et machines virtuelles</li>
+                            <li>Réseau virtuel et load balancing</li>
+                            <li>Monitoring et sauvegarde</li>
+                            <li>Gouvernance et conformité</li>
+                        </ul>
+
+                        <h4>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12 6 12 12 16 14"/>
+                            </svg>
+                            <span>Inclus</span>
+                        </h4>
+                        <ul>
+                            <li>Support de cours 250+ pages</li>
+                            <li>Accès labs Azure 30 jours</li>
+                            <li>150+ questions d'entraînement</li>
+                            <li>2 examens blancs</li>
+                        </ul>
+
+                        <div class="training-price">
+                            <div class="price">2 400 € <span>HT</span></div>
+                            <a href="index.html#contact" class="btn btn-primary">Demander un devis</a>
+                        </div>
+
+                        <div class="training-options">
+                            <p><strong>Avec voucher examen</strong> : 2 750 € HT</p>
+                            <p><strong>Intra-entreprise</strong> : 10 000 € HT</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- AZ-400 DevOps Engineer -->
+                <article class="training-card">
+                    <div class="training-card-header az400">
+                        <span class="duration">5 jours</span>
+                        <h3>AZ-400 DevOps Engineer</h3>
+                        <p class="subtitle">Microsoft DevOps Engineer Expert</p>
+                    </div>
+                    <div class="training-card-body">
+                        <h4>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                <polyline points="14 2 14 8 20 8"/>
+                                <line x1="16" y1="13" x2="8" y2="13"/>
+                                <line x1="16" y1="17" x2="8" y2="17"/>
+                            </svg>
+                            <span>Programme</span>
+                        </h4>
+                        <ul>
+                            <li>Planification DevOps et contrôle source</li>
+                            <li>Azure Pipelines CI/CD</li>
+                            <li>Infrastructure as Code (ARM, Bicep)</li>
+                            <li>Conteneurs et Kubernetes (AKS)</li>
+                            <li>Monitoring et feedback continu</li>
+                        </ul>
+
+                        <h4>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12 6 12 12 16 14"/>
+                            </svg>
+                            <span>Inclus</span>
+                        </h4>
+                        <ul>
+                            <li>Support de cours 300+ pages</li>
+                            <li>Accès Azure DevOps 60 jours</li>
+                            <li>Projets pratiques complets</li>
+                            <li>2 examens blancs</li>
+                        </ul>
+
+                        <div class="training-price">
+                            <div class="price">3 000 € <span>HT</span></div>
+                            <a href="index.html#contact" class="btn btn-primary">Demander un devis</a>
+                        </div>
+
+                        <div class="training-options">
+                            <p><strong>Avec voucher examen</strong> : 3 350 € HT</p>
+                            <p><strong>Prérequis</strong> : AZ-104 recommandé</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
         </div>
     </section>
 
@@ -671,7 +882,7 @@
                     </tr>
                     <tr>
                         <td data-i18n="training.comparison.rows.certification">Certification</td>
-                        <td data-i18n="training.comparison.cert.attestation">Attestation AKOUENDY</td>
+                        <td data-i18n="training.comparison.cert.attestation">Attestation DOVEAIA</td>
                         <td data-i18n="training.comparison.cert.cncf">Certification CNCF</td>
                         <td data-i18n="training.comparison.cert.cncf">Certification CNCF</td>
                     </tr>
@@ -747,11 +958,11 @@
     <!-- CTA Section -->
     <section class="training-cta">
         <div class="container">
-            <h2 data-i18n="training.cta.title">Prêt à vous former sur Kubernetes ?</h2>
-            <p data-i18n="training.cta.subtitle">Contactez-nous pour discuter de vos besoins et planifier votre formation</p>
+            <h2>Prêt à vous former sur Kubernetes ou Azure ?</h2>
+            <p>Contactez-nous pour discuter de vos besoins et planifier votre formation</p>
             <div class="cta-buttons">
-                <a href="index.html#contact" class="btn btn-primary btn-lg" data-i18n="training.cta.contact">Demander un devis</a>
-                <a href="index.html#simulateur" class="btn btn-outline btn-lg" data-i18n="training.cta.simulator">Simuler mon projet</a>
+                <a href="index.html#contact" class="btn btn-primary btn-lg">Demander un devis</a>
+                <a href="kubernetes.html#simulateur" class="btn btn-outline btn-lg">Simuler un projet K8s</a>
             </div>
         </div>
     </section>
@@ -761,23 +972,21 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <span class="logo-text">AKOUENDY</span>
-                    <p data-i18n="footer.tagline">Expert Kubernetes & Cloud Native en France</p>
-                    <p class="footer-legal">SIRET : [À compléter]</p>
+                    <span class="logo-text">DOVEAIA</span>
+                    <p data-i18n="footer.tagline">Expert Kubernetes & Azure</p>
+                    <p class="footer-legal">SIRET : 94763010900033</p>
                 </div>
                 <div class="footer-links">
                     <h4 data-i18n="footer.services">Services</h4>
                     <ul>
-                        <li><a href="index.html#services">BUILD</a></li>
-                        <li><a href="index.html#services">RUN</a></li>
-                        <li><a href="index.html#services">DEPLOY</a></li>
+                        <li><a href="kubernetes.html">Kubernetes</a></li>
+                        <li><a href="azure.html">Azure</a></li>
                         <li><a href="training.html" data-i18n="nav.training">Formations</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
                     <h4 data-i18n="footer.resources">Ressources</h4>
                     <ul>
-                        <li><a href="index.html#tarifs" data-i18n="nav.pricing">Tarifs</a></li>
                         <li><a href="index.html#technologies" data-i18n="nav.technologies">Technologies</a></li>
                         <li><a href="index.html#contact" data-i18n="nav.contact">Contact</a></li>
                     </ul>
@@ -785,11 +994,16 @@
                 <div class="footer-contact">
                     <h4 data-i18n="footer.contact">Contact</h4>
                     <p>jkgaglo@akouendy.com</p>
-                    <p>+33 7 49 62 49 89</p>
+                    <!-- <p>+33 </p> -->
+                    <p style="margin-top: 0.5rem; font-size: 0.9rem;">
+                        Parc Lorans, Bâtiment 1G<br>
+                        Rue Jean-Marie Huchet<br>
+                        35000 Rennes
+                    </p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 AKOUENDY. <span data-i18n="footer.copyright">Tous droits réservés.</span></p>
+                <p>&copy; 2026 DOVEAIA. <span data-i18n="footer.copyright">Tous droits réservés.</span></p>
             </div>
         </div>
     </footer>
