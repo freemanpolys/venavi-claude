@@ -1,0 +1,209 @@
+# =============================================================================
+# Stack RAG v2 — DGX Spark / MSI EdgeXpert-MS-C931 (GB10 Blackwell)
+#
+# Version 2: eugr/spark-vllm-docker (vLLM 0.19.1+, Transformers 5.5+)
+# Avantages vs v1 (NGC 26.03):
+#   - Supporte Gemma 4, Qwen3.5, Mistral et tous les modèles récents
+#   - vLLM 0.19+ avec --task embed/score natif
+#   - Plus besoin de TEI pour le reranker → tout unifié sur vLLM
+#
+# Pré-requis: builder l'image vllm-node-tf5 (voir doc)
+#
+# Services:
+#   - vllm-qwen     : Qwen3-32B NVFP4            (port 8000, profile: qwen)
+#   - vllm-gemma4   : Gemma-4-31B-IT NVFP4      (port 8000, profile: gemma)
+#   - vllm-mistral  : Mistral-Small-3.1-24B     (port 8000, profile: mistral)
+#   - vllm-embed    : Qwen3-Embedding-0.6B       (port 8001)
+#   - vllm-reranker : Qwen3-Reranker-0.6B        (port 8002)
+#   - paradedb      : PostgreSQL + pgvector + BM25 (port 5432)
+#
+# Usage:
+#   docker compose -f compose.v2.yaml up -d
+#   docker compose -f compose.v2.yaml --profile qwen up -d
+#   docker compose -f compose.v2.yaml down
+#
+# LLM (choisir 1 seul à la fois, même port 8000):
+#   docker compose -f compose.v2.yaml --profile qwen up -d      # Qwen3-32B
+#   docker compose -f compose.v2.yaml --profile gemma up -d      # Gemma 4 31B
+#   docker compose -f compose.v2.yaml --profile mistral up -d    # Mistral Small 3.1
+#
+# Switcher de LLM:
+#   docker compose -f compose.v2.yaml --profile qwen stop vllm-qwen
+#   docker compose -f compose.v2.yaml --profile gemma up -d vllm-gemma4
+#
+# Build de l'image (à faire une seule fois):
+#   cd ~/spark-vllm-docker
+#   ./build-and-copy.sh --tf5
+#   → produit l'image vllm-node-tf5
+# =============================================================================
+
+x-vllm-common: &vllm-common
+  image: vllm-node
+  runtime: nvidia
+  restart: unless-stopped
+  ipc: host
+  ulimits:
+    memlock: -1
+    stack: 67108864
+  volumes:
+    - huggingface-cache:/root/.cache/huggingface
+  environment:
+    - HUGGING_FACE_HUB_TOKEN=${HF_TOKEN:-}
+    - VLLM_LOGGING_LEVEL=INFO
+  healthcheck:
+    test: ["CMD", "curl", "-f", "http://localhost:${PORT:-8000}/health"]
+    interval: 30s
+    timeout: 10s
+    retries: 5
+    start_period: 300s
+
+services:
+  # -------------------------------------------------------------------------
+  # LLM — Qwen3-32B NVFP4
+  # -------------------------------------------------------------------------
+  vllm-qwen:
+    <<: *vllm-common
+    container_name: vllm-qwen
+    network_mode: host
+    profiles: ["qwen"]
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    command: >
+      vllm serve nvidia/Qwen3-32B-NVFP4
+      --port 8000
+      --max-model-len 8192
+      --gpu-memory-utilization 0.60
+      --swap-space 16
+      --enable-prefix-caching
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+
+  # -------------------------------------------------------------------------
+  # LLM — Gemma 4 31B IT NVFP4
+  # -------------------------------------------------------------------------
+  vllm-gemma4:
+    <<: *vllm-common
+    container_name: vllm-gemma4
+    network_mode: host
+    profiles: ["gemma"]
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    command: >
+      vllm serve nvidia/Gemma-4-31B-IT-NVFP4
+      --port 8000
+      --max-model-len 8192
+      --gpu-memory-utilization 0.60
+      --swap-space 16
+      --enable-prefix-caching
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+
+  # -------------------------------------------------------------------------
+  # LLM — Mistral Small 3.1 24B
+  # -------------------------------------------------------------------------
+  vllm-mistral:
+    <<: *vllm-common
+    container_name: vllm-mistral
+    network_mode: host
+    profiles: ["mistral"]
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    command: >
+      vllm serve mistralai/Mistral-Small-3.1-24B-Instruct-2503
+      --port 8000
+      --max-model-len 8192
+      --gpu-memory-utilization 0.60
+      --swap-space 16
+      --enable-prefix-caching
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+
+  # -------------------------------------------------------------------------
+  # Embedding — Qwen3-Embedding-0.6B
+  # vLLM 0.19+ supporte --task embed nativement
+  # -------------------------------------------------------------------------
+  vllm-embed:
+    <<: *vllm-common
+    container_name: vllm-embed
+    network_mode: host
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    command: >
+      vllm serve Qwen/Qwen3-Embedding-0.6B
+      --task embed
+      --port 8001
+      --gpu-memory-utilization 0.10
+      --max-model-len 4096
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8001/health"]
+
+  # -------------------------------------------------------------------------
+  # Reranker — Qwen3-Reranker-0.6B (vLLM natif, plus besoin de TEI)
+  # vLLM 0.19+ supporte --task score nativement
+  # -------------------------------------------------------------------------
+  vllm-reranker:
+    <<: *vllm-common
+    container_name: vllm-reranker
+    network_mode: host
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    command: >
+      vllm serve Qwen/Qwen3-Reranker-0.6B
+      --task score
+      --port 8002
+      --gpu-memory-utilization 0.10
+      --max-model-len 4096
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8002/health"]
+
+  # -------------------------------------------------------------------------
+  # PostgreSQL — Base de données applicative + vectorielle + BM25
+  # -------------------------------------------------------------------------
+  paradedb:
+    image: paradedb/paradedb:latest
+    container_name: paradedb
+    network_mode: host
+    restart: unless-stopped
+    volumes:
+      - paradedb-data:/var/lib/postgresql
+    environment:
+      - POSTGRES_USER=doveaia
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-doveaia_secret}
+      - POSTGRES_DB=doveaia
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U doveaia -d doveaia"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 15s
+
+volumes:
+  huggingface-cache:
+    driver: local
+  paradedb-data:
+    driver: local

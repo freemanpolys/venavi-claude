@@ -927,15 +927,6 @@ Active le mode plan où Claude :
 - Attend validation avant d'agir
 ```
 
-**`/todos` : Lister les tâches TODO**
-
-```
-> /todos
-
-Recherche et affiche tous les TODO/FIXME/HACK
-dans le projet avec leur contexte.
-```
-
 ### 5.4 Commandes de configuration
 
 **`/config` : Ouvrir les paramètres**
@@ -1004,7 +995,7 @@ Renomme la session actuelle pour la retrouver facilement.
 
 Exporte vers stdout.
 
-> /export ./session.md
+> /export ./session
 
 Exporte vers un fichier markdown.
 ```
@@ -1035,8 +1026,7 @@ Vérifie :
 1. Utilisez `/status` pour voir votre configuration
 2. Utilisez `/cost` pour voir l'utilisation
 3. Essayez `/init` sur un nouveau projet
-4. Utilisez `/commit` après avoir fait une modification
-5. Exportez votre conversation avec `/export`
+4. Exportez votre conversation avec `/export`
 
 ---
 
@@ -1046,13 +1036,12 @@ Vérifie :
 
 ### 6.1 Contrôles généraux
 
-| Raccourci | Action |
-|-----------|--------|
-| `Ctrl+C` | Annuler l'opération en cours |
-| `Ctrl+D` | Quitter la session |
-| `Ctrl+L` | Effacer l'écran terminal |
-| `Ctrl+O` | Basculer le mode verbose (voir les détails) |
-| `Esc` + `Esc` | Rewind rapide (revenir en arrière) |
+| Raccourci     | Action                                      |
+| ------------- | ------------------------------------------- |
+| `Ctrl+C`      | Annuler l'opération en cours                |
+| `Ctrl+D`      | Quitter la session                          |
+| `Ctrl+O`      | Basculer le mode verbose (voir les détails) |
+| `Esc` + `Esc` | Rewind rapide (revenir en arrière)          |
 
 **`Ctrl+C` - Annuler :**
 Interrompt ce que Claude est en train de faire. Utile si :
@@ -1068,12 +1057,12 @@ Active/désactive l'affichage détaillé des opérations. En mode verbose, vous 
 
 ### 6.2 Édition de texte
 
-| Raccourci | Action |
-|-----------|--------|
-| `Ctrl+K` | Supprimer du curseur jusqu'à la fin de ligne |
-| `Ctrl+U` | Supprimer la ligne entière |
-| `\` + `Enter` | Saut de ligne (multiline) |
-| `Option+Enter` | Saut de ligne (macOS) |
+| Raccourci     | Action                                       |
+| ------------- | -------------------------------------------- |
+| `Ctrl+K`      | Supprimer du curseur jusqu'à la fin de ligne |
+| `Ctrl+U`      | Supprimer la ligne entière                   |
+| `\` + `Enter` | Saut de ligne (multiline)                    |
+| `Shift+Enter` | Saut de ligne (macOS)                        |
 
 **Écrire des prompts multilignes :**
 
@@ -1083,7 +1072,7 @@ Active/désactive l'affichage détaillé des opérations. En mode verbose, vous 
   qui forme un seul message
 ```
 
-Ou utilisez `Option+Enter` (Mac) / `Alt+Enter` (Linux/Windows).
+Ou utilisez `Shift+Enter` (Mac) .
 
 ### 6.3 Navigation et modèles
 
@@ -1341,7 +1330,7 @@ claude --add-dir ../shared-library --add-dir ../common-types
 **Créer des commits :**
 
 ```
-> /commit
+> commit et push
 ```
 
 Claude va :
@@ -1361,6 +1350,202 @@ feat(auth): add JWT token refresh mechanism
 
 Closes #123
 ```
+
+#### GitHub CLI (gh) avec Claude Code
+
+Claude Code utilise nativement la CLI GitHub (`gh`) pour interagir avec GitHub directement depuis le terminal. C'est l'outil privilégié pour toutes les opérations GitHub.
+
+**Prérequis :**
+
+```bash
+# Installer gh
+brew install gh          # macOS
+apt install gh           # Ubuntu/Debian
+
+# S'authentifier
+gh auth login
+```
+
+**Opérations courantes via Claude Code :**
+
+```
+> Crée une pull request pour mes changements
+
+Claude utilise : gh pr create --title "..." --body "..."
+
+> Montre-moi les issues ouvertes assignées à moi
+
+Claude utilise : gh issue list --assignee @me
+
+> Vérifie si la CI passe sur ma PR
+
+Claude utilise : gh pr checks
+
+> Fais une review de la PR #42
+
+Claude utilise : gh pr view 42, gh pr diff 42
+```
+
+**Commandes gh les plus utilisées par Claude Code :**
+
+| Commande          | Usage                     |
+| ----------------- | ------------------------- |
+| `gh pr create`    | Créer une pull request    |
+| `gh pr view`      | Voir les détails d'une PR |
+| `gh pr diff`      | Voir le diff d'une PR     |
+| `gh pr checks`    | Vérifier le status CI/CD  |
+| `gh pr merge`     | Merger une PR             |
+| `gh issue list`   | Lister les issues         |
+| `gh issue create` | Créer une issue           |
+| `gh issue view`   | Voir une issue            |
+| `gh api`          | Appels API GitHub bruts   |
+| `gh repo clone`   | Cloner un repository      |
+
+**Workflow complet PR avec Claude Code :**
+
+```
+> Crée une branche feature/user-avatar puis :
+- implémente l'upload d'avatar utilisateur,
+- commite, pousse et crée la PR
+
+Claude va :
+1. git checkout -b feature/user-avatar
+2. Implémenter le code
+3. git add & git commit
+4. git push -u origin feature/user-avatar
+5. gh pr create avec titre et description
+```
+
+**Consulter les commentaires d'une PR :**
+
+```
+> Montre-moi les commentaires de review sur la PR #123
+
+Claude utilise : gh api repos/{owner}/{repo}/pulls/123/comments
+```
+
+#### Claude Code GitHub Actions
+
+Claude Code s'intègre directement dans vos workflows GitHub Actions pour automatiser des tâches de développement. Avec un simple `@claude` dans un commentaire de PR ou d'issue, Claude peut analyser votre code, créer des PRs, implémenter des features et corriger des bugs.
+
+**Ce que Claude Code GitHub Actions permet :**
+
+- **Création instantanée de PR** : Décrivez ce que vous voulez, Claude crée la PR complète
+- **Implémentation automatisée** : Transformez des issues en code fonctionnel
+- **Respect des standards** : Claude suit votre `CLAUDE.md` et les conventions du projet
+- **Sécurisé** : Votre code reste sur les runners GitHub
+
+**Setup rapide (recommandé) :**
+
+```bash
+# Dans Claude Code terminal, lancez :
+> /install-github-app
+
+# Cette commande guide le setup complet :
+# 1. Installation de l'app GitHub Claude
+# 2. Configuration des secrets
+# 3. Création du workflow
+```
+
+**Setup manuel :**
+
+1. Installer l'app GitHub Claude : https://github.com/apps/claude
+2. Ajouter `ANTHROPIC_API_KEY` dans les secrets du repository
+3. Copier le fichier workflow dans `.github/workflows/`
+https://github.com/anthropics/claude-code-action/blob/main/examples/
+
+**Workflow de base :**
+
+```yaml
+name: Claude Code
+on:
+  issue_comment:
+    types: [created]
+  pull_request_review_comment:
+    types: [created]
+jobs:
+  claude:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          # Répond aux mentions @claude dans les commentaires
+```
+
+**Workflow de code review automatique :**
+
+```yaml
+name: Code Review
+on:
+  pull_request:
+    types: [opened, synchronize]
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          prompt: "Review cette PR pour la qualité, la sécurité et les bugs potentiels."
+          claude_args: "--max-turns 5"
+```
+
+**Workflow planifié (rapport quotidien) :**
+
+```yaml
+name: Daily Report
+on:
+  schedule:
+    - cron: "0 9 * * *"
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          prompt: "Génère un résumé des commits et issues de la veille"
+          claude_args: "--model opus"
+```
+
+**Utilisation dans les commentaires GitHub :**
+
+```
+@claude implémente cette feature selon la description de l'issue
+@claude comment implémenter l'authentification pour cet endpoint ?
+@claude corrige le TypeError dans le composant dashboard
+```
+
+**Paramètres de configuration :**
+
+| Paramètre | Description | Requis |
+|-----------|-------------|--------|
+| `prompt` | Instructions pour Claude | Non |
+| `claude_args` | Arguments CLI passés à Claude | Non |
+| `anthropic_api_key` | Clé API Claude | Oui* |
+| `trigger_phrase` | Phrase déclencheur (défaut: "@claude") | Non |
+| `use_bedrock` | Utiliser AWS Bedrock | Non |
+| `use_vertex` | Utiliser Google Vertex AI | Non |
+
+*Requis pour l'API directe, pas pour Bedrock/Vertex
+
+**Passer des arguments CLI :**
+
+```yaml
+claude_args: "--max-turns 5 --model claude-sonnet-4-6"
+```
+
+**Providers cloud enterprise :**
+
+Claude Code GitHub Actions supporte aussi AWS Bedrock et Google Vertex AI pour les environnements enterprise. Consultez la documentation officielle pour la configuration OIDC et les workflows spécifiques.
+
+**Bonnes pratiques :**
+
+- Utilisez `CLAUDE.md` pour guider le comportement de Claude dans les Actions
+- Stockez toujours les clés API dans les GitHub Secrets
+- Configurez `--max-turns` pour éviter les exécutions trop longues
+- Utilisez des timeouts au niveau workflow pour contrôler les coûts
 
 ### 8.4 Débugger efficacement
 
@@ -1540,12 +1725,184 @@ Le subagent retourne un résumé à l'agent principal. Vous ne voyez que :
 - Les tâches indépendantes s'exécutent simultanément
 - Les tâches dépendantes s'exécutent séquentiellement
 
+### 9.4 Créer ses propres Subagents
+
+Au-delà des subagents intégrés, vous pouvez **créer vos propres subagents** pour des tâches spécifiques à votre projet ou votre workflow.
+
+**Où définir un subagent personnalisé :**
+
+Les subagents personnalisés se définissent dans le dossier `.claude/agents/` de votre projet (ou dans `~/.claude/agents/` pour un usage global).
+
+Chaque subagent est un fichier Markdown (`.md`) qui contient le prompt système du subagent.
+
+**Structure d'un fichier subagent :**
+
+```markdown
+# .claude/agents/deep-explore.md
+
+---
+
+name: deep-explore
+
+description: Deep codebase exploration using agentdx semantic search and call graph tracing. Use this agent for understanding code architecture, finding implementations by intent, analyzing function relationships, and exploring unfamiliar code areas.
+
+tools: Read, Grep, Glob, Bash
+
+model: inherit
+
+---
+## Instructions
+
+You are a specialized code exploration agent with access to agentdx semantic search and call graph tracing.
+
+
+### Primary Tools
+
+  
+
+#### 1. Semantic Search: `agentdx search`
+
+  
+
+Use this to find code by intent and meaning:
+
+  
+
+\```bash
+
+# Use English queries for best results (--compact saves ~80% tokens)
+
+agentdx search "authentication flow" --json --compact
+
+agentdx search "error handling middleware" --json --compact
+
+agentdx search "database connection management" --json --compact
+
+\```
+
+  
+
+#### 2. Call Graph Tracing: `agentdx trace`
+
+  
+
+Use this to understand function relationships and code flow:
+
+  
+
+\```bash
+
+# Find all functions that call a symbol
+
+agentdx trace callers "HandleRequest" --json
+
+  
+
+# Find all functions called by a symbol
+
+agentdx trace callees "ProcessOrder" --json
+
+  
+
+# Build complete call graph
+
+agentdx trace graph "ValidateToken" --depth 3 --json
+
+\```
+
+  
+
+Use `agentdx trace` when you need to:
+
+- Find all callers of a function
+
+- Understand the call hierarchy
+
+- Analyze the impact of changes to a function
+
+- Map dependencies between components
+
+  
+
+### When to use standard tools
+
+  
+
+Only fall back to Grep/Glob when:
+
+- You need exact text matching (variable names, imports)
+
+- agentdx is not available or returns errors
+
+- You need file path patterns
+
+  
+
+### Workflow
+
+  
+
+1. Start with `agentdx search` to find relevant code semantically
+
+2. Use `agentdx trace` to understand function relationships and call graphs
+
+3. Use `Read` to examine promising files in detail
+
+4. Use Grep only for exact string searches if needed
+
+5. Synthesize findings into a clear summary
+```
+
+**Appeler un subagent personnalisé :**
+
+Une fois le fichier créé, le subagent apparaît comme un type disponible dans l'outil Agent (Task) de Claude Code. Claude peut le lancer automatiquement quand la tâche correspond, ou vous pouvez le référencer explicitement.
+
+**Exemples de subagents personnalisés utiles :**
+
+| Subagent | Fichier | Usage |
+|----------|---------|-------|
+| Code Reviewer | `code-reviewer.md` | Revue de code automatisée |
+| Security Auditor | `security-auditor.md` | Audit de sécurité ciblé |
+| API Designer | `api-designer.md` | Conception d'endpoints REST |
+| DB Migrator | `db-migrator.md` | Planification de migrations SQL |
+| Test Writer | `test-writer.md` | Génération de tests spécialisés |
+
+**Exemple complet : Subagent de migration de base de données**
+
+```markdown
+# .claude/agents/db-migrator.md
+
+Tu es un spécialiste des migrations de bases de données PostgreSQL.
+
+Quand on te demande de planifier une migration :
+1. Analyse le schéma actuel
+2. Identifie les changements nécessaires
+3. Génère les scripts SQL UP et DOWN
+4. Vérifie la rétro-compatibilité
+5. Estime l'impact sur les données existantes
+
+Conventions :
+- Fichiers nommés : YYYYMMDDHHMMSS_description.sql
+- Toujours inclure un rollback (DOWN)
+- Ne jamais supprimer de colonnes sans période de dépréciation
+```
+
+**Bonnes pratiques :**
+
+- Gardez le prompt **focalisé** : un subagent = une responsabilité
+- Incluez les **conventions** de votre projet dans le prompt
+- Spécifiez les **outils** que le subagent devrait privilégier
+- Testez le subagent sur des cas simples avant de lui confier des tâches complexes
+- Partagez vos subagents avec votre équipe via le dossier `.claude/agents/` versionné dans Git
+
 **Exercice pratique :**
 
 1. Demandez à Claude d'explorer un projet inconnu
 2. Observez le subagent Explore en action
 3. Demandez de planifier une feature complexe
 4. Observez la différence entre Explore et Plan
+5. Créez un subagent personnalisé dans `.claude/agents/` adapté à votre projet
+6. Testez-le sur une tâche concrète
 
 ---
 

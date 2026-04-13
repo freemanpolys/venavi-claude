@@ -1,0 +1,3 @@
+[submodule "business/doveaia/freelance-missions-recaps"]
+	path = business/doveaia/freelance-missions-recaps
+	url = git@github.com:doveaia/freelance-missions-recaps.git

@@ -1,0 +1,314 @@
+# =============================================================================
+# Stack RAG vLLM — DGX Spark / MSI EdgeXpert-MS-C931 (GB10 Blackwell)
+#
+# Services:
+#   - vllm-qwen     : Qwen3-32B NVFP4            (port 8000, profile: qwen)
+#   - vllm-gemma4   : Gemma-4-31B-IT NVFP4      (port 8000, profile: gemma)
+#   - vllm-mistral  : Mistral-Small-3.1-24B     (port 8000, profile: mistral)
+#   - vllm-embed     : Qwen3-Embedding-0.6B       (port 8001)
+#   - tei-reranker   : bge-reranker-v2-m3 (TEI)   (port 8002)
+#   - paradedb       : PostgreSQL + pgvector + BM25  (port 5432)
+#   - dify           : Orchestration RAG + UI      (port 3000)
+#
+# Usage:
+#   docker compose up -d
+#   docker compose logs -f vllm-llm
+#   docker compose down
+#
+# LLM (choisir 1 seul à la fois, même port 8000):
+#   docker compose --profile qwen up -d      # Qwen3-32B NVFP4
+#   docker compose --profile llama up -d      # Llama 3.3 70B NVFP4
+#   docker compose --profile phi up -d        # Phi-4 Reasoning Plus NVFP4
+#   docker compose --profile nemotron up -d   # Nemotron 3 Super 120B MoE NVFP4
+#   docker compose --profile gemma up -d      # Gemma 4 31B NVFP4 (⚠️ nécessite NGC 26.04+)
+#   docker compose --profile mistral up -d    # Mistral Small 3.1 (⚠️ non testé)
+#
+# Switcher de LLM:
+#   docker compose --profile qwen stop vllm-qwen
+#   docker compose --profile gemma up -d vllm-gemma4
+# =============================================================================
+
+x-vllm-common: &vllm-common
+  image: nvcr.io/nvidia/vllm:26.03-py3
+  runtime: nvidia
+  restart: unless-stopped
+  ipc: host
+  ulimits:
+    memlock: -1
+    stack: 67108864
+  volumes:
+    - huggingface-cache:/root/.cache/huggingface
+  environment:
+    - HUGGING_FACE_HUB_TOKEN=${HF_TOKEN:-}
+    - VLLM_LOGGING_LEVEL=INFO
+  healthcheck:
+    test: ["CMD", "curl", "-f", "http://localhost:${PORT:-8000}/health"]
+    interval: 30s
+    timeout: 10s
+    retries: 5
+    start_period: 300s  # les modèles prennent du temps à charger
+
+services:
+  # -------------------------------------------------------------------------
+  # LLM — Qwen3-32B NVFP4
+  # Démarrage: docker compose --profile qwen up -d vllm-qwen
+  # -------------------------------------------------------------------------
+  vllm-qwen:
+    <<: *vllm-common
+    container_name: vllm-qwen
+    network_mode: host
+    profiles: ["qwen"]
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    command: >
+      vllm serve nvidia/Qwen3-32B-NVFP4
+      --port 8000
+      --max-model-len 8192
+      --gpu-memory-utilization 0.60
+      --swap-space 16
+      --enable-prefix-caching
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+
+  # -------------------------------------------------------------------------
+  # LLM alternatif — Gemma 4 31B IT NVFP4
+  # Démarrage: docker compose --profile gemma up -d vllm-gemma4
+  # ⚠️ NE FONCTIONNE PAS avec NGC 26.03 (vLLM 0.17.1)
+  # Nécessite Transformers >= 5.5.0 (eugr/spark-vllm-docker --tf5)
+  # Ref: https://forums.developer.nvidia.com/t/gemma-4-models-which-vllm-version-any-prs-spotted/365490
+  # -------------------------------------------------------------------------
+  vllm-gemma4:
+    <<: *vllm-common
+    container_name: vllm-gemma4
+    network_mode: host
+    profiles: ["gemma"]
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    command: >
+      vllm serve nvidia/Gemma-4-31B-IT-NVFP4
+      --port 8000
+      --max-model-len 8192
+      --gpu-memory-utilization 0.60
+      --swap-space 16
+      --enable-prefix-caching
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+
+  # -------------------------------------------------------------------------
+  # LLM alternatif — Mistral Small 3.1 24B
+  # Démarrage: docker compose --profile mistral up -d vllm-mistral
+  # ⚠️ Non testé avec NGC 26.03 — peut nécessiter un build custom
+  # -------------------------------------------------------------------------
+  vllm-mistral:
+    <<: *vllm-common
+    container_name: vllm-mistral
+    network_mode: host
+    profiles: ["mistral"]
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    command: >
+      vllm serve mistralai/Mistral-Small-3.1-24B-Instruct-2503
+      --port 8000
+      --max-model-len 8192
+      --gpu-memory-utilization 0.60
+      --swap-space 16
+      --enable-prefix-caching
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+
+  # -------------------------------------------------------------------------
+  # LLM alternatif — Llama 3.3 70B Instruct NVFP4
+  # Démarrage: docker compose --profile llama up -d vllm-llama
+  # -------------------------------------------------------------------------
+  vllm-llama:
+    <<: *vllm-common
+    container_name: vllm-llama
+    network_mode: host
+    profiles: ["llama"]
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    command: >
+      vllm serve nvidia/Llama-3.3-70B-Instruct-NVFP4
+      --port 8000
+      --max-model-len 8192
+      --gpu-memory-utilization 0.60
+      --swap-space 16
+      --enable-prefix-caching
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+
+  # -------------------------------------------------------------------------
+  # LLM alternatif — Phi-4 Reasoning Plus NVFP4
+  # Démarrage: docker compose --profile phi up -d vllm-phi
+  # -------------------------------------------------------------------------
+  vllm-phi:
+    <<: *vllm-common
+    container_name: vllm-phi
+    network_mode: host
+    profiles: ["phi"]
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    command: >
+      vllm serve nvidia/Phi-4-reasoning-plus-NVFP4
+      --port 8000
+      --max-model-len 8192
+      --gpu-memory-utilization 0.60
+      --swap-space 16
+      --enable-prefix-caching
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+
+  # -------------------------------------------------------------------------
+  # LLM alternatif — Nemotron 3 Super 120B MoE (12B actifs) NVFP4
+  # Démarrage: docker compose --profile nemotron up -d vllm-nemotron
+  # -------------------------------------------------------------------------
+  vllm-nemotron:
+    <<: *vllm-common
+    container_name: vllm-nemotron
+    network_mode: host
+    profiles: ["nemotron"]
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    command: >
+      vllm serve nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-NVFP4
+      --trust-remote-code
+      --port 8000
+      --max-model-len 8192
+      --gpu-memory-utilization 0.60
+      --swap-space 16
+      --enable-prefix-caching
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+
+  # -------------------------------------------------------------------------
+  # Embedding — Vectorisation de texte
+  # Qwen3-Embedding-0.6B → ~1 Go en mémoire
+  # -------------------------------------------------------------------------
+  vllm-embed:
+    <<: *vllm-common
+    container_name: vllm-embed
+    network_mode: host
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    command: >
+      vllm serve Qwen/Qwen3-Embedding-0.6B
+      --port 8001
+      --gpu-memory-utilization 0.10
+      --max-model-len 4096
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8001/health"]
+
+  # -------------------------------------------------------------------------
+  # Reranker — Re-classement des documents (TEI)
+  # BAAI/bge-reranker-v2-m3 — multilingue (FR inclus), ~1 Go en mémoire
+  # Image build: docker build . -f Dockerfile-cuda --build-arg CUDA_COMPUTE_CAP=121 -t tei-spark:latest
+  # -------------------------------------------------------------------------
+  tei-reranker:
+    image: tei-spark:latest
+    container_name: tei-reranker
+    network_mode: host
+    ipc: host
+    restart: unless-stopped
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    volumes:
+      - huggingface-cache:/data
+    environment:
+      - HUGGING_FACE_HUB_TOKEN=${HF_TOKEN:-}
+    command: --model-id BAAI/bge-reranker-v2-m3 --port 8002
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8002/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 120s
+
+  # -------------------------------------------------------------------------
+  # PostgreSQL — Base de données applicative + vectorielle + BM25
+  # ParadeDB = PostgreSQL + pgvector + pg_search (BM25) pré-installés
+  # Sert à la fois pour l'app Go/Angular et le RAG (hybrid search)
+  # Port: 5432
+  # -------------------------------------------------------------------------
+  paradedb:
+    image: paradedb/paradedb:latest
+    container_name: paradedb
+    network_mode: host
+    restart: unless-stopped
+    volumes:
+      - paradedb-data:/var/lib/postgresql
+    environment:
+      - POSTGRES_USER=doveaia
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-doveaia_secret}
+      - POSTGRES_DB=doveaia
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U doveaia -d doveaia"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 15s
+
+  # -------------------------------------------------------------------------
+  # Orchestration RAG — Dify
+  # Plateforme AI: workflows visuels, RAG, agents, API, UI chat
+  # UI: http://localhost:3000
+  # Doc: https://docs.dify.ai/getting-started/install-self-hosted/docker-compose
+  # Note: Dify a son propre docker-compose avec Redis, PostgreSQL, etc.
+  #       Pour une installation complète, utiliser le compose officiel Dify
+  #       et configurer les endpoints LLM/Embedding/Reranker suivants:
+  #
+  #   LLM:       http://<IP_MACHINE>:8000/v1  (OpenAI-compatible)
+  #   Embedding: http://<IP_MACHINE>:8001/v1  (OpenAI-compatible)
+  #   Reranker:  http://<IP_MACHINE>:8002     (TEI endpoint)
+  #
+  # Installation Dify (dans un dossier séparé):
+  #   git clone https://github.com/langgenius/dify.git
+  #   cd dify/docker
+  #   cp .env.example .env
+  #   docker compose up -d
+  # -------------------------------------------------------------------------
+
+volumes:
+  huggingface-cache:
+    driver: local
+  paradedb-data:
+    driver: local

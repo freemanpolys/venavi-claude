@@ -1,0 +1,4767 @@
+{
+  "version": "2.9",
+  "children": [
+    {
+      "type": "text",
+      "id": "RfmWN",
+      "x": 0,
+      "y": -80,
+      "name": "title",
+      "fill": "#1E293B",
+      "content": "DoveAIA Platform Architecture — OpenFang Based",
+      "fontFamily": "Inter",
+      "fontSize": 32,
+      "fontWeight": "700"
+    },
+    {
+      "type": "frame",
+      "id": "9aiwk",
+      "x": 0,
+      "y": 0,
+      "name": "1. Architecture Plateforme SaaS",
+      "width": 2000,
+      "height": 800,
+      "fill": "#F8FAFC",
+      "cornerRadius": 16,
+      "layout": "vertical",
+      "gap": 24,
+      "padding": 40,
+      "children": [
+        {
+          "type": "text",
+          "id": "tSBj8",
+          "name": "h1",
+          "fill": "#0F172A",
+          "content": "1. Architecture Plateforme SaaS — DoveAIA",
+          "fontFamily": "Inter",
+          "fontSize": 24,
+          "fontWeight": "700"
+        },
+        {
+          "type": "text",
+          "id": "ezt0z",
+          "name": "subtitle",
+          "fill": "#64748B",
+          "content": "app.doveaia.com • Go + Angular + OpenFang + Azure",
+          "fontFamily": "Inter",
+          "fontSize": 14
+        },
+        {
+          "type": "frame",
+          "id": "FCKLr",
+          "name": "mainRow",
+          "width": 1920,
+          "height": 520,
+          "gap": 20,
+          "children": [
+            {
+              "type": "frame",
+              "id": "WxfK9",
+              "name": "leftCol",
+              "width": 1020,
+              "height": 500,
+              "layout": "vertical",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "55f91",
+                  "name": "feBox",
+                  "width": "fill_container",
+                  "fill": "#DBEAFE",
+                  "cornerRadius": 12,
+                  "stroke": {
+                    "thickness": 2,
+                    "fill": "#3B82F6"
+                  },
+                  "layout": "vertical",
+                  "gap": 8,
+                  "padding": 16,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "SpKY2",
+                      "name": "feLabel",
+                      "fill": "#1E40AF",
+                      "content": "Frontend — Angular",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "hSZIM",
+                      "name": "feRow",
+                      "width": "fill_container",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "1YhAO",
+                          "name": "fe1",
+                          "width": "fill_container",
+                          "fill": "#FFFFFF",
+                          "cornerRadius": 8,
+                          "layout": "vertical",
+                          "gap": 4,
+                          "padding": 10,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "7Luv3",
+                              "name": "fe1t",
+                              "fill": "#1E40AF",
+                              "content": "Landing Page",
+                              "fontFamily": "Inter",
+                              "fontSize": 11,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "text",
+                              "id": "xcQyJ",
+                              "name": "fe1d",
+                              "fill": "#64748B",
+                              "content": "Pricing, Signup",
+                              "fontFamily": "Inter",
+                              "fontSize": 10,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "sUDYM",
+                          "name": "fe2",
+                          "width": "fill_container",
+                          "fill": "#FFFFFF",
+                          "cornerRadius": 8,
+                          "layout": "vertical",
+                          "gap": 4,
+                          "padding": 10,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "0cM7N",
+                              "name": "fe2t",
+                              "fill": "#1E40AF",
+                              "content": "Dashboard",
+                              "fontFamily": "Inter",
+                              "fontSize": 11,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "text",
+                              "id": "moFyU",
+                              "name": "fe2d",
+                              "fill": "#64748B",
+                              "content": "Chat, Tasks, Memory",
+                              "fontFamily": "Inter",
+                              "fontSize": 10,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "ikjrS",
+                          "name": "fe3",
+                          "width": "fill_container",
+                          "fill": "#FFFFFF",
+                          "cornerRadius": 8,
+                          "layout": "vertical",
+                          "gap": 4,
+                          "padding": 10,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "GEvHY",
+                              "name": "fe3t",
+                              "fill": "#1E40AF",
+                              "content": "Settings",
+                              "fontFamily": "Inter",
+                              "fontSize": 11,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "text",
+                              "id": "qFpQ1",
+                              "name": "fe3d",
+                              "fill": "#64748B",
+                              "content": "Agents, Channels, Skills",
+                              "fontFamily": "Inter",
+                              "fontSize": 10,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "DbGiR",
+                          "name": "fe4",
+                          "width": "fill_container",
+                          "fill": "#FFFFFF",
+                          "cornerRadius": 8,
+                          "layout": "vertical",
+                          "gap": 4,
+                          "padding": 10,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "WLaf7",
+                              "name": "fe4t",
+                              "fill": "#1E40AF",
+                              "content": "Billing",
+                              "fontFamily": "Inter",
+                              "fontSize": 11,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "text",
+                              "id": "1WImZ",
+                              "name": "fe4d",
+                              "fill": "#64748B",
+                              "content": "Stripe, Usage",
+                              "fontFamily": "Inter",
+                              "fontSize": 10,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "gKyST",
+                  "name": "arrow1",
+                  "fill": "#6366F1",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "▼  API calls (REST/JSON)",
+                  "textAlign": "center",
+                  "fontFamily": "Inter",
+                  "fontSize": 11,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "frame",
+                  "id": "uVZS2",
+                  "name": "goBox",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#F0FDF4",
+                  "cornerRadius": 12,
+                  "stroke": {
+                    "thickness": 2,
+                    "fill": "#22C55E"
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": 16,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "WA1oW",
+                      "name": "goLabel",
+                      "fill": "#166534",
+                      "content": "Go API Backend — Azure Container Apps",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "IBizw",
+                      "name": "goRow",
+                      "width": "fill_container",
+                      "gap": 10,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "bpaP4",
+                          "name": "gs1",
+                          "width": "fill_container",
+                          "fill": "#FFFFFF",
+                          "cornerRadius": 8,
+                          "layout": "vertical",
+                          "gap": 4,
+                          "padding": 10,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "ahKYI",
+                              "name": "gs1t",
+                              "fill": "#166534",
+                              "content": "Auth Service",
+                              "fontFamily": "Inter",
+                              "fontSize": 11,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "text",
+                              "id": "IBnRT",
+                              "name": "gs1d",
+                              "fill": "#64748B",
+                              "content": "Azure AD B2C\nJWT Tokens\nOAuth2 Signup",
+                              "lineHeight": 1.4,
+                              "fontFamily": "Inter",
+                              "fontSize": 9,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "8I4pa",
+                          "name": "gs2",
+                          "width": "fill_container",
+                          "fill": "#FFFFFF",
+                          "cornerRadius": 8,
+                          "layout": "vertical",
+                          "gap": 4,
+                          "padding": 10,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "2rjyV",
+                              "name": "gs2t",
+                              "fill": "#166534",
+                              "content": "Instance Manager",
+                              "fontFamily": "Inter",
+                              "fontSize": 11,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "text",
+                              "id": "aQwEg",
+                              "name": "gs2d",
+                              "fill": "#64748B",
+                              "content": "Provision OpenFang\nGenerate config.toml\nHealth checks\nAuto-restart",
+                              "lineHeight": 1.4,
+                              "fontFamily": "Inter",
+                              "fontSize": 9,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "Gs5kw",
+                          "name": "gs3",
+                          "width": "fill_container",
+                          "fill": "#FFFFFF",
+                          "cornerRadius": 8,
+                          "layout": "vertical",
+                          "gap": 4,
+                          "padding": 10,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "nFHXk",
+                              "name": "gs3t",
+                              "fill": "#166534",
+                              "content": "Billing Service",
+                              "fontFamily": "Inter",
+                              "fontSize": 11,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "text",
+                              "id": "HCdJz",
+                              "name": "gs3d",
+                              "fill": "#64748B",
+                              "content": "Stripe Subs\nUsage Metering\nLLM Cost Tracking",
+                              "lineHeight": 1.4,
+                              "fontFamily": "Inter",
+                              "fontSize": 9,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "X2G4t",
+                          "name": "gs4",
+                          "width": "fill_container",
+                          "fill": "#FFFFFF",
+                          "cornerRadius": 8,
+                          "layout": "vertical",
+                          "gap": 4,
+                          "padding": 10,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "0a1qE",
+                              "name": "gs4t",
+                              "fill": "#166534",
+                              "content": "Proxy Service",
+                              "fontFamily": "Inter",
+                              "fontSize": 11,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "text",
+                              "id": "nenA7",
+                              "name": "gs4d",
+                              "fill": "#64748B",
+                              "content": "Reverse Proxy\nWebhook Routing\nWebSocket Proxy\nTLS Termination",
+                              "lineHeight": 1.4,
+                              "fontFamily": "Inter",
+                              "fontSize": 9,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "2Hzh5",
+                      "name": "goRow2",
+                      "width": "fill_container",
+                      "gap": 10,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "DryBK",
+                          "name": "pgBox",
+                          "width": "fill_container",
+                          "fill": "#EEF2FF",
+                          "cornerRadius": 8,
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "#6366F1"
+                          },
+                          "layout": "vertical",
+                          "gap": 4,
+                          "padding": 10,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "mjTKs",
+                              "name": "pgT",
+                              "fill": "#4338CA",
+                              "content": "PostgreSQL + pgvector",
+                              "fontFamily": "Inter",
+                              "fontSize": 11,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "text",
+                              "id": "uTKt7",
+                              "name": "pgD",
+                              "fill": "#64748B",
+                              "content": "tenants, users, subscriptions\nusage_snapshots, backups\nchannel_configs",
+                              "lineHeight": 1.4,
+                              "fontFamily": "Inter",
+                              "fontSize": 9,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "tkBPt",
+                          "name": "azBox",
+                          "width": "fill_container",
+                          "fill": "#FFF7ED",
+                          "cornerRadius": 8,
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "#F97316"
+                          },
+                          "layout": "vertical",
+                          "gap": 4,
+                          "padding": 10,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "4XJ3z",
+                              "name": "azT",
+                              "fill": "#C2410C",
+                              "content": "Azure AI Search",
+                              "fontFamily": "Inter",
+                              "fontSize": 11,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "text",
+                              "id": "fZEM1",
+                              "name": "azD",
+                              "fill": "#64748B",
+                              "content": "Vector embeddings\nDocument indexing\nHybrid search (RAG)",
+                              "lineHeight": 1.4,
+                              "fontFamily": "Inter",
+                              "fontSize": 9,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "I6gPT",
+                          "name": "blobBox",
+                          "width": "fill_container",
+                          "fill": "#FEF9C3",
+                          "cornerRadius": 8,
+                          "stroke": {
+                            "thickness": 1,
+                            "fill": "#CA8A04"
+                          },
+                          "layout": "vertical",
+                          "gap": 4,
+                          "padding": 10,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "TcLTJ",
+                              "name": "blobT",
+                              "fill": "#854D0E",
+                              "content": "Azure Blob Storage",
+                              "fontFamily": "Inter",
+                              "fontSize": 11,
+                              "fontWeight": "600"
+                            },
+                            {
+                              "type": "text",
+                              "id": "vrWNZ",
+                              "name": "blobD",
+                              "fill": "#64748B",
+                              "content": "Document uploads\nDaily SQLite backups\nWeb crawl cache",
+                              "lineHeight": 1.4,
+                              "fontFamily": "Inter",
+                              "fontSize": 9,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "BuioP",
+              "name": "rightCol",
+              "width": 480,
+              "height": 500,
+              "layout": "vertical",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "FjjRE",
+                  "name": "arrowR",
+                  "fill": "#6366F1",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "REST API (70+ endpoints)",
+                  "textAlign": "center",
+                  "fontFamily": "Inter",
+                  "fontSize": 11,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "frame",
+                  "id": "pUmVN",
+                  "name": "ofA",
+                  "width": "fill_container",
+                  "fill": "#FFF1F2",
+                  "cornerRadius": 10,
+                  "stroke": {
+                    "thickness": 2,
+                    "fill": "#F43F5E"
+                  },
+                  "layout": "vertical",
+                  "gap": 6,
+                  "padding": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "wRWqE",
+                      "name": "ofAt",
+                      "fill": "#BE123C",
+                      "content": "OpenFang — Client A",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "egdKv",
+                      "name": "ofAd",
+                      "fill": "#64748B",
+                      "content": "mode: stable • model: claude-sonnet\n[[users]] Alice (owner), Bob (user)\n[channels] WhatsApp +33 6xx, Telegram @bot-A\nSQLite local • port: 50051 • ~40MB RAM",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 9,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Zuk7K",
+                  "name": "ofB",
+                  "width": "fill_container",
+                  "fill": "#FFF1F2",
+                  "cornerRadius": 10,
+                  "stroke": {
+                    "thickness": 2,
+                    "fill": "#F43F5E"
+                  },
+                  "layout": "vertical",
+                  "gap": 6,
+                  "padding": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "CGb3W",
+                      "name": "ofBt",
+                      "fill": "#BE123C",
+                      "content": "OpenFang — Client B",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "wDlD2",
+                      "name": "ofBd",
+                      "fill": "#64748B",
+                      "content": "mode: stable • model: gpt-4o\n[[users]] Carol (owner), Dave (admin)\n[channels] Slack workspace-B, Email\nSQLite local • port: 50052 • ~40MB RAM",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 9,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "E7RsC",
+                  "name": "ofC",
+                  "width": "fill_container",
+                  "fill": "#FFF1F2",
+                  "cornerRadius": 10,
+                  "stroke": {
+                    "thickness": 2,
+                    "fill": "#F43F5E"
+                  },
+                  "layout": "vertical",
+                  "gap": 6,
+                  "padding": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "w7gUh",
+                      "name": "ofCt",
+                      "fill": "#BE123C",
+                      "content": "OpenFang — Client C",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "BQGPG",
+                      "name": "ofCd",
+                      "fill": "#64748B",
+                      "content": "mode: stable • model: groq\n[[users]] Eve (owner), Frank (viewer)\n[channels] Teams, Discord guild-C\nSQLite local • port: 50053 • ~40MB RAM",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 9,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "MQ0Ct",
+                  "name": "ofpLabel",
+                  "width": "fill_container",
+                  "fill": "#ECFDF5",
+                  "cornerRadius": 8,
+                  "gap": 6,
+                  "padding": 8,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "ZKWuG",
+                      "name": "ofpT",
+                      "fill": "#166534",
+                      "content": "OFP P2P Cluster (shared_secret)",
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Nujtn",
+          "name": "newRow",
+          "width": 1920,
+          "fill": "#1e293b",
+          "cornerRadius": 12,
+          "stroke": {
+            "thickness": 2,
+            "fill": "#14b8a6"
+          },
+          "gap": 16,
+          "padding": 16,
+          "children": [
+            {
+              "type": "text",
+              "id": "LOPvQ",
+              "name": "newLabel",
+              "fill": "#14b8a6",
+              "content": "v2",
+              "fontFamily": "Inter",
+              "fontSize": 28,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "csb6K",
+              "name": "cwBox",
+              "fill": "#f59e0b",
+              "cornerRadius": 8,
+              "layout": "vertical",
+              "gap": 4,
+              "padding": [
+                8,
+                14
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "wnWCe",
+                  "name": "cwT",
+                  "fill": "#0f172a",
+                  "content": "Chatwoot",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "Rhcwr",
+                  "name": "cwD",
+                  "fill": "#451a03",
+                  "content": "Inbox · CSAT · SLA · Reports",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "CgJCN",
+              "name": "ragBox",
+              "fill": "#0c4a6e",
+              "cornerRadius": 8,
+              "layout": "vertical",
+              "gap": 4,
+              "padding": [
+                8,
+                14
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "t5jue",
+                  "name": "ragT",
+                  "fill": "#38bdf8",
+                  "content": "RAG Engine",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "aTSTX",
+                  "name": "ragD",
+                  "fill": "#7dd3fc",
+                  "content": "Crawler · Docs · Email",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Uz4VJ",
+              "name": "qwenBox",
+              "fill": "#14532d",
+              "cornerRadius": 8,
+              "layout": "vertical",
+              "gap": 4,
+              "padding": [
+                8,
+                14
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "lUsNh",
+                  "name": "qwenT",
+                  "fill": "#4ade80",
+                  "content": "Qwen3-VL-Embed",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "H5AlF",
+                  "name": "qwenD",
+                  "fill": "#86efac",
+                  "content": "Multimodal · Reranker",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "wTynh",
+              "name": "pgBox",
+              "fill": "#3b0764",
+              "cornerRadius": 8,
+              "layout": "vertical",
+              "gap": 4,
+              "padding": [
+                8,
+                14
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "2ZNh9",
+                  "name": "pgT",
+                  "fill": "#c084fc",
+                  "content": "pgvector",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "04Fnr",
+                  "name": "pgD",
+                  "fill": "#d8b4fe",
+                  "content": "Hybrid search",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "MiAPU",
+      "x": 0,
+      "y": 960,
+      "name": "2. Pattern 1 Instance / Client",
+      "width": 2000,
+      "height": 750,
+      "fill": "#F8FAFC",
+      "cornerRadius": 16,
+      "layout": "vertical",
+      "gap": 24,
+      "padding": 40,
+      "children": [
+        {
+          "type": "text",
+          "id": "4fcKe",
+          "name": "h2",
+          "fill": "#0F172A",
+          "content": "2. Pattern : 1 Instance OpenFang par Client",
+          "fontFamily": "Inter",
+          "fontSize": 24,
+          "fontWeight": "700"
+        },
+        {
+          "type": "text",
+          "id": "ViMka",
+          "name": "h2sub",
+          "fill": "#64748B",
+          "content": "Isolation données, canaux dédiés, RBAC indépendant, config LLM séparée, billing par instance",
+          "fontFamily": "Inter",
+          "fontSize": 12,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "frame",
+          "id": "yB8Jp",
+          "name": "row2",
+          "width": 1920,
+          "height": "fill_container",
+          "gap": 16,
+          "children": [
+            {
+              "type": "frame",
+              "id": "1bnl5",
+              "name": "whyBox",
+              "width": 320,
+              "height": "fill_container",
+              "fill": "#EEF2FF",
+              "cornerRadius": 12,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#6366F1"
+              },
+              "layout": "vertical",
+              "gap": 10,
+              "padding": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "qGNdV",
+                  "name": "whyT",
+                  "fill": "#4338CA",
+                  "content": "Pourquoi 1 instance / client",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "5YgSE",
+                  "name": "why1",
+                  "fill": "#334155",
+                  "content": "• [channels.whatsapp] = table unique\n  → 1 seul bot/numéro par canal\n\n• Isolation SQLite complète\n  → zéro risque de fuite de données\n\n• RBAC indépendant\n  → client = owner de son instance\n\n• Config LLM séparée\n  → Claude, GPT-4, Groq par client\n\n• Billing simple\n  → GET /api/usage/summary par instance\n\n• Blast radius limité\n  → si instance A crash, B pas impacté",
+                  "lineHeight": 1.5,
+                  "fontFamily": "Inter",
+                  "fontSize": 10,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "edyaV",
+              "name": "costBox",
+              "width": 320,
+              "height": "fill_container",
+              "fill": "#F0FDF4",
+              "cornerRadius": 12,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#22C55E"
+              },
+              "layout": "vertical",
+              "gap": 12,
+              "padding": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "xgN5K",
+                  "name": "costT",
+                  "fill": "#166534",
+                  "content": "Coûts estimés",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "Ai6nj",
+                  "name": "costD",
+                  "fill": "#334155",
+                  "content": "1 instance OpenFang :\n  ~40MB RAM idle\n  ~32MB disque\n\nHetzner CX22 (4GB, 4.35€/mois) :\n  → ~80 clients idle\n  → ~30-40 clients actifs\n\nHetzner CX32 (8GB, 7.49€/mois) :\n  → ~160 clients idle\n  → ~60-80 clients actifs\n\nAzure Container Apps :\n  → Scale-to-zero\n  → ~0.50-2€/client/mois\n\nMarge brute :\n  80-95% sur Hetzner\n  60-80% sur Azure",
+                  "lineHeight": 1.5,
+                  "fontFamily": "Inter",
+                  "fontSize": 10,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "NE7m7",
+              "name": "provBox",
+              "width": "fill_container",
+              "height": "fill_container",
+              "fill": "#FFF7ED",
+              "cornerRadius": 12,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#F97316"
+              },
+              "layout": "vertical",
+              "gap": 12,
+              "padding": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "WjGvs",
+                  "name": "provT",
+                  "fill": "#C2410C",
+                  "content": "Flux de provisioning",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "LUcj1",
+                  "name": "provD",
+                  "fill": "#334155",
+                  "content": "1. Client souscrit → Stripe webhook\n\n2. Go crée tenant en PostgreSQL\n\n3. Go génère config.toml :\n   • api_listen, api_key\n   • mode: stable\n   • [default_model] provider\n   • [[users]] name, role: owner\n   • [network] shared_secret\n\n4. Go lance container Docker :\n   docker run -d \\\n     --name openfang-{tenant_id} \\\n     --memory=512m --cpus=1 \\\n     -p {api_port}:50051\n\n5. Health check OK :\n   GET /api/health\n\n6. Crée agent par défaut :\n   POST /api/agents\n\n7. Configure canaux → restart\n\n8. Email bienvenue → client",
+                  "lineHeight": 1.45,
+                  "fontFamily": "Inter",
+                  "fontSize": 9,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "N7IMD",
+      "x": 0,
+      "y": 1770,
+      "name": "3. Pipeline Embeddings (Azure AI Search → pgvector)",
+      "width": 2000,
+      "height": 750,
+      "fill": "#F8FAFC",
+      "cornerRadius": 16,
+      "layout": "vertical",
+      "gap": 24,
+      "padding": 40,
+      "children": [
+        {
+          "type": "text",
+          "id": "cu6dv",
+          "name": "h3",
+          "fill": "#0F172A",
+          "content": "3. Pipeline Embeddings — Azure AI Search → pgvector",
+          "fontFamily": "Inter",
+          "fontSize": 24,
+          "fontWeight": "700"
+        },
+        {
+          "type": "text",
+          "id": "DUpJ8",
+          "name": "h3sub",
+          "fill": "#64748B",
+          "content": "Ingestion documents + sites web • RAG pour agents OpenFang • Interface Go SearchService pour migration transparente",
+          "fontFamily": "Inter",
+          "fontSize": 12,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "frame",
+          "id": "dO4dP",
+          "name": "row3",
+          "width": 1920,
+          "height": "fill_container",
+          "gap": 16,
+          "children": [
+            {
+              "type": "frame",
+              "id": "TN0B4",
+              "name": "pipeCol",
+              "width": "fill_container",
+              "height": "fill_container",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "iNh3S",
+                  "name": "step1",
+                  "width": "fill_container",
+                  "fill": "#DBEAFE",
+                  "cornerRadius": 10,
+                  "gap": 10,
+                  "padding": 12,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "IY22V",
+                      "name": "s1num",
+                      "width": 28,
+                      "height": 28,
+                      "fill": "#3B82F6",
+                      "cornerRadius": 14,
+                      "layout": "none",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "HkR3M",
+                          "x": 8,
+                          "y": 6,
+                          "name": "s1numT",
+                          "fill": "#FFFFFF",
+                          "content": "1",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "bmVKK",
+                      "name": "s1body",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 2,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "6TFWx",
+                          "name": "s1t",
+                          "fill": "#1E40AF",
+                          "content": "Client upload (Dashboard Angular)",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "dp3VR",
+                          "name": "s1d",
+                          "fill": "#64748B",
+                          "content": "PDF, DOCX, XLSX, PPTX, HTML, TXT → Go backend → Azure Blob Storage",
+                          "fontFamily": "Inter",
+                          "fontSize": 9,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "t8ugN",
+                  "name": "step2",
+                  "width": "fill_container",
+                  "fill": "#FFF7ED",
+                  "cornerRadius": 10,
+                  "gap": 10,
+                  "padding": 12,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "lHUND",
+                      "name": "s2num",
+                      "width": 28,
+                      "height": 28,
+                      "fill": "#F97316",
+                      "cornerRadius": 14,
+                      "layout": "none",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "8Nr8s",
+                          "x": 8,
+                          "y": 6,
+                          "name": "s2numT",
+                          "fill": "#FFFFFF",
+                          "content": "2",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "qNk3U",
+                      "name": "s2body",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 2,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "bKWmO",
+                          "name": "s2t",
+                          "fill": "#C2410C",
+                          "content": "Azure AI Search Indexer (auto, pull mode)",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "vswhx",
+                          "name": "s2d",
+                          "fill": "#64748B",
+                          "content": "Détecte blob → Document cracking → Chunking → Vectorisation (Azure OpenAI text-embedding-3-large)",
+                          "fontFamily": "Inter",
+                          "fontSize": 9,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "nmVtc",
+                  "name": "step3",
+                  "width": "fill_container",
+                  "fill": "#EEF2FF",
+                  "cornerRadius": 10,
+                  "gap": 10,
+                  "padding": 12,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "gEVBQ",
+                      "name": "s3num",
+                      "width": 28,
+                      "height": 28,
+                      "fill": "#6366F1",
+                      "cornerRadius": 14,
+                      "layout": "none",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "sssWM",
+                          "x": 8,
+                          "y": 6,
+                          "name": "s3numT",
+                          "fill": "#FFFFFF",
+                          "content": "3",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "En0KU",
+                      "name": "s3body",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 2,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "UM6gy",
+                          "name": "s3t",
+                          "fill": "#4338CA",
+                          "content": "Azure AI Search Index (tenant_{id}_documents)",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "7jp4x",
+                          "name": "s3d",
+                          "fill": "#64748B",
+                          "content": "Full-text + Vector + Semantic reranking → Hybrid search",
+                          "fontFamily": "Inter",
+                          "fontSize": 9,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "eYp7e",
+                  "name": "step4",
+                  "width": "fill_container",
+                  "fill": "#FFF1F2",
+                  "cornerRadius": 10,
+                  "gap": 10,
+                  "padding": 12,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "wKP7R",
+                      "name": "s4num",
+                      "width": 28,
+                      "height": 28,
+                      "fill": "#F43F5E",
+                      "cornerRadius": 14,
+                      "layout": "none",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "VRtSw",
+                          "x": 8,
+                          "y": 6,
+                          "name": "s4numT",
+                          "fill": "#FFFFFF",
+                          "content": "4",
+                          "fontFamily": "Inter",
+                          "fontSize": 12,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "IdxhY",
+                      "name": "s4body",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 2,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "mgVp1",
+                          "name": "s4t",
+                          "fill": "#BE123C",
+                          "content": "OpenFang agent query via MCP / tool custom",
+                          "fontFamily": "Inter",
+                          "fontSize": 11,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "hKZwl",
+                          "name": "s4d",
+                          "fill": "#64748B",
+                          "content": "Skill 'search_documents' → Azure AI Search REST API → Résultats injectés dans le contexte agent",
+                          "fontFamily": "Inter",
+                          "fontSize": 9,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Z4IWI",
+                  "name": "crawlBox",
+                  "width": "fill_container",
+                  "fill": "#F0FDF4",
+                  "cornerRadius": 10,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#22C55E"
+                  },
+                  "layout": "vertical",
+                  "gap": 6,
+                  "padding": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "7Ex3s",
+                      "name": "crawlT",
+                      "fill": "#166534",
+                      "content": "Web Crawler (sites clients)",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "iulpD",
+                      "name": "crawlD",
+                      "fill": "#64748B",
+                      "content": "Go cron (colly/go-rod) → HTML → Markdown (readability) → Azure Blob → Auto-indexé\nAlternative : OpenFang web_fetch (readability: true) → push dans Blob Storage",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 9,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "c5Bct",
+                  "name": "goIfBox",
+                  "width": "fill_container",
+                  "fill": "#F5F3FF",
+                  "cornerRadius": 10,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#8B5CF6"
+                  },
+                  "layout": "vertical",
+                  "gap": 6,
+                  "padding": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "kMshL",
+                      "name": "goIfT",
+                      "fill": "#6D28D9",
+                      "content": "Interface Go SearchService (jour 1)",
+                      "fontFamily": "Inter",
+                      "fontSize": 11,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "9U7qJ",
+                      "name": "goIfD",
+                      "fill": "#334155",
+                      "content": "type SearchService interface {\n  IndexDocument(ctx, tenantID, doc) error\n  Search(ctx, tenantID, query, opts) ([]Result, error)\n  HybridSearch(ctx, tenantID, query, opts) ([]Result, error)\n}\n\n→ AzureSearchService (Phase 1) | PgVectorSearchService (Phase 3)",
+                      "lineHeight": 1.5,
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": 9,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "bkIu7",
+              "name": "migrCol",
+              "width": 380,
+              "height": "fill_container",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "0I5yP",
+                  "name": "ph1",
+                  "width": "fill_container",
+                  "fill": "#FFF7ED",
+                  "cornerRadius": 10,
+                  "stroke": {
+                    "thickness": 2,
+                    "fill": "#F97316"
+                  },
+                  "layout": "vertical",
+                  "gap": 6,
+                  "padding": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "S6qe7",
+                      "name": "ph1t",
+                      "fill": "#C2410C",
+                      "content": "Phase 1 — MVP",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "bHN9u",
+                      "name": "ph1d",
+                      "fill": "#334155",
+                      "content": "Azure AI Search\n• Basic ~60€/mois\n• Pipeline intégré (auto)\n• Hybrid search natif\n• Zéro infra custom\n• SDK REST depuis Go",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "6WGuF",
+                  "name": "ph2",
+                  "width": "fill_container",
+                  "fill": "#EEF2FF",
+                  "cornerRadius": 10,
+                  "stroke": {
+                    "thickness": 2,
+                    "fill": "#6366F1"
+                  },
+                  "layout": "vertical",
+                  "gap": 6,
+                  "padding": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "tvhog",
+                      "name": "ph2t",
+                      "fill": "#4338CA",
+                      "content": "Phase 2 — Scale",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "ymrZ1",
+                      "name": "ph2d",
+                      "fill": "#334155",
+                      "content": "Azure AI Search + pgvector\n• Dual-write\n• Migration progressive\n• Test comparatif qualité",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "2Ry6k",
+                  "name": "ph3",
+                  "width": "fill_container",
+                  "fill": "#F0FDF4",
+                  "cornerRadius": 10,
+                  "stroke": {
+                    "thickness": 2,
+                    "fill": "#22C55E"
+                  },
+                  "layout": "vertical",
+                  "gap": 6,
+                  "padding": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "J3dVn",
+                      "name": "ph3t",
+                      "fill": "#166534",
+                      "content": "Phase 3 — Mature",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "lpCoF",
+                      "name": "ph3d",
+                      "fill": "#334155",
+                      "content": "pgvector principal\n• PostgreSQL existant (0€)\n• Self-hosted compatible\n• tsvector full-text FR\n• RLS multi-tenant\n• pg_cron re-indexation\n• Azure AI Search optionnel\n  (clients enterprise)",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "K5UZ1",
+                  "name": "pricBox",
+                  "width": "fill_container",
+                  "fill": "#FEF9C3",
+                  "cornerRadius": 8,
+                  "layout": "vertical",
+                  "gap": 4,
+                  "padding": 10,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "UA1ln",
+                      "name": "pricT",
+                      "fill": "#854D0E",
+                      "content": "Coût embeddings",
+                      "fontFamily": "Inter",
+                      "fontSize": 10,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "CbOc9",
+                      "name": "pricD",
+                      "fill": "#64748B",
+                      "content": "Azure OpenAI text-embedding-3-large\n~$0.13/1M tokens\n100 docs (~500 pages) = ~$0.50 one-shot",
+                      "lineHeight": 1.4,
+                      "fontFamily": "Inter",
+                      "fontSize": 9,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "treN4",
+      "x": 0,
+      "y": 2580,
+      "name": "4. Offre Self-Hosted",
+      "width": 2000,
+      "fill": "#0f172a",
+      "cornerRadius": 16,
+      "layout": "vertical",
+      "gap": 24,
+      "padding": 40,
+      "children": [
+        {
+          "type": "text",
+          "id": "LhPr4",
+          "name": "title4",
+          "fill": "#38bdf8",
+          "textGrowth": "fixed-width",
+          "width": 1320,
+          "content": "4. OFFRE SELF-HOSTED — Architecture Client On-Premise",
+          "fontFamily": "Inter",
+          "fontSize": 32,
+          "fontWeight": "700"
+        },
+        {
+          "type": "rectangle",
+          "id": "DlrGB",
+          "name": "sep4",
+          "fill": "#334155",
+          "width": 1320,
+          "height": 2
+        },
+        {
+          "type": "frame",
+          "id": "K3Thz",
+          "name": "cols",
+          "width": 1920,
+          "gap": 30,
+          "children": [
+            {
+              "type": "frame",
+              "id": "c9Spx",
+              "name": "leftCol",
+              "width": 620,
+              "layout": "vertical",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Rv9EI",
+                  "name": "leftTitle",
+                  "fill": "#f8fafc",
+                  "content": "Infrastructure Client",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "frame",
+                  "id": "iX4Zf",
+                  "name": "clientBox",
+                  "width": 600,
+                  "fill": "#1e293b",
+                  "cornerRadius": 12,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#475569"
+                  },
+                  "layout": "vertical",
+                  "gap": 14,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "MXkZ9",
+                      "name": "clientLabel",
+                      "fill": "#fbbf24",
+                      "content": "Serveur Client (VM / Bare Metal)",
+                      "fontFamily": "Inter",
+                      "fontSize": 28,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "xY1BO",
+                      "name": "gwBox",
+                      "width": "fill_container",
+                      "fill": "#0c4a6e",
+                      "cornerRadius": 8,
+                      "layout": "vertical",
+                      "gap": 8,
+                      "padding": 16,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "Y9xQx",
+                          "name": "gwTitle",
+                          "fill": "#38bdf8",
+                          "content": "doveaia-gateway (Go binary)",
+                          "fontFamily": "Inter",
+                          "fontSize": 28,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "Hajhv",
+                          "name": "gwDesc",
+                          "fill": "#94a3b8",
+                          "textGrowth": "fixed-width",
+                          "width": 500,
+                          "content": "• Auth locale (OIDC / LDAP)\n• Proxy vers OpenFang\n• Dashboard Angular embarqué\n• Licence Manager (heartbeat)",
+                          "lineHeight": 1.4,
+                          "fontFamily": "Inter",
+                          "fontSize": 28,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "9bV2O",
+                      "name": "ofBox",
+                      "width": "fill_container",
+                      "fill": "#14532d",
+                      "cornerRadius": 8,
+                      "layout": "vertical",
+                      "gap": 8,
+                      "padding": 16,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "W4GaT",
+                          "name": "ofTitle",
+                          "fill": "#4ade80",
+                          "content": "OpenFang (Rust binary)",
+                          "fontFamily": "Inter",
+                          "fontSize": 28,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "gF4Cm",
+                          "name": "ofDesc",
+                          "fill": "#94a3b8",
+                          "textGrowth": "fixed-width",
+                          "width": 500,
+                          "content": "• SQLite local (conversations)\n• Channels (WhatsApp, Teams, Slack)\n• Skills WASM personnalisés\n• LLM Provider (Azure OpenAI / local)",
+                          "lineHeight": 1.4,
+                          "fontFamily": "Inter",
+                          "fontSize": 28,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "d84Li",
+                      "name": "dataBox",
+                      "width": "fill_container",
+                      "fill": "#3b0764",
+                      "cornerRadius": 8,
+                      "layout": "vertical",
+                      "gap": 8,
+                      "padding": 16,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "kXNn7",
+                          "name": "dataTitle",
+                          "fill": "#c084fc",
+                          "content": "Données Client (100% local)",
+                          "fontFamily": "Inter",
+                          "fontSize": 28,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "G6yn9",
+                          "name": "dataDesc",
+                          "fill": "#94a3b8",
+                          "textGrowth": "fixed-width",
+                          "width": 500,
+                          "content": "• Documents uploadés (disque local)\n• Embeddings pgvector (PostgreSQL)\n• Logs & Audit trail\n• Backups gérés par le client",
+                          "lineHeight": 1.4,
+                          "fontFamily": "Inter",
+                          "fontSize": 28,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "BTQoq",
+                      "name": "cwSelfBox",
+                      "width": "fill_container",
+                      "fill": "#78350f",
+                      "cornerRadius": 8,
+                      "layout": "vertical",
+                      "gap": 8,
+                      "padding": 16,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "HYjg8",
+                          "name": "cwSelfTitle",
+                          "fill": "#f59e0b",
+                          "content": "Chatwoot (Docker local)",
+                          "fontFamily": "Inter",
+                          "fontSize": 28,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "18L2W",
+                          "name": "cwSelfDesc",
+                          "fill": "#94a3b8",
+                          "textGrowth": "fixed-width",
+                          "width": 500,
+                          "content": "• Rails + Sidekiq + Redis\n• Inbox agents humains\n• CSAT / SLA / Reports\n• AgentBot → OpenFang",
+                          "lineHeight": 1.4,
+                          "fontFamily": "Inter",
+                          "fontSize": 28,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "h0Csc",
+                      "name": "qwenSelfBox",
+                      "width": "fill_container",
+                      "fill": "#064e3b",
+                      "cornerRadius": 8,
+                      "layout": "vertical",
+                      "gap": 8,
+                      "padding": 16,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "HKLCn",
+                          "name": "qwenSelfTitle",
+                          "fill": "#34d399",
+                          "content": "Qwen3 Embeddings (optionnel)",
+                          "fontFamily": "Inter",
+                          "fontSize": 28,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "Bff8k",
+                          "name": "qwenSelfDesc",
+                          "fill": "#94a3b8",
+                          "textGrowth": "fixed-width",
+                          "width": 500,
+                          "content": "• VL-Embed-2B si GPU (RTX 3060)\n• Embedding-0.6B sur CPU (639MB)\n• Ou Azure OpenAI si internet OK\n• Apache 2.0, 100% local",
+                          "lineHeight": 1.4,
+                          "fontFamily": "Inter",
+                          "fontSize": 28,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "SAcOk",
+              "name": "rightCol",
+              "width": 650,
+              "layout": "vertical",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "eYdyR",
+                  "name": "rightTitle",
+                  "fill": "#f8fafc",
+                  "content": "Licence & Contrôle",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "frame",
+                  "id": "jgZqT",
+                  "name": "licBox",
+                  "width": 630,
+                  "fill": "#1e293b",
+                  "cornerRadius": 12,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#475569"
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "mlydG",
+                      "name": "licLabel",
+                      "fill": "#fbbf24",
+                      "content": "Système de Licence",
+                      "fontFamily": "Inter",
+                      "fontSize": 28,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Nn6yF",
+                      "name": "licDesc",
+                      "fill": "#e2e8f0",
+                      "textGrowth": "fixed-width",
+                      "width": 580,
+                      "content": "1. Gateway envoie heartbeat\n   → api.doveaia.com/licence/check\n2. Réponse signée (JWT)\n   → features activées, expiration\n3. Cache local 72h\n   → fonctionne hors-ligne\n4. Mode air-gap disponible\n   → licence fichier USB",
+                      "lineHeight": 1.4,
+                      "fontFamily": "Inter",
+                      "fontSize": 28,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "zQcL2",
+                  "name": "pricingBox",
+                  "width": 630,
+                  "fill": "#1e293b",
+                  "cornerRadius": 12,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#475569"
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "6Leeo",
+                      "name": "pricingLabel",
+                      "fill": "#fbbf24",
+                      "content": "Tarifs Self-Hosted",
+                      "fontFamily": "Inter",
+                      "fontSize": 28,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "PYaLW",
+                      "name": "tier1",
+                      "width": "fill_container",
+                      "fill": "#0c4a6e",
+                      "cornerRadius": 8,
+                      "gap": 12,
+                      "padding": [
+                        8,
+                        16
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "Rv2pN",
+                          "name": "tier1name",
+                          "fill": "#38bdf8",
+                          "content": "Starter",
+                          "fontFamily": "Inter",
+                          "fontSize": 28,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "frrVA",
+                          "name": "tier1price",
+                          "fill": "#e2e8f0",
+                          "content": "2 000 €/an",
+                          "fontFamily": "Inter",
+                          "fontSize": 28,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "G0m0m",
+                      "name": "tier2",
+                      "width": "fill_container",
+                      "fill": "#14532d",
+                      "cornerRadius": 8,
+                      "gap": 12,
+                      "padding": [
+                        8,
+                        16
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "Eq2eq",
+                          "name": "tier2name",
+                          "fill": "#4ade80",
+                          "content": "Pro",
+                          "fontFamily": "Inter",
+                          "fontSize": 28,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "imHrx",
+                          "name": "tier2price",
+                          "fill": "#e2e8f0",
+                          "content": "5 000 €/an",
+                          "fontFamily": "Inter",
+                          "fontSize": 28,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "f9wJk",
+                      "name": "tier3",
+                      "width": "fill_container",
+                      "fill": "#3b0764",
+                      "cornerRadius": 8,
+                      "gap": 12,
+                      "padding": [
+                        8,
+                        16
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "GnyoT",
+                          "name": "tier3name",
+                          "fill": "#c084fc",
+                          "content": "Enterprise",
+                          "fontFamily": "Inter",
+                          "fontSize": 28,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "3G2q9",
+                          "name": "tier3price",
+                          "fill": "#e2e8f0",
+                          "content": "Sur devis",
+                          "fontFamily": "Inter",
+                          "fontSize": 28,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "8PMI9",
+                  "name": "cloudBox",
+                  "width": 630,
+                  "fill": "#1e293b",
+                  "cornerRadius": 12,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#475569"
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "qZS0A",
+                      "name": "cloudLabel",
+                      "fill": "#fbbf24",
+                      "content": "Connexion DoveAIA Cloud",
+                      "fontFamily": "Inter",
+                      "fontSize": 28,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "7vG6B",
+                      "name": "cloudDesc",
+                      "fill": "#e2e8f0",
+                      "textGrowth": "fixed-width",
+                      "width": 580,
+                      "content": "→ Heartbeat licence (HTTPS)\n→ Mises à jour gateway + skills\n→ Télémétrie anonyme (opt-in)\n→ Support remote (opt-in)",
+                      "lineHeight": 1.4,
+                      "fontFamily": "Inter",
+                      "fontSize": 28,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "vLBQO",
+                  "name": "advBox",
+                  "width": 630,
+                  "fill": "#042f2e",
+                  "cornerRadius": 12,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#14b8a6"
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "CsZyo",
+                      "name": "advLabel",
+                      "fill": "#2dd4bf",
+                      "content": "Avantages Client",
+                      "fontFamily": "Inter",
+                      "fontSize": 28,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "TiJoV",
+                      "name": "advDesc",
+                      "fill": "#e2e8f0",
+                      "textGrowth": "fixed-width",
+                      "width": 580,
+                      "content": "• Données 100% on-premise\n• Conformité RGPD / souveraineté\n• LLM local possible (Ollama)\n• Latence réseau minimale\n• Contrôle total infrastructure",
+                      "lineHeight": 1.4,
+                      "fontFamily": "Inter",
+                      "fontSize": 28,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "xgqM9",
+      "x": 0,
+      "y": 3340,
+      "name": "5. Agents Autonomes (Hands + Cron + Triggers)",
+      "width": 2000,
+      "fill": "#0f172a",
+      "cornerRadius": 16,
+      "layout": "vertical",
+      "gap": 24,
+      "padding": 40,
+      "children": [
+        {
+          "type": "text",
+          "id": "UbyQX",
+          "name": "title5",
+          "fill": "#38bdf8",
+          "textGrowth": "fixed-width",
+          "width": 1320,
+          "content": "5. AGENTS AUTONOMES — Hands + Cron + Triggers + Workflows",
+          "fontFamily": "Inter",
+          "fontSize": 32,
+          "fontWeight": "700"
+        },
+        {
+          "type": "rectangle",
+          "id": "6Gry0",
+          "name": "sep5",
+          "fill": "#334155",
+          "width": 1320,
+          "height": 2
+        },
+        {
+          "type": "frame",
+          "id": "71U7T",
+          "name": "topRow",
+          "width": 1920,
+          "gap": 24,
+          "children": [
+            {
+              "type": "frame",
+              "id": "0ltwf",
+              "name": "handsBox",
+              "width": 400,
+              "fill": "#1e293b",
+              "cornerRadius": 12,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#475569"
+              },
+              "layout": "vertical",
+              "gap": 10,
+              "padding": 20,
+              "children": [
+                {
+                  "type": "icon_font",
+                  "id": "glak8",
+                  "name": "handsIcon",
+                  "width": 40,
+                  "height": 40,
+                  "iconFontName": "hand",
+                  "iconFontFamily": "lucide",
+                  "fill": "#f59e0b"
+                },
+                {
+                  "type": "text",
+                  "id": "m5l5y",
+                  "name": "handsTitle",
+                  "fill": "#f59e0b",
+                  "content": "Hands",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "rSIB1",
+                  "name": "handsSubtitle",
+                  "fill": "#94a3b8",
+                  "content": "Agents Autonomes",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "MWqug",
+                  "name": "handsDesc",
+                  "fill": "#e2e8f0",
+                  "textGrowth": "fixed-width",
+                  "width": 270,
+                  "content": "• Exécution autonome\n• Planification multi-étapes\n• Appel de skills chaîné\n• Mémoire conversationnelle\n• Retry & fallback auto",
+                  "lineHeight": 1.4,
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "6qfSG",
+                  "name": "handsApi",
+                  "width": "fill_container",
+                  "fill": "#0c4a6e",
+                  "cornerRadius": 6,
+                  "layout": "vertical",
+                  "gap": 4,
+                  "padding": [
+                    8,
+                    12
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "cvO0u",
+                      "name": "handsApiT",
+                      "fill": "#7dd3fc",
+                      "textGrowth": "fixed-width",
+                      "width": 250,
+                      "content": "POST /hands\nGET /hands/{id}/status\nDELETE /hands/{id}",
+                      "lineHeight": 1.3,
+                      "fontFamily": "Inter",
+                      "fontSize": 28,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "bSskX",
+              "name": "cronBox",
+              "width": 400,
+              "fill": "#1e293b",
+              "cornerRadius": 12,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#475569"
+              },
+              "layout": "vertical",
+              "gap": 10,
+              "padding": 20,
+              "children": [
+                {
+                  "type": "icon_font",
+                  "id": "K1bD0",
+                  "name": "cronIcon",
+                  "width": 40,
+                  "height": 40,
+                  "iconFontName": "clock",
+                  "iconFontFamily": "lucide",
+                  "fill": "#3b82f6"
+                },
+                {
+                  "type": "text",
+                  "id": "uFoYN",
+                  "name": "cronTitle",
+                  "fill": "#3b82f6",
+                  "content": "Cron",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "2DpZh",
+                  "name": "cronSubtitle",
+                  "fill": "#94a3b8",
+                  "content": "Tâches Planifiées",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "9s5us",
+                  "name": "cronDesc",
+                  "fill": "#e2e8f0",
+                  "textGrowth": "fixed-width",
+                  "width": 270,
+                  "content": "• Expressions cron standard\n• Résumés quotidiens auto\n• Rapports hebdomadaires\n• Nettoyage sessions\n• Sync données externe",
+                  "lineHeight": 1.4,
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "bF1vi",
+                  "name": "cronApi",
+                  "width": "fill_container",
+                  "fill": "#0c4a6e",
+                  "cornerRadius": 6,
+                  "layout": "vertical",
+                  "gap": 4,
+                  "padding": [
+                    8,
+                    12
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "cp0SH",
+                      "name": "cronApiT",
+                      "fill": "#7dd3fc",
+                      "textGrowth": "fixed-width",
+                      "width": 250,
+                      "content": "POST /cron\nGET /cron\nDELETE /cron/{id}",
+                      "lineHeight": 1.3,
+                      "fontFamily": "Inter",
+                      "fontSize": 28,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "3rhbz",
+              "name": "trigBox",
+              "width": 400,
+              "fill": "#1e293b",
+              "cornerRadius": 12,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#475569"
+              },
+              "layout": "vertical",
+              "gap": 10,
+              "padding": 20,
+              "children": [
+                {
+                  "type": "icon_font",
+                  "id": "4DpWE",
+                  "name": "trigIcon",
+                  "width": 40,
+                  "height": 40,
+                  "iconFontName": "zap",
+                  "iconFontFamily": "lucide",
+                  "fill": "#ef4444"
+                },
+                {
+                  "type": "text",
+                  "id": "SAxE4",
+                  "name": "trigTitle",
+                  "fill": "#ef4444",
+                  "content": "Triggers",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "JuvOd",
+                  "name": "trigSubtitle",
+                  "fill": "#94a3b8",
+                  "content": "Événements Temps Réel",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "JIyKJ",
+                  "name": "trigDesc",
+                  "fill": "#e2e8f0",
+                  "textGrowth": "fixed-width",
+                  "width": 270,
+                  "content": "• Webhook entrant\n• Nouveau message canal\n• Changement skill status\n• Seuil métrique atteint\n• Event externe (API)",
+                  "lineHeight": 1.4,
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "UPWbt",
+                  "name": "trigApi",
+                  "width": "fill_container",
+                  "fill": "#0c4a6e",
+                  "cornerRadius": 6,
+                  "layout": "vertical",
+                  "gap": 4,
+                  "padding": [
+                    8,
+                    12
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "OSjyz",
+                      "name": "trigApiT",
+                      "fill": "#7dd3fc",
+                      "textGrowth": "fixed-width",
+                      "width": 250,
+                      "content": "POST /triggers\nGET /triggers\nPUT /triggers/{id}",
+                      "lineHeight": 1.3,
+                      "fontFamily": "Inter",
+                      "fontSize": 28,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "GTORD",
+              "name": "wfBox",
+              "width": 400,
+              "fill": "#1e293b",
+              "cornerRadius": 12,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#475569"
+              },
+              "layout": "vertical",
+              "gap": 10,
+              "padding": 20,
+              "children": [
+                {
+                  "type": "icon_font",
+                  "id": "VSgO6",
+                  "name": "wfIcon",
+                  "width": 40,
+                  "height": 40,
+                  "iconFontName": "git-branch",
+                  "iconFontFamily": "lucide",
+                  "fill": "#a855f7"
+                },
+                {
+                  "type": "text",
+                  "id": "jd7j6",
+                  "name": "wfTitle",
+                  "fill": "#a855f7",
+                  "content": "Workflows",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "SSnps",
+                  "name": "wfSubtitle",
+                  "fill": "#94a3b8",
+                  "content": "Orchestration Multi-Agents",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "3nhDw",
+                  "name": "wfDesc",
+                  "fill": "#e2e8f0",
+                  "textGrowth": "fixed-width",
+                  "width": 270,
+                  "content": "• Chaîne Hand → Cron → Trigger\n• Conditions if/else\n• Parallélisation tâches\n• Approbation humaine\n• Logging centralisé",
+                  "lineHeight": 1.4,
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "bLJLh",
+                  "name": "wfApi",
+                  "width": "fill_container",
+                  "fill": "#0c4a6e",
+                  "cornerRadius": 6,
+                  "layout": "vertical",
+                  "gap": 4,
+                  "padding": [
+                    8,
+                    12
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "7CQR6",
+                      "name": "wfApiT",
+                      "fill": "#7dd3fc",
+                      "textGrowth": "fixed-width",
+                      "width": 250,
+                      "content": "POST /workflows\nGET /workflows/{id}\nPOST /workflows/{id}/run",
+                      "lineHeight": 1.3,
+                      "fontFamily": "Inter",
+                      "fontSize": 28,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "hd8pP",
+          "name": "bottomRow",
+          "width": 1920,
+          "fill": "#1e293b",
+          "cornerRadius": 12,
+          "stroke": {
+            "thickness": 1,
+            "fill": "#475569"
+          },
+          "gap": 20,
+          "padding": 20,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "QPi0J",
+              "name": "dashLabel",
+              "fill": "#38bdf8",
+              "content": "Dashboard Angular",
+              "fontFamily": "Inter",
+              "fontSize": 28,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "MTdw7",
+              "name": "arrow1",
+              "fill": "#64748b",
+              "content": "→",
+              "fontFamily": "Inter",
+              "fontSize": 32,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "5Tslv",
+              "name": "goLabel",
+              "fill": "#0c4a6e",
+              "cornerRadius": 8,
+              "layout": "vertical",
+              "gap": 4,
+              "padding": [
+                8,
+                16
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "3jsDE",
+                  "name": "goText",
+                  "fill": "#38bdf8",
+                  "content": "Go API Gateway",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "Jx5Hi",
+              "name": "arrow2",
+              "fill": "#64748b",
+              "content": "→",
+              "fontFamily": "Inter",
+              "fontSize": 32,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "etqrF",
+              "name": "ofLabel",
+              "fill": "#14532d",
+              "cornerRadius": 8,
+              "layout": "vertical",
+              "gap": 4,
+              "padding": [
+                8,
+                16
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "GHrzC",
+                  "name": "ofText",
+                  "fill": "#4ade80",
+                  "content": "OpenFang REST API",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "uNs1d",
+              "name": "arrow3",
+              "fill": "#64748b",
+              "content": "→",
+              "fontFamily": "Inter",
+              "fontSize": 32,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "ZUg1c",
+              "name": "execLabel",
+              "fill": "#3b0764",
+              "cornerRadius": 8,
+              "layout": "vertical",
+              "gap": 4,
+              "padding": [
+                8,
+                16
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "N3HL9",
+                  "name": "execText",
+                  "fill": "#c084fc",
+                  "content": "Hands / Cron / Triggers",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "600"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "d8Ljv",
+          "name": "handoffRow",
+          "width": 1920,
+          "fill": "#78350f",
+          "cornerRadius": 12,
+          "stroke": {
+            "thickness": 1,
+            "fill": "#f59e0b"
+          },
+          "gap": 20,
+          "padding": 20,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "QgFAh",
+              "name": "hoLabel",
+              "fill": "#f59e0b",
+              "content": "Escalade Humaine",
+              "fontFamily": "Inter",
+              "fontSize": 28,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "FJzmB",
+              "name": "hoArr1",
+              "fill": "#64748b",
+              "content": "→",
+              "fontFamily": "Inter",
+              "fontSize": 32,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "dR6A8",
+              "name": "hoBot",
+              "fill": "#7f1d1d",
+              "cornerRadius": 8,
+              "padding": [
+                8,
+                14
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "vdvAJ",
+                  "name": "hoBotT",
+                  "fill": "#fca5a5",
+                  "content": "bot_handoff!",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "lDfyY",
+              "name": "hoArr2",
+              "fill": "#64748b",
+              "content": "→",
+              "fontFamily": "Inter",
+              "fontSize": 32,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "YcJRD",
+              "name": "hoCw",
+              "fill": "#f59e0b",
+              "cornerRadius": 8,
+              "padding": [
+                8,
+                14
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "BvpBe",
+                  "name": "hoCwT",
+                  "fill": "#0f172a",
+                  "content": "Chatwoot Inbox",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "ZvX9e",
+              "name": "hoArr3",
+              "fill": "#64748b",
+              "content": "→",
+              "fontFamily": "Inter",
+              "fontSize": 32,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "za467",
+              "name": "hoAgent",
+              "fill": "#1e293b",
+              "cornerRadius": 8,
+              "padding": [
+                8,
+                14
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Kc0pE",
+                  "name": "hoAgentT",
+                  "fill": "#e2e8f0",
+                  "content": "Agent humain",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "WJY03",
+              "name": "hoArr4",
+              "fill": "#64748b",
+              "content": "→",
+              "fontFamily": "Inter",
+              "fontSize": 32,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "fY4uE",
+              "name": "hoCsat",
+              "fill": "#3b0764",
+              "cornerRadius": 8,
+              "padding": [
+                8,
+                14
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "AqLsC",
+                  "name": "hoCsatT",
+                  "fill": "#c084fc",
+                  "content": "CSAT auto",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "600"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "amhzG",
+      "x": 0,
+      "y": 4457,
+      "name": "6. RAG Engine — Ingestion Multi-Sources",
+      "width": 2000,
+      "fill": "#0f172a",
+      "cornerRadius": 16,
+      "layout": "vertical",
+      "gap": 24,
+      "padding": 40,
+      "children": [
+        {
+          "type": "text",
+          "id": "SOGVv",
+          "name": "ragTitle",
+          "fill": "#38bdf8",
+          "textGrowth": "fixed-width",
+          "width": 1320,
+          "content": "6. RAG ENGINE — Ingestion Multi-Sources",
+          "fontFamily": "Inter",
+          "fontSize": 32,
+          "fontWeight": "700"
+        },
+        {
+          "type": "rectangle",
+          "id": "9ONZq",
+          "name": "ragSep",
+          "fill": "#334155",
+          "width": 1320,
+          "height": 2
+        },
+        {
+          "type": "frame",
+          "id": "YXV4g",
+          "name": "sourcesRow",
+          "width": 1920,
+          "gap": 20,
+          "children": [
+            {
+              "type": "frame",
+              "id": "denKy",
+              "name": "webBox",
+              "width": 400,
+              "fill": "#1e293b",
+              "cornerRadius": 12,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#475569"
+              },
+              "layout": "vertical",
+              "gap": 10,
+              "padding": 20,
+              "children": [
+                {
+                  "type": "icon_font",
+                  "id": "uEQXT",
+                  "name": "webIcon",
+                  "width": 40,
+                  "height": 40,
+                  "iconFontName": "globe",
+                  "iconFontFamily": "lucide",
+                  "fill": "#3b82f6"
+                },
+                {
+                  "type": "text",
+                  "id": "j7uG2",
+                  "name": "webTitle",
+                  "fill": "#3b82f6",
+                  "content": "Web Crawler",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "bHKpd",
+                  "name": "webDesc",
+                  "fill": "#e2e8f0",
+                  "textGrowth": "fixed-width",
+                  "width": 270,
+                  "content": "• URL racine → crawl récursif\n• Sitemap.xml auto-détecté\n• go-readability extraction\n• HTML → Markdown\n• Respect robots.txt\n• Re-crawl planifié (cron)",
+                  "lineHeight": 1.4,
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "ERehf",
+                  "name": "webApi",
+                  "width": 360,
+                  "fill": "#0c4a6e",
+                  "cornerRadius": 6,
+                  "layout": "vertical",
+                  "gap": 4,
+                  "padding": [
+                    8,
+                    12
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "FtRwd",
+                      "name": "webApiT",
+                      "fill": "#7dd3fc",
+                      "textGrowth": "fixed-width",
+                      "width": 260,
+                      "content": "POST /rag/crawl\nGET  /rag/crawl/{id}\nPUT  /rag/crawl/{id}/refresh",
+                      "lineHeight": 1.3,
+                      "fontFamily": "Inter",
+                      "fontSize": 28,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "mcEeG",
+              "name": "docBox",
+              "width": 400,
+              "fill": "#1e293b",
+              "cornerRadius": 12,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#475569"
+              },
+              "layout": "vertical",
+              "gap": 10,
+              "padding": 20,
+              "children": [
+                {
+                  "type": "icon_font",
+                  "id": "MHdez",
+                  "name": "docIcon",
+                  "width": 40,
+                  "height": 40,
+                  "iconFontName": "file-text",
+                  "iconFontFamily": "lucide",
+                  "fill": "#f59e0b"
+                },
+                {
+                  "type": "text",
+                  "id": "4Nvzu",
+                  "name": "docTitle",
+                  "fill": "#f59e0b",
+                  "content": "Documents",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "52tNd",
+                  "name": "docDesc",
+                  "fill": "#e2e8f0",
+                  "textGrowth": "fixed-width",
+                  "width": 270,
+                  "content": "• Upload PDF, DOCX, XLSX\n• PPTX, TXT, CSV, HTML\n• OCR (PDFs scannés)\n• Document cracking auto\n• Tags custom par fichier\n• Virus scan optionnel",
+                  "lineHeight": 1.4,
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "fgv8g",
+                  "name": "docApi",
+                  "width": 360,
+                  "fill": "#0c4a6e",
+                  "cornerRadius": 6,
+                  "layout": "vertical",
+                  "gap": 4,
+                  "padding": [
+                    8,
+                    12
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "bChgI",
+                      "name": "docApiT",
+                      "fill": "#7dd3fc",
+                      "textGrowth": "fixed-width",
+                      "width": 260,
+                      "content": "POST /rag/documents\nGET  /rag/documents/{id}\nGET  /rag/documents/{id}/chunks",
+                      "lineHeight": 1.3,
+                      "fontFamily": "Inter",
+                      "fontSize": 28,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "rYBUi",
+              "name": "emailBox",
+              "width": 400,
+              "fill": "#1e293b",
+              "cornerRadius": 12,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#475569"
+              },
+              "layout": "vertical",
+              "gap": 10,
+              "padding": 20,
+              "children": [
+                {
+                  "type": "icon_font",
+                  "id": "92vZB",
+                  "name": "emailIcon",
+                  "width": 40,
+                  "height": 40,
+                  "iconFontName": "mail",
+                  "iconFontFamily": "lucide",
+                  "fill": "#ef4444"
+                },
+                {
+                  "type": "text",
+                  "id": "1FXZQ",
+                  "name": "emailTitle",
+                  "fill": "#ef4444",
+                  "content": "Email Indexer",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "IxA5e",
+                  "name": "emailDesc",
+                  "fill": "#e2e8f0",
+                  "textGrowth": "fixed-width",
+                  "width": 270,
+                  "content": "• Gmail (OAuth2)\n• Outlook / M365 (OAuth2)\n• IMAP custom\n• Filtres : dossier, expéditeur\n  sujet, date, PJ\n• Sync incrémentale\n• PJ → Document Ingester",
+                  "lineHeight": 1.4,
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "NbQJd",
+                  "name": "emailApi",
+                  "width": 360,
+                  "fill": "#0c4a6e",
+                  "cornerRadius": 6,
+                  "layout": "vertical",
+                  "gap": 4,
+                  "padding": [
+                    8,
+                    12
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "2yfra",
+                      "name": "emailApiT",
+                      "fill": "#7dd3fc",
+                      "textGrowth": "fixed-width",
+                      "width": 260,
+                      "content": "POST /rag/email/connect\nPOST /rag/email/filters\nPOST /rag/email/sync",
+                      "lineHeight": 1.3,
+                      "fontFamily": "Inter",
+                      "fontSize": 28,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "rtlTa",
+              "name": "apiBox",
+              "width": 400,
+              "fill": "#1e293b",
+              "cornerRadius": 12,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#475569"
+              },
+              "layout": "vertical",
+              "gap": 10,
+              "padding": 20,
+              "children": [
+                {
+                  "type": "icon_font",
+                  "id": "0NB3U",
+                  "name": "apiIcon",
+                  "width": 40,
+                  "height": 40,
+                  "iconFontName": "plug",
+                  "iconFontFamily": "lucide",
+                  "fill": "#a855f7"
+                },
+                {
+                  "type": "text",
+                  "id": "gjOPE",
+                  "name": "apiTitle",
+                  "fill": "#a855f7",
+                  "content": "API Connectors",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "o9BqB",
+                  "name": "apiDesc",
+                  "fill": "#e2e8f0",
+                  "textGrowth": "fixed-width",
+                  "width": 270,
+                  "content": "• Notion (API)\n• Confluence (REST)\n• SharePoint (Graph)\n• Google Drive (API)\n• Webhook push\n• Custom REST pull",
+                  "lineHeight": 1.4,
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "fj1Dy",
+                  "name": "apiApi",
+                  "width": 360,
+                  "fill": "#0c4a6e",
+                  "cornerRadius": 6,
+                  "layout": "vertical",
+                  "gap": 4,
+                  "padding": [
+                    8,
+                    12
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "iFlFN",
+                      "name": "apiApiT",
+                      "fill": "#7dd3fc",
+                      "textGrowth": "fixed-width",
+                      "width": 260,
+                      "content": "POST /rag/connectors\nGET  /rag/connectors\nPOST /rag/connectors/{id}/sync",
+                      "lineHeight": 1.3,
+                      "fontFamily": "Inter",
+                      "fontSize": 28,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "xy9KW",
+          "name": "pipelineBox",
+          "width": 1920,
+          "fill": "#1e293b",
+          "cornerRadius": 12,
+          "stroke": {
+            "thickness": 1,
+            "fill": "#475569"
+          },
+          "gap": 16,
+          "padding": 20,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "6QzLs",
+              "name": "pipLabel",
+              "fill": "#fbbf24",
+              "content": "Content Pipeline",
+              "fontFamily": "Inter",
+              "fontSize": 28,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "DbDcW",
+              "name": "step1",
+              "fill": "#0c4a6e",
+              "cornerRadius": 8,
+              "layout": "vertical",
+              "gap": 2,
+              "padding": [
+                8,
+                14
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "QHgI0",
+                  "name": "step1t",
+                  "fill": "#38bdf8",
+                  "content": "1. Extract",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "kN61m",
+              "name": "arr1",
+              "fill": "#64748b",
+              "content": "→",
+              "fontFamily": "Inter",
+              "fontSize": 32,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "x7nSu",
+              "name": "step2",
+              "fill": "#0c4a6e",
+              "cornerRadius": 8,
+              "layout": "vertical",
+              "gap": 2,
+              "padding": [
+                8,
+                14
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "GAoWG",
+                  "name": "step2t",
+                  "fill": "#38bdf8",
+                  "content": "2. Clean",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "geLmC",
+              "name": "arr2",
+              "fill": "#64748b",
+              "content": "→",
+              "fontFamily": "Inter",
+              "fontSize": 32,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "ulojW",
+              "name": "step3",
+              "fill": "#0c4a6e",
+              "cornerRadius": 8,
+              "layout": "vertical",
+              "gap": 2,
+              "padding": [
+                8,
+                14
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "hXfov",
+                  "name": "step3t",
+                  "fill": "#38bdf8",
+                  "content": "3. Chunk",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "608IR",
+              "name": "arr3",
+              "fill": "#64748b",
+              "content": "→",
+              "fontFamily": "Inter",
+              "fontSize": 32,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "TGCbC",
+              "name": "step4",
+              "fill": "#14532d",
+              "cornerRadius": 8,
+              "layout": "vertical",
+              "gap": 2,
+              "padding": [
+                8,
+                14
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "tn0M0",
+                  "name": "step4t",
+                  "fill": "#4ade80",
+                  "content": "4. Embed",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "Ri2Ti",
+              "name": "arr4",
+              "fill": "#64748b",
+              "content": "→",
+              "fontFamily": "Inter",
+              "fontSize": 32,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "suYsp",
+              "name": "step5",
+              "fill": "#3b0764",
+              "cornerRadius": 8,
+              "layout": "vertical",
+              "gap": 2,
+              "padding": [
+                8,
+                14
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "2TRKW",
+                  "name": "step5t",
+                  "fill": "#c084fc",
+                  "content": "5. Index",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "600"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "0U1o4",
+          "name": "searchRow",
+          "width": 1920,
+          "fill": "#042f2e",
+          "cornerRadius": 12,
+          "stroke": {
+            "thickness": 1,
+            "fill": "#14b8a6"
+          },
+          "gap": 20,
+          "padding": 20,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "EnQIY",
+              "name": "searchLabel",
+              "fill": "#2dd4bf",
+              "content": "OpenFang Agent",
+              "fontFamily": "Inter",
+              "fontSize": 28,
+              "fontWeight": "700"
+            },
+            {
+              "type": "text",
+              "id": "Uc0XS",
+              "name": "sarr1",
+              "fill": "#64748b",
+              "content": "→",
+              "fontFamily": "Inter",
+              "fontSize": 32,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "mIL4i",
+              "name": "skillBox",
+              "fill": "#14532d",
+              "cornerRadius": 8,
+              "layout": "vertical",
+              "gap": 2,
+              "padding": [
+                8,
+                14
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "KgRja",
+                  "name": "skillT",
+                  "fill": "#4ade80",
+                  "content": "skill: search_knowledge",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "l60NL",
+              "name": "sarr2",
+              "fill": "#64748b",
+              "content": "→",
+              "fontFamily": "Inter",
+              "fontSize": 32,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "NA4Wt",
+              "name": "goBox",
+              "fill": "#0c4a6e",
+              "cornerRadius": 8,
+              "layout": "vertical",
+              "gap": 2,
+              "padding": [
+                8,
+                14
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "YY8Ht",
+                  "name": "goT",
+                  "fill": "#38bdf8",
+                  "content": "Go SearchService",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "95qfv",
+              "name": "sarr3",
+              "fill": "#64748b",
+              "content": "→",
+              "fontFamily": "Inter",
+              "fontSize": 32,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "ISAUy",
+              "name": "azBox",
+              "fill": "#3b0764",
+              "cornerRadius": 8,
+              "layout": "vertical",
+              "gap": 2,
+              "padding": [
+                8,
+                14
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "YVVgo",
+                  "name": "azT",
+                  "fill": "#c084fc",
+                  "content": "Azure AI Search / pgvector",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "05jJy",
+              "name": "sarr4",
+              "fill": "#64748b",
+              "content": "→",
+              "fontFamily": "Inter",
+              "fontSize": 32,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "wIQiu",
+              "name": "resBox",
+              "fill": "#1e293b",
+              "cornerRadius": 8,
+              "layout": "vertical",
+              "gap": 2,
+              "padding": [
+                8,
+                14
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "SCqQ2",
+                  "name": "resT",
+                  "fill": "#fbbf24",
+                  "content": "Réponse contextualisée",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "600"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "ZnFiM",
+      "x": 0,
+      "y": 5794,
+      "name": "7. Multimodal Embeddings — Qwen3-VL-Embedding",
+      "width": 2000,
+      "fill": "#0f172a",
+      "cornerRadius": 16,
+      "layout": "vertical",
+      "gap": 24,
+      "padding": 40,
+      "children": [
+        {
+          "type": "text",
+          "id": "pldmh",
+          "name": "mmTitle",
+          "fill": "#38bdf8",
+          "textGrowth": "fixed-width",
+          "width": 1320,
+          "content": "7. MULTIMODAL EMBEDDINGS — Qwen3-VL-Embedding",
+          "fontFamily": "Inter",
+          "fontSize": 32,
+          "fontWeight": "700"
+        },
+        {
+          "type": "rectangle",
+          "id": "lvaTt",
+          "name": "mmSep",
+          "fill": "#334155",
+          "width": 1320,
+          "height": 2
+        },
+        {
+          "type": "frame",
+          "id": "vbT4v",
+          "name": "modelsRow",
+          "width": 1920,
+          "gap": 20,
+          "children": [
+            {
+              "type": "frame",
+              "id": "80vcU",
+              "name": "vl2b",
+              "width": 520,
+              "fill": "#1e293b",
+              "cornerRadius": 12,
+              "stroke": {
+                "thickness": 2,
+                "fill": "#14b8a6"
+              },
+              "layout": "vertical",
+              "gap": 10,
+              "padding": 20,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "vohgU",
+                  "name": "vl2bBadge",
+                  "fill": "#14b8a6",
+                  "cornerRadius": 6,
+                  "gap": 8,
+                  "padding": [
+                    4,
+                    10
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "DVrCu",
+                      "name": "vl2bBadgeT",
+                      "fill": "#042f2e",
+                      "content": "RECOMMANDÉ",
+                      "fontFamily": "Inter",
+                      "fontSize": 28,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "Ek4lL",
+                  "name": "vl2bTitle",
+                  "fill": "#2dd4bf",
+                  "content": "Qwen3-VL-Embedding-2B",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "vMG7A",
+                  "name": "vl2bSub",
+                  "fill": "#94a3b8",
+                  "content": "Multimodal (texte + image + vidéo)",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "CMP7G",
+                  "name": "vl2bSpecs",
+                  "fill": "#e2e8f0",
+                  "textGrowth": "fixed-width",
+                  "width": 380,
+                  "content": "• 2B params, 28 layers\n• Dims: 64 → 2048 (MRL)\n• Context: 32K tokens\n• VRAM: 3-6 GB\n• GPU: RTX 3060 12GB\n• Cross-modal: 0.945 (#1)\n• Apache 2.0",
+                  "lineHeight": 1.4,
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "2ARaA",
+                  "name": "vl2bDeploy",
+                  "width": "fill_container",
+                  "fill": "#0c4a6e",
+                  "cornerRadius": 6,
+                  "layout": "vertical",
+                  "gap": 4,
+                  "padding": [
+                    8,
+                    12
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "0x8km",
+                      "name": "vl2bDeployT",
+                      "fill": "#38bdf8",
+                      "content": "vLLM / Azure AI Foundry",
+                      "fontFamily": "Inter",
+                      "fontSize": 28,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "ordQx",
+              "name": "vl8b",
+              "width": 520,
+              "fill": "#1e293b",
+              "cornerRadius": 12,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#475569"
+              },
+              "layout": "vertical",
+              "gap": 10,
+              "padding": 20,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "VLIkn",
+                  "name": "vl8bTitle",
+                  "fill": "#c084fc",
+                  "content": "Qwen3-VL-Embedding-8B",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "yN5ks",
+                  "name": "vl8bSub",
+                  "fill": "#94a3b8",
+                  "content": "Multimodal Max Qualité",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "jBzAN",
+                  "name": "vl8bSpecs",
+                  "fill": "#e2e8f0",
+                  "textGrowth": "fixed-width",
+                  "width": 380,
+                  "content": "• 8B params, 36 layers\n• Dims: 64 → 4096 (MRL)\n• Context: 32K tokens\n• VRAM: 8-20 GB\n• GPU: A10 / A100\n• MMEB-V2: 77.9 (#1)\n• Apache 2.0",
+                  "lineHeight": 1.4,
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "6TNwk",
+                  "name": "vl8bDeploy",
+                  "width": "fill_container",
+                  "fill": "#3b0764",
+                  "cornerRadius": 6,
+                  "layout": "vertical",
+                  "gap": 4,
+                  "padding": [
+                    8,
+                    12
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "ts5Ve",
+                      "name": "vl8bDeployT",
+                      "fill": "#c084fc",
+                      "content": "vLLM / Azure A100",
+                      "fontFamily": "Inter",
+                      "fontSize": 28,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "3lyj6",
+              "name": "txtEmb",
+              "width": 520,
+              "fill": "#1e293b",
+              "cornerRadius": 12,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#475569"
+              },
+              "layout": "vertical",
+              "gap": 10,
+              "padding": 20,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "HBZD2",
+                  "name": "txtEmbTitle",
+                  "fill": "#f59e0b",
+                  "content": "Qwen3-Embedding",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "riP75",
+                  "name": "txtEmbSub",
+                  "fill": "#94a3b8",
+                  "content": "Text-Only (0.6B / 4B / 8B)",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "d2Ekq",
+                  "name": "txtEmbSpecs",
+                  "fill": "#e2e8f0",
+                  "textGrowth": "fixed-width",
+                  "width": 380,
+                  "content": "• MTEB Multilingual #1\n• 100+ langues + code\n• Dims: 32 → 4096 (MRL)\n• 0.6B = 639MB (CPU!)\n• 8B = 4.7GB (Ollama)\n• Context: 32-40K tokens\n• Apache 2.0",
+                  "lineHeight": 1.4,
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "fYrje",
+                  "name": "txtEmbDeploy",
+                  "width": 480,
+                  "fill": "#14532d",
+                  "cornerRadius": 6,
+                  "layout": "vertical",
+                  "gap": 4,
+                  "padding": [
+                    8,
+                    12
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "ld5ZY",
+                      "name": "txtEmbDeployT",
+                      "fill": "#4ade80",
+                      "content": "Ollama / TEI Docker / Azure",
+                      "fontFamily": "Inter",
+                      "fontSize": 28,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "oKN8N",
+          "name": "pipeRow",
+          "width": 1920,
+          "fill": "#1e293b",
+          "cornerRadius": 12,
+          "stroke": {
+            "thickness": 1,
+            "fill": "#475569"
+          },
+          "gap": 16,
+          "padding": 20,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "4Kroo",
+              "name": "pipL",
+              "fill": "#fbbf24",
+              "content": "Pipeline RAG Multimodal",
+              "fontFamily": "Inter",
+              "fontSize": 28,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "AEDOJ",
+              "name": "s1",
+              "fill": "#0c4a6e",
+              "cornerRadius": 8,
+              "padding": [
+                8,
+                14
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "yKWf8",
+                  "name": "s1t",
+                  "fill": "#38bdf8",
+                  "content": "PDF → Image",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "m2cDf",
+              "name": "a1",
+              "fill": "#64748b",
+              "content": "→",
+              "fontFamily": "Inter",
+              "fontSize": 32,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "S0YcK",
+              "name": "s2",
+              "fill": "#14532d",
+              "cornerRadius": 8,
+              "padding": [
+                8,
+                14
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "NKYLu",
+                  "name": "s2t",
+                  "fill": "#4ade80",
+                  "content": "VL-Embed-2B",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "hvdiU",
+              "name": "a2",
+              "fill": "#64748b",
+              "content": "→",
+              "fontFamily": "Inter",
+              "fontSize": 32,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "dFlzJ",
+              "name": "s3",
+              "fill": "#3b0764",
+              "cornerRadius": 8,
+              "padding": [
+                8,
+                14
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "auVll",
+                  "name": "s3t",
+                  "fill": "#c084fc",
+                  "content": "pgvector",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "SkvnS",
+              "name": "a3",
+              "fill": "#64748b",
+              "content": "→",
+              "fontFamily": "Inter",
+              "fontSize": 32,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "SXoOo",
+              "name": "s4",
+              "fill": "#0c4a6e",
+              "cornerRadius": 8,
+              "padding": [
+                8,
+                14
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "tmqkd",
+                  "name": "s4t",
+                  "fill": "#38bdf8",
+                  "content": "VL-Reranker",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "7YaL5",
+              "name": "a4",
+              "fill": "#64748b",
+              "content": "→",
+              "fontFamily": "Inter",
+              "fontSize": 32,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "o4Nzk",
+              "name": "s5",
+              "fill": "#042f2e",
+              "cornerRadius": 8,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#14b8a6"
+              },
+              "padding": [
+                8,
+                14
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Sw7lu",
+                  "name": "s5t",
+                  "fill": "#2dd4bf",
+                  "content": "Réponse",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "600"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "mcGQu",
+          "name": "phaseRow",
+          "width": 1920,
+          "gap": 16,
+          "children": [
+            {
+              "type": "frame",
+              "id": "liKI0",
+              "name": "ph1",
+              "width": "fill_container",
+              "fill": "#0c4a6e",
+              "cornerRadius": 12,
+              "layout": "vertical",
+              "gap": 8,
+              "padding": 20,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "LQEx6",
+                  "name": "ph1t",
+                  "fill": "#38bdf8",
+                  "content": "Phase 1 — MVP",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "RDKYJ",
+                  "name": "ph1d",
+                  "fill": "#e2e8f0",
+                  "textGrowth": "fixed-width",
+                  "width": 380,
+                  "content": "Azure OpenAI\ntext-embedding-3-large\nText only, zéro GPU",
+                  "lineHeight": 1.3,
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "TcPME",
+              "name": "ph2",
+              "width": "fill_container",
+              "fill": "#14532d",
+              "cornerRadius": 12,
+              "layout": "vertical",
+              "gap": 8,
+              "padding": 20,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "GzcWc",
+                  "name": "ph2t",
+                  "fill": "#4ade80",
+                  "content": "Phase 2 — Scale",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "04i9R",
+                  "name": "ph2d",
+                  "fill": "#e2e8f0",
+                  "textGrowth": "fixed-width",
+                  "width": 380,
+                  "content": "Qwen3-VL-Embedding-2B\nvLLM + 1x A10 GPU\nPDFs visuels searchables",
+                  "lineHeight": 1.3,
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "MT68U",
+              "name": "ph3",
+              "width": "fill_container",
+              "fill": "#3b0764",
+              "cornerRadius": 12,
+              "layout": "vertical",
+              "gap": 8,
+              "padding": 20,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "2Bpds",
+                  "name": "ph3t",
+                  "fill": "#c084fc",
+                  "content": "Phase 3 — Production",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "IEekl",
+                  "name": "ph3d",
+                  "fill": "#e2e8f0",
+                  "textGrowth": "fixed-width",
+                  "width": 380,
+                  "content": "VL-Embed + VL-Reranker\npgvector + retrieve→rerank\nSelf-hosted Apache 2.0",
+                  "lineHeight": 1.3,
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "zIyE8",
+      "x": 0,
+      "y": 6864,
+      "name": "8. Chatwoot — Service Client + Human Handoff",
+      "width": 2000,
+      "fill": "#0f172a",
+      "cornerRadius": 16,
+      "layout": "vertical",
+      "gap": 24,
+      "padding": 40,
+      "children": [
+        {
+          "type": "text",
+          "id": "eFReq",
+          "name": "cwTitle",
+          "fill": "#38bdf8",
+          "textGrowth": "fixed-width",
+          "width": 1320,
+          "content": "8. CHATWOOT — Service Client Multicanaux + Human Handoff",
+          "fontFamily": "Inter",
+          "fontSize": 32,
+          "fontWeight": "700"
+        },
+        {
+          "type": "rectangle",
+          "id": "ys5LK",
+          "name": "cwSep",
+          "fill": "#334155",
+          "width": 1320,
+          "height": 2
+        },
+        {
+          "type": "frame",
+          "id": "Ht17i",
+          "name": "cwCols",
+          "width": 1920,
+          "gap": 24,
+          "children": [
+            {
+              "type": "frame",
+              "id": "kwKd3",
+              "name": "leftCol",
+              "width": 420,
+              "layout": "vertical",
+              "gap": 14,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "KLOvU",
+                  "name": "cwCard",
+                  "width": 400,
+                  "fill": "#1e293b",
+                  "cornerRadius": 12,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#475569"
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "OW55a",
+                      "name": "cwCardTitle",
+                      "fill": "#f59e0b",
+                      "content": "Chatwoot 4.0",
+                      "fontFamily": "Inter",
+                      "fontSize": 28,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "zkMvj",
+                      "name": "cwCardDesc",
+                      "fill": "#e2e8f0",
+                      "textGrowth": "fixed-width",
+                      "width": 360,
+                      "content": "• MIT License (gratuit self-hosted)\n• Ruby on Rails + Vue.js 3\n• PostgreSQL + Redis\n• 26K+ GitHub stars\n• 13+ canaux natifs\n• Multi-tenant natif\n• 3 APIs (App, Client, Platform)\n• Captain AI (copilot agents)",
+                      "lineHeight": 1.4,
+                      "fontFamily": "Inter",
+                      "fontSize": 28,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "5Zsem",
+                  "name": "featCard",
+                  "width": 400,
+                  "fill": "#1e293b",
+                  "cornerRadius": 12,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#475569"
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "71g2I",
+                      "name": "featTitle",
+                      "fill": "#2dd4bf",
+                      "content": "Features Service Client",
+                      "fontFamily": "Inter",
+                      "fontSize": 28,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "VbjGU",
+                      "name": "featDesc",
+                      "fill": "#e2e8f0",
+                      "textGrowth": "fixed-width",
+                      "width": 360,
+                      "content": "• Inbox unifié multicanaux\n• Routing round-robin / smart\n• CSAT automatique\n• SLA (FRT, NRT, résolution)\n• Knowledge Base + portail\n• Automations trigger→action\n• Canned responses + macros\n• Reports & analytics\n• Teams / labels / tags",
+                      "lineHeight": 1.4,
+                      "fontFamily": "Inter",
+                      "fontSize": 28,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "qm5QT",
+              "name": "centerCol",
+              "width": 620,
+              "layout": "vertical",
+              "gap": 14,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "nkwra",
+                  "name": "flowCard",
+                  "width": 600,
+                  "fill": "#1e293b",
+                  "cornerRadius": 12,
+                  "stroke": {
+                    "thickness": 2,
+                    "fill": "#14b8a6"
+                  },
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "3SyEF",
+                      "name": "flowTitle",
+                      "fill": "#14b8a6",
+                      "content": "Flow AI → Humain",
+                      "fontFamily": "Inter",
+                      "fontSize": 28,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "1uyF0",
+                      "name": "step1",
+                      "width": 560,
+                      "fill": "#0c4a6e",
+                      "cornerRadius": 8,
+                      "padding": [
+                        10,
+                        16
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "m0Ta4",
+                          "name": "step1t",
+                          "fill": "#38bdf8",
+                          "content": "1. Message client (WhatsApp, email...)",
+                          "fontFamily": "Inter",
+                          "fontSize": 28,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "IOYU5",
+                      "name": "step2",
+                      "width": 560,
+                      "fill": "#0c4a6e",
+                      "cornerRadius": 8,
+                      "padding": [
+                        10,
+                        16
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "6F5WF",
+                          "name": "step2t",
+                          "fill": "#38bdf8",
+                          "content": "2. Chatwoot inbox → AgentBot webhook",
+                          "fontFamily": "Inter",
+                          "fontSize": 28,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "f5VEF",
+                      "name": "step3",
+                      "width": 560,
+                      "fill": "#14532d",
+                      "cornerRadius": 8,
+                      "padding": [
+                        10,
+                        16
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "TY5j9",
+                          "name": "step3t",
+                          "fill": "#4ade80",
+                          "content": "3. Go backend → OpenFang AI",
+                          "fontFamily": "Inter",
+                          "fontSize": 28,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "9mwjc",
+                      "name": "step4",
+                      "width": 560,
+                      "fill": "#14532d",
+                      "cornerRadius": 8,
+                      "padding": [
+                        10,
+                        16
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "AfQFY",
+                          "name": "step4t",
+                          "fill": "#4ade80",
+                          "content": "4. IA répond via Chatwoot API",
+                          "fontFamily": "Inter",
+                          "fontSize": 28,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "1kdKZ",
+                      "name": "step5",
+                      "width": 560,
+                      "fill": "#7f1d1d",
+                      "cornerRadius": 8,
+                      "padding": [
+                        10,
+                        16
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "9UKXG",
+                          "name": "step5t",
+                          "fill": "#fca5a5",
+                          "content": "5. Escalade ? → bot_handoff!",
+                          "fontFamily": "Inter",
+                          "fontSize": 28,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "jVdLf",
+                      "name": "step6",
+                      "width": 560,
+                      "fill": "#f59e0b",
+                      "cornerRadius": 8,
+                      "padding": [
+                        10,
+                        16
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "oIs0s",
+                          "name": "step6t",
+                          "fill": "#0f172a",
+                          "content": "6. Agent humain dans inbox Chatwoot",
+                          "fontFamily": "Inter",
+                          "fontSize": 28,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "gvXlc",
+                      "name": "step7",
+                      "width": 560,
+                      "fill": "#3b0764",
+                      "cornerRadius": 8,
+                      "padding": [
+                        10,
+                        16
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "v5eLL",
+                          "name": "step7t",
+                          "fill": "#c084fc",
+                          "content": "7. Résolution → CSAT auto → rapport",
+                          "fontFamily": "Inter",
+                          "fontSize": 28,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "hlARC",
+              "name": "rightCol",
+              "width": 420,
+              "layout": "vertical",
+              "gap": 14,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "FlrcW",
+                  "name": "compCard",
+                  "width": 400,
+                  "fill": "#1e293b",
+                  "cornerRadius": 12,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#475569"
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "HnvhI",
+                      "name": "compTitle",
+                      "fill": "#fbbf24",
+                      "content": "OpenFang vs Chatwoot",
+                      "fontFamily": "Inter",
+                      "fontSize": 28,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "oMX0U",
+                      "name": "compDesc",
+                      "fill": "#e2e8f0",
+                      "textGrowth": "fixed-width",
+                      "width": 360,
+                      "content": "OpenFang = cerveau IA\n• 40+ canaux, 26 LLM, WASM\n• Agents autonomes 24/7\n• Clustering P2P (OFP)\n\nChatwoot = workspace humain\n• Inbox, routing, CSAT, SLA\n• Knowledge base + portail\n• Reports & analytics\n• bot_handoff! natif",
+                      "lineHeight": 1.4,
+                      "fontFamily": "Inter",
+                      "fontSize": 28,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "yo1kS",
+                  "name": "deployCard",
+                  "width": 400,
+                  "fill": "#1e293b",
+                  "cornerRadius": 12,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#475569"
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": 20,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Y7dtT",
+                      "name": "deployTitle",
+                      "fill": "#3b82f6",
+                      "content": "Déploiement",
+                      "fontFamily": "Inter",
+                      "fontSize": 28,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "CDztK",
+                      "name": "deployDesc",
+                      "fill": "#e2e8f0",
+                      "textGrowth": "fixed-width",
+                      "width": 360,
+                      "content": "• 1 Chatwoot partagé (multi-tenant)\n  account_id par client\n• 1 OpenFang par client (isolé)\n• Docker : Rails + Sidekiq\n• 4 CPU, 8-16 GB RAM\n• PostgreSQL + Redis partagés\n• Hetzner : ~30€/mois\n• Azure : ~100-200€/mois",
+                      "lineHeight": 1.4,
+                      "fontFamily": "Inter",
+                      "fontSize": 28,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "mow2C",
+          "name": "archRow",
+          "width": 1920,
+          "fill": "#042f2e",
+          "cornerRadius": 12,
+          "stroke": {
+            "thickness": 1,
+            "fill": "#14b8a6"
+          },
+          "gap": 16,
+          "padding": 20,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "MTceX",
+              "name": "archL",
+              "fill": "#2dd4bf",
+              "content": "Architecture finale",
+              "fontFamily": "Inter",
+              "fontSize": 28,
+              "fontWeight": "700"
+            },
+            {
+              "type": "frame",
+              "id": "A981n",
+              "name": "b1",
+              "fill": "#0c4a6e",
+              "cornerRadius": 8,
+              "padding": [
+                8,
+                14
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "JzRtf",
+                  "name": "b1t",
+                  "fill": "#38bdf8",
+                  "content": "Angular",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "CPsrj",
+              "name": "ba1",
+              "fill": "#64748b",
+              "content": "→",
+              "fontFamily": "Inter",
+              "fontSize": 32,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "tO88O",
+              "name": "b2",
+              "fill": "#14532d",
+              "cornerRadius": 8,
+              "padding": [
+                8,
+                14
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "E8QPv",
+                  "name": "b2t",
+                  "fill": "#4ade80",
+                  "content": "Go Gateway",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "sHZm8",
+              "name": "ba2",
+              "fill": "#64748b",
+              "content": "→",
+              "fontFamily": "Inter",
+              "fontSize": 32,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "h3v7d",
+              "name": "b3",
+              "fill": "#f59e0b",
+              "cornerRadius": 8,
+              "padding": [
+                8,
+                14
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "KAokx",
+                  "name": "b3t",
+                  "fill": "#0f172a",
+                  "content": "Chatwoot",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "ccsWG",
+              "name": "ba3",
+              "fill": "#64748b",
+              "content": "↔",
+              "fontFamily": "Inter",
+              "fontSize": 32,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "ssEi3",
+              "name": "b4",
+              "fill": "#3b0764",
+              "cornerRadius": 8,
+              "padding": [
+                8,
+                14
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "pGtZc",
+                  "name": "b4t",
+                  "fill": "#c084fc",
+                  "content": "OpenFang (1/client)",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "h5lCM",
+              "name": "ba4",
+              "fill": "#64748b",
+              "content": "↔",
+              "fontFamily": "Inter",
+              "fontSize": 32,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "rEFcJ",
+              "name": "b5",
+              "fill": "#1e293b",
+              "cornerRadius": 8,
+              "padding": [
+                8,
+                14
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "xUxny",
+                  "name": "b5t",
+                  "fill": "#e2e8f0",
+                  "content": "RAG + pgvector",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "600"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
